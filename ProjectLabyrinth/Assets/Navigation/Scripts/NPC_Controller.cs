@@ -30,7 +30,7 @@ public class NPC_Controller : MonoBehaviour
             NavigationNode[] nodes = FindObjectsByType<NavigationNode>(FindObjectsSortMode.None);
             while (path == null || path.Count == 0)
             {
-                path = NavigationManager.instance.GeneratePath(currentNode, nodes[Random.Range(0, nodes.Length)]);
+                path = NavigationManager.instance.GeneratePath(currentNode, nodes[Random.Range(0, nodes.Length)], false);
             }
         }
     }

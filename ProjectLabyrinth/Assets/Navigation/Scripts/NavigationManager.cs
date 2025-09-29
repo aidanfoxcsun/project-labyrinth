@@ -1,6 +1,5 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 
 public class NavigationManager : MonoBehaviour
@@ -12,7 +11,7 @@ public class NavigationManager : MonoBehaviour
         instance = this;
     }
 
-    public List<NavigationNode> GeneratePath(NavigationNode start, NavigationNode end)
+    public List<NavigationNode> GeneratePath(NavigationNode start, NavigationNode end, bool skipFirstNode)
     {
         List<NavigationNode> openSet = new List<NavigationNode>();
 
@@ -54,6 +53,7 @@ public class NavigationManager : MonoBehaviour
                 }
 
                 path.Reverse();
+                if (skipFirstNode) path.RemoveAt(0);
                 return path;
             }
 

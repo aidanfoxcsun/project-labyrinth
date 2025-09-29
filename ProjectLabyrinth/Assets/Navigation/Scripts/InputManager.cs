@@ -6,20 +6,39 @@ public class InputManager : MonoBehaviour
 
     public NavigationAgent agent;
 
+    public float tickRate = 0.2f;
+    private float tickCounter;
+
     private void Update()
     {
-        if (Input.GetMouseButtonDown(0))
+        //if (Input.GetMouseButtonDown(0))
+        //{
+        //    // Get mouse position in screen space
+        //    Vector3 mouseScreenPos = Input.mousePosition;
+
+        //    // Convert to world space (with z depth)
+        //    Vector3 worldPos = Camera.main.ScreenToWorldPoint(
+        //        new Vector3(mouseScreenPos.x, mouseScreenPos.y, -Camera.main.transform.position.z )
+        //    );
+
+        //    targetPoint.transform.position = worldPos;
+        //    agent.SetDestination(worldPos);
+        //}
+        if (tickCounter >= tickRate)
         {
-            // Get mouse position in screen space
+            //Get mouse position in screen space
             Vector3 mouseScreenPos = Input.mousePosition;
 
             // Convert to world space (with z depth)
             Vector3 worldPos = Camera.main.ScreenToWorldPoint(
-                new Vector3(mouseScreenPos.x, mouseScreenPos.y, -Camera.main.transform.position.z )
+                new Vector3(mouseScreenPos.x, mouseScreenPos.y, -Camera.main.transform.position.z)
             );
 
             targetPoint.transform.position = worldPos;
             agent.SetDestination(worldPos);
+            tickCounter = 0f;
         }
+
+        tickCounter += Time.deltaTime;
     }
 }
