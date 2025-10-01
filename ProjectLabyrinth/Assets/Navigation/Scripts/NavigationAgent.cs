@@ -8,15 +8,13 @@ public class NavigationAgent : MonoBehaviour
 
     public Vector3 targetPosition;
     public NavigationNode currentNode;
-    public List<NavigationNode> nodePath = new List<NavigationNode>();
     public NavigationPath path = new NavigationPath(new List<NavigationNode>());
 
     private NavigationNode lastVisited;
-
     private NavigationNode targetNode;
-    
-    public float maxSightRange = 10f;
 
+    [Header("Vision Settings")]
+    public float maxSightRange = 10f;
     public LayerMask obstacleMask;
 
     private bool usePathfinding = true;
@@ -35,36 +33,35 @@ public class NavigationAgent : MonoBehaviour
         currentNode = NavigationManager.instance.FindNearestNode(transform.position);
 
         Vector3 diff = (target - transform.position);
-        Vector3 dir = diff.normalized;
-
         float distance = diff.magnitude;
 
         if (distance < maxSightRange)
         {
-
-            Debug.DrawRay(transform.position, dir * distance, Color.red);
-            if(Physics2D.Raycast(transform.position, dir, distance, obstacleMask))
+            if(!hasLineOfSight(target))
             {
-                // NavigationNode previousNode = targetNode;
                 targetNode = NavigationManager.instance.FindNearestNode(targetPosition);
+                NavigationPath newPath = NavigationManager.instance.GeneratePath(currentNode, targetNode, currentNode == lastVisited);
 
-                // if (previousNode == targetNode && usePathfinding) { return; } // This is temporary. I need to create a proper path DataStructure to hold and properly update Navigation Node Paths.
-                NavigationPath newPath = new NavigationPath(NavigationManager.instance.GeneratePath(currentNode, targetNode, currentNode == lastVisited));
-
-                if (path.nodes != null && path.nodes.Count > 0) 
+                if (newPath != null && newPath.nodes != null && newPath.nodes.Count > 0)
                 {
-                    path.MergeWith(newPath);
+                    if (path.nodes != null && path.nodes.Count > 0)
+                        path.MergeWith(newPath);
+                    else
+                        path = newPath;
+
+                    // pick the furthest visible node along the path
+                    NavigationNode startNode = FindBestNode();
+                    int index = path.nodes.IndexOf(startNode);
+                    if (index >= 0 && index < path.nodes.Count)
+                        path.nodes = path.nodes.GetRange(index, path.nodes.Count - index);
+
+                    usePathfinding = true;
                 }
                 else
                 {
-                    path = newPath;
+                    // Path failed, just stop or fallback
+                    usePathfinding = false;
                 }
-
-                NavigationNode startNode = FindBestNode();
-                int index = path.nodes.IndexOf(startNode);
-                path.nodes = path.nodes.GetRange(index, path.nodes.Count - index); // Heuristic. Attempt to start from the furthest along visible node on the path.
-
-                usePathfinding = true;
             }
             else
             {
@@ -88,32 +85,30 @@ public class NavigationAgent : MonoBehaviour
 
     public void FollowPath()
     {
+        if (hasLineOfSight(targetPosition))
+        {
+            usePathfinding = false;
+        }
+
         if (path != null && path.nodes != null && path.nodes.Count > 0 && usePathfinding)
         {
-            if ( path.nodes.Count > 0)
-            {
-                int x = 0;
-                transform.position = Vector3.MoveTowards(transform.position, new Vector3(path.nodes[x].transform.position.x, path.nodes[x].transform.position.y, -2), speed * Time.deltaTime);
+            NavigationNode nextNode = path.nodes[0];
+            Vector3 nextPos = new Vector3(nextNode.transform.position.x, nextNode.transform.position.y, -2);
 
-                if (Vector2.Distance(transform.position, path.nodes[x].transform.position) < 0.1f)
-                {
-                    currentNode = path.nodes[x];
-                    path.nodes.RemoveAt(x);
-                    lastVisited = currentNode;
-                    if (hasLineOfSight(targetPosition))
-                    {
-                        usePathfinding=false;
-                    }
-                }
-            }
-            else
+            transform.position = Vector3.MoveTowards(transform.position, nextPos, speed * Time.deltaTime);
+
+            if (Vector2.Distance(transform.position, nextNode.transform.position) < 0.1f)
             {
-                SetDestination(targetPosition);
+                currentNode = nextNode;
+                path.nodes.RemoveAt(0);
+                lastVisited = currentNode;
             }
         }
         else
         {
-            transform.position = Vector3.MoveTowards(transform.position, new Vector3(targetPosition.x, targetPosition.y, -2), speed * Time.deltaTime);
+            // direct movement
+            Vector3 dest = new Vector3(targetPosition.x, targetPosition.y, -2);
+            transform.position = Vector3.MoveTowards(transform.position, dest, speed * Time.deltaTime);
             currentNode = lastVisited = NavigationManager.instance.FindNearestNode(targetPosition);
         }
 
@@ -121,15 +116,33 @@ public class NavigationAgent : MonoBehaviour
 
     private bool hasLineOfSight(Vector3 target)
     {
-        Vector3 diff = (target - transform.position);
+        Vector3 diff = target - transform.position;
         Vector3 dir = diff.normalized;
-
         float distance = diff.magnitude;
-        return !Physics2D.Raycast(transform.position, dir, distance, obstacleMask);
+
+        float offset = 0.5f; // half collider width
+        Vector3 perp = Vector3.Cross(dir, Vector3.forward).normalized;
+
+        Vector3[] origins = {
+            transform.position,
+            transform.position + perp * offset,
+            transform.position - perp * offset
+        };
+
+        foreach (var origin in origins)
+        {
+            if (Physics2D.Raycast(origin, dir, distance, obstacleMask))
+                return false;
+        }
+
+        return true;
     }
 
     private NavigationNode FindBestNode()
     {
+        if (!usePathfinding || path == null || path.nodes == null || path.nodes.Count == 0)
+            return currentNode;
+
         NavigationNode bestNode = path.nodes[0];
         foreach(NavigationNode node in path.nodes)
         {

@@ -2,8 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+// Script for performing the A* Pathfinding Algorithm
 public class NavigationManager : MonoBehaviour
 {
+    // Singleton Class
     public static NavigationManager instance;
 
     private void Awake()
@@ -11,9 +13,11 @@ public class NavigationManager : MonoBehaviour
         instance = this;
     }
 
-    public List<NavigationNode> GeneratePath(NavigationNode start, NavigationNode end, bool skipFirstNode)
+    // Generates a path based using the A* Pathfinding Algorithm
+    public NavigationPath GeneratePath(NavigationNode start, NavigationNode end, bool skipFirstNode)
     {
         List<NavigationNode> openSet = new List<NavigationNode>();
+        NavigationPath path = new NavigationPath(openSet);
 
         foreach(NavigationNode node in FindObjectsByType<NavigationNode>(FindObjectsSortMode.None))
         {
@@ -41,19 +45,17 @@ public class NavigationManager : MonoBehaviour
 
             if (currentNode == end)
             {
-                List<NavigationNode> path = new List<NavigationNode>();
-
-                path.Insert(0, end);
+                path.nodes.Insert(0, end);
 
 
                 while(currentNode != start)
                 {
                     currentNode = currentNode.cameFrom;
-                    path.Add(currentNode);
+                    path.nodes.Add(currentNode);
                 }
 
-                path.Reverse();
-                if (skipFirstNode) path.RemoveAt(0);
+                path.nodes.Reverse();
+                if (skipFirstNode) path.nodes.RemoveAt(0);
                 return path;
             }
 

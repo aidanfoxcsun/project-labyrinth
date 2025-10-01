@@ -11,6 +11,23 @@ public class NavigationNode : MonoBehaviour
     public float gScore;
     public float hScore;
 
+    private void Awake()
+    {
+        // Verifying two-way connections
+        foreach (var connection in connections)
+        {
+            if (connection == this)
+            {
+                connections.Remove(connection);
+                continue;
+            }
+            if (!connection.connections.Contains(this))
+            {
+                connection.connections.Add(this);
+            }
+        }
+    }
+
     public float FScore()
     {
         return gScore + hScore;
