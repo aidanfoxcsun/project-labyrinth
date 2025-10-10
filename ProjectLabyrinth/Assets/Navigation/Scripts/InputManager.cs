@@ -23,7 +23,10 @@ public class InputManager : MonoBehaviour
             );
 
             targetPoint.transform.position = worldPos;
-            agent.SetDestination(worldPos);
+            if (agent != null)
+            {
+                agent.SetDestination(worldPos);
+            }
             tickCounter = 0f;
         }
 
