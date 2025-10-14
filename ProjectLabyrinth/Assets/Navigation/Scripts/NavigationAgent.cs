@@ -37,7 +37,7 @@ public class NavigationAgent : MonoBehaviour
 
         if (distance < maxSightRange)
         {
-            if(!hasLineOfSight(target))
+            if(!hasLineOfSight(target, false))
             {
                 targetNode = NavigationManager.instance.FindNearestNode(targetPosition);
                 NavigationPath newPath = NavigationManager.instance.GeneratePath(currentNode, targetNode, currentNode == lastVisited);
@@ -49,11 +49,13 @@ public class NavigationAgent : MonoBehaviour
                     else
                         path = newPath;
 
+                    
                     // pick the furthest visible node along the path
                     NavigationNode startNode = FindBestNode();
                     int index = path.nodes.IndexOf(startNode);
                     if (index >= 0 && index < path.nodes.Count)
                         path.nodes = path.nodes.GetRange(index, path.nodes.Count - index);
+                    
 
                     usePathfinding = true;
                 }
@@ -85,7 +87,7 @@ public class NavigationAgent : MonoBehaviour
 
     public void FollowPath()
     {
-        if (hasLineOfSight(targetPosition))
+        if (hasLineOfSight(targetPosition, false))
         {
             usePathfinding = false;
         }
@@ -93,10 +95,34 @@ public class NavigationAgent : MonoBehaviour
         if (path != null && path.nodes != null && path.nodes.Count > 0 && usePathfinding)
         {
             NavigationNode nextNode = path.nodes[0];
+
+            if(!hasLineOfSight(nextNode.transform.position, true))
+            {
+                bool foundVisible = false;
+                for(int i = 0; i < path.nodes.Count; i++)
+                {
+                    if (hasLineOfSight(path.nodes[i].transform.position, true))
+                    {
+                        path.nodes.RemoveRange(0, i);
+                        foundVisible = true;
+                        break;
+                    }
+                }
+                if (!foundVisible)
+                {
+                    // No visible nodes, stop pathfinding
+                    usePathfinding = false;
+                    return;
+                }
+
+                nextNode = path.nodes[0];
+            }
+
             Vector3 nextPos = new Vector3(nextNode.transform.position.x, nextNode.transform.position.y, -2);
 
             transform.position = Vector3.MoveTowards(transform.position, nextPos, speed * Time.deltaTime);
 
+            // arrived at Node
             if (Vector2.Distance(transform.position, nextNode.transform.position) < 0.1f)
             {
                 currentNode = nextNode;
@@ -114,14 +140,10 @@ public class NavigationAgent : MonoBehaviour
 
     }
 
-    private bool hasLineOfSight(Vector3 target)
+    private bool hasLineOfSight(Vector3 target, bool drawRays)
     {
-        Vector3 diff = target - transform.position;
-        Vector3 dir = diff.normalized;
-        float distance = diff.magnitude;
-
-        float offset = 0.5f; // half collider width
-        Vector3 perp = Vector3.Cross(dir, Vector3.forward).normalized;
+        float offset = GetComponent<Collider2D>().bounds.extents.x * 0.8f;
+        Vector3 perp = Vector3.Cross(Vector3.forward, (target - transform.position).normalized).normalized;
 
         Vector3[] origins = {
             transform.position,
@@ -129,13 +151,28 @@ public class NavigationAgent : MonoBehaviour
             transform.position - perp * offset
         };
 
+        bool blocked = false;
+
         foreach (var origin in origins)
         {
+            Vector3 diff = target - origin;
+            float distance = diff.magnitude;
+            Vector3 dir = diff.normalized;
+
+            // Draw the ray in the Scene view
+            Color rayColor = Color.green;
+
             if (Physics2D.Raycast(origin, dir, distance, obstacleMask))
-                return false;
+            {
+                rayColor = Color.red; // red if blocked
+                blocked = true;
+            }
+
+            if(drawRays)
+                Debug.DrawRay(origin, dir * distance, rayColor);
         }
 
-        return true;
+        return !blocked;
     }
 
     private NavigationNode FindBestNode()
@@ -146,7 +183,7 @@ public class NavigationAgent : MonoBehaviour
         NavigationNode bestNode = path.nodes[0];
         foreach(NavigationNode node in path.nodes)
         {
-            if (hasLineOfSight(node.transform.position))
+            if (hasLineOfSight(node.transform.position, true))
             {
                 bestNode = node;
             }

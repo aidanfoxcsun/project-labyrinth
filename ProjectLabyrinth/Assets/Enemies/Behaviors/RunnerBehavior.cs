@@ -1,14 +1,17 @@
 using UnityEngine;
 
-public class RunnerBehavior : MonoBehaviour, IEntityBehavior
+public class RunnerBehavior : EnemyBehavior, IEntityBehavior
 {
-    private Health health;
+    public float tickRate = 0.2f;
 
-    private void Awake()
+    private GameObject player;
+
+    private void Start()
     {
-        health = GetComponent<Health>();
-        health.OnDeath += OnDeath;
-        health.OnHit += OnHit;
+        controller.health.OnDeath += OnDeath;
+        controller.health.OnHit += OnHit;
+
+        player = GameObject.FindGameObjectWithTag("Player");
     }
 
     public void OnDeath()
@@ -24,5 +27,23 @@ public class RunnerBehavior : MonoBehaviour, IEntityBehavior
         // This is where any special behaviors need to go.
         // Change in behavior, animations, etc.
         Debug.Log(this.name + " has been hit");
+    }
+
+    private float frameCounter = 0f;
+
+    public override void OnUpdate()
+    {
+        if (player == null)
+        {
+            player = GameObject.FindGameObjectWithTag("Player");
+        }
+
+        if (frameCounter >= tickRate && player != null)
+        {
+            controller.agent.SetDestination(player.transform.position);
+            frameCounter = 0f;
+        }
+
+        frameCounter += Time.deltaTime;
     }
 }
