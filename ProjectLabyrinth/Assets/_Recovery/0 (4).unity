@@ -457,15 +457,12 @@ MonoBehaviour:
   roomPrefab: {fileID: 3738668724862959439, guid: 03781b73cc420d74eac9b0e109cd457d, type: 3}
   rockPrefabs:
   - {fileID: 1390904374234985786, guid: 047dea15ebd48ed4e89c054d27ce4032, type: 3}
-  minRocksPerRoom: 5
-  maxRocksPerRoom: 20
+  minRocksPerRoom: 2
+  maxRocksPerRoom: 5
   seed: 0
-  targetRooms: 40
+  targetRooms: 15
   maxBranchDegree: 3
   minBossDistance: 5
-  roomSpacing: {x: 12, y: 8}
-  autoDetectSpacing: 1
-  verticalOverlap: 0.15
 --- !u!4 &1632927080
 Transform:
   m_ObjectHideFlags: 0
