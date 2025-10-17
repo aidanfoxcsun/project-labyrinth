@@ -5,8 +5,6 @@ public class InputManager : MonoBehaviour
     // Placeholder class for testing navigation
     public GameObject targetPoint;
 
-    public NavigationAgent agent;
-
     public float tickRate = 999999999f;
     private float tickCounter;
 
@@ -23,7 +21,6 @@ public class InputManager : MonoBehaviour
             );
 
             targetPoint.transform.position = worldPos;
-            agent.SetDestination(worldPos);
             tickCounter = 0f;
         }
 

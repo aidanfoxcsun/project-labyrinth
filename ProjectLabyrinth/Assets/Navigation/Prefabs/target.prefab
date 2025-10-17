@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 4909603462849867986}
   - component: {fileID: 533103311263822480}
   - component: {fileID: 5751478332361069850}
+  - component: {fileID: 2064300205726192443}
   m_Layer: 0
   m_Name: target
   m_TagString: Untagged
@@ -96,3 +97,16 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &2064300205726192443
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6991328660054515783}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f5741e24a6e5be244a54366867f1e704, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Hazard
+  damage: 2
