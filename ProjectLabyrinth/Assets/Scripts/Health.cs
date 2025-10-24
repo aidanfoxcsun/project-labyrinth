@@ -13,6 +13,13 @@ public class Health : MonoBehaviour
     public event System.Action OnHit;   // Subscribe to this event to enable hit behavior
     // Expand for healing behaviors
 
+    private bool isPlayer = false;
+
+    public void SetIsPlayer(bool value)
+    {
+        isPlayer = value;
+    }
+
     public void Heal(float amount)
     {
         hitPoints += amount;
@@ -54,6 +61,18 @@ public class Health : MonoBehaviour
         IDamager damager = collision.gameObject.GetComponent<IDamager>();
         if (damager != null)
         {
+            Debug.Log("Damager hit!");
+            // if((isPlayer && damager.PlayerSourced) ||  (!isPlayer && !damager.PlayerSourced)) { return; }
+            RecieveDamage(damager.DamageAmount);
+        }
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        IDamager damager = collision.gameObject.GetComponent<IDamager>();
+        if (damager != null)
+        {
+            Debug.Log("Damager hit!");
+            // if((isPlayer && damager.PlayerSourced) ||  (!isPlayer && !damager.PlayerSourced)) { return; }
             RecieveDamage(damager.DamageAmount);
         }
     }
