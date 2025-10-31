@@ -1,0 +1,507 @@
+fileFormatVersion: 2
+guid: 74e01476736e3f34dbf5744e8bc76ab1
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 9113371266861542007
+    second: SELECT CHARACTER_0
+  - first:
+      213: -1718660001219079950
+    second: SELECT CHARACTER_1
+  - first:
+      213: -7185357216517239563
+    second: SELECT CHARACTER_2
+  - first:
+      213: 8098485563569897107
+    second: SELECT CHARACTER_3
+  - first:
+      213: 5799691101378161402
+    second: SELECT CHARACTER_4
+  - first:
+      213: -4210627026951899739
+    second: SELECT CHARACTER_5
+  - first:
+      213: 8922243858006364306
+    second: SELECT CHARACTER_6
+  - first:
+      213: 2734573145228878260
+    second: SELECT CHARACTER_7
+  - first:
+      213: -5854098110766147242
+    second: SELECT CHARACTER_8
+  - first:
+      213: -5156853298904626257
+    second: SELECT CHARACTER_9
+  - first:
+      213: 8469324966825762918
+    second: SELECT CHARACTER_10
+  - first:
+      213: -8556940532558057347
+    second: SELECT CHARACTER_11
+  - first:
+      213: -5077068487940430017
+    second: SELECT CHARACTER_12
+  - first:
+      213: -5671948681566201123
+    second: SELECT CHARACTER_13
+  - first:
+      213: 920348437559310099
+    second: SELECT CHARACTER_14
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: SELECT CHARACTER_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 43
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 77aa88be1e2397e70800000000000000
+      internalID: 9113371266861542007
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SELECT CHARACTER_1
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 0
+        width: 35
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2f01aa1b5d71628e0800000000000000
+      internalID: -1718660001219079950
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SELECT CHARACTER_2
+      rect:
+        serializedVersion: 2
+        x: 87
+        y: 2
+        width: 32
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5fc43356eab784c90800000000000000
+      internalID: -7185357216517239563
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SELECT CHARACTER_3
+      rect:
+        serializedVersion: 2
+        x: 123
+        y: 0
+        width: 35
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 39e763366b9936070800000000000000
+      internalID: 8098485563569897107
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SELECT CHARACTER_4
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 0
+        width: 44
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: afaa3a02454ac7050800000000000000
+      internalID: 5799691101378161402
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SELECT CHARACTER_5
+      rect:
+        serializedVersion: 2
+        x: 206
+        y: 1
+        width: 37
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5a57fd02709d095c0800000000000000
+      internalID: -4210627026951899739
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SELECT CHARACTER_6
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 0
+        width: 44
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 29051eb448d22db70800000000000000
+      internalID: 8922243858006364306
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SELECT CHARACTER_7
+      rect:
+        serializedVersion: 2
+        x: 321
+        y: 1
+        width: 45
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4b1a0b589c723f520800000000000000
+      internalID: 2734573145228878260
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SELECT CHARACTER_8
+      rect:
+        serializedVersion: 2
+        x: 370
+        y: 0
+        width: 46
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6599f7bd8c012cea0800000000000000
+      internalID: -5854098110766147242
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SELECT CHARACTER_9
+      rect:
+        serializedVersion: 2
+        x: 420
+        y: 1
+        width: 39
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fab0dff2f3d2f68b0800000000000000
+      internalID: -5156853298904626257
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SELECT CHARACTER_10
+      rect:
+        serializedVersion: 2
+        x: 461
+        y: 0
+        width: 46
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6602ff65f26198570800000000000000
+      internalID: 8469324966825762918
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SELECT CHARACTER_11
+      rect:
+        serializedVersion: 2
+        x: 508
+        y: 0
+        width: 44
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d703cb81ce3af3980800000000000000
+      internalID: -8556940532558057347
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SELECT CHARACTER_12
+      rect:
+        serializedVersion: 2
+        x: 554
+        y: 1
+        width: 37
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f372bf31c11aa89b0800000000000000
+      internalID: -5077068487940430017
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SELECT CHARACTER_13
+      rect:
+        serializedVersion: 2
+        x: 595
+        y: 0
+        width: 35
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dda5003b9b03941b0800000000000000
+      internalID: -5671948681566201123
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SELECT CHARACTER_14
+      rect:
+        serializedVersion: 2
+        x: 634
+        y: 1
+        width: 38
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 317fe4a170cb5cc00800000000000000
+      internalID: 920348437559310099
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      SELECT CHARACTER_0: 9113371266861542007
+      SELECT CHARACTER_1: -1718660001219079950
+      SELECT CHARACTER_10: 8469324966825762918
+      SELECT CHARACTER_11: -8556940532558057347
+      SELECT CHARACTER_12: -5077068487940430017
+      SELECT CHARACTER_13: -5671948681566201123
+      SELECT CHARACTER_14: 920348437559310099
+      SELECT CHARACTER_2: -7185357216517239563
+      SELECT CHARACTER_3: 8098485563569897107
+      SELECT CHARACTER_4: 5799691101378161402
+      SELECT CHARACTER_5: -4210627026951899739
+      SELECT CHARACTER_6: 8922243858006364306
+      SELECT CHARACTER_7: 2734573145228878260
+      SELECT CHARACTER_8: -5854098110766147242
+      SELECT CHARACTER_9: -5156853298904626257
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
