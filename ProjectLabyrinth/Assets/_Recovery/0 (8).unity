@@ -462,7 +462,6 @@ MonoBehaviour:
   maxRocksPerRoom: 20
   seed: 0
   targetRooms: 100
-  maxBranchDegree: 3
   minBossDistance: 5
   roomSpacing: {x: 12, y: 8}
   autoDetectSpacing: 1
