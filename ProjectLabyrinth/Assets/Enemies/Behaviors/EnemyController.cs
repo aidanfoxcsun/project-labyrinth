@@ -13,10 +13,7 @@ public class EnemyController : MonoBehaviour
     {
         agent = GetComponent<NavigationAgent>();
         health = GetComponent<Health>();
-    }
 
-    private void Start()
-    {
         if (behavior != null)
         {
             behavior.Initialize(this);

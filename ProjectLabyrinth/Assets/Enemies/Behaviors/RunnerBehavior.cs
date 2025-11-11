@@ -8,6 +8,10 @@ public class RunnerBehavior : EnemyBehavior, IEntityBehavior
 
     private void Start()
     {
+        if(controller.health == null)
+        {
+            Debug.Log("cannot find health component!");
+        }
         controller.health.OnDeath += OnDeath;
         controller.health.OnHit += OnHit;
 

@@ -22,9 +22,9 @@ public class Projectile : MonoBehaviour
         transform.Translate(direction * speed * Time.deltaTime);
     }
 
-void OnTriggerEnter2D(Collider2D other)
-{
-    if (other.CompareTag("Player")) return; // don't self-hit
-    Destroy(gameObject);
-}
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.CompareTag("Player")) return; // don't self-hit
+        Destroy(gameObject, 0.05f);
+    }
 }

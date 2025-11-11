@@ -8,18 +8,25 @@ public class NavigationManager : MonoBehaviour
     // Singleton Class
     public static NavigationManager instance;
 
+    public List<NavigationNode> nodes = new List<NavigationNode>();
+
     private void Awake()
     {
         instance = this;
+
+        foreach (NavigationNode node in FindObjectsByType<NavigationNode>(FindObjectsSortMode.None))
+        {
+            nodes.Add(node);
+        }
     }
 
     // Generates a path based using the A* Pathfinding Algorithm
-    public NavigationPath GeneratePath(NavigationNode start, NavigationNode end, bool skipFirstNode)
+    public List<NavigationNode> GeneratePath(NavigationNode start, NavigationNode end, bool skipFirstNode = false)
     {
         List<NavigationNode> openSet = new List<NavigationNode>();
-        NavigationPath path = new NavigationPath(openSet);
+        List<NavigationNode> path = openSet;
 
-        foreach(NavigationNode node in FindObjectsByType<NavigationNode>(FindObjectsSortMode.None))
+        foreach(NavigationNode node in nodes)
         {
             node.gScore = float.MaxValue;
         }
@@ -45,17 +52,17 @@ public class NavigationManager : MonoBehaviour
 
             if (currentNode == end)
             {
-                path.nodes.Insert(0, end);
+                path.Insert(0, end);
 
 
                 while(currentNode != start)
                 {
                     currentNode = currentNode.cameFrom;
-                    path.nodes.Add(currentNode);
+                    path.Add(currentNode);
                 }
 
-                path.nodes.Reverse();
-                if (skipFirstNode) path.nodes.RemoveAt(0);
+                path.Reverse();
+                if (skipFirstNode) path.RemoveAt(0);
                 return path;
             }
 

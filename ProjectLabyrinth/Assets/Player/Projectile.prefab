@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 7079288548817894688}
   - component: {fileID: 3880483609047068595}
   - component: {fileID: 8515006339118050366}
+  - component: {fileID: 8433153940377721449}
   m_Layer: 0
   m_Name: Projectile
   m_TagString: Untagged
@@ -170,3 +171,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Projectile
   speed: 10
   lifetime: 2
+--- !u!114 &8433153940377721449
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3579003263570803674}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f5741e24a6e5be244a54366867f1e704, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Hazard
+  damage: 1
+  isPlayerSourced: 1

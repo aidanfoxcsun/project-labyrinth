@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4482140838626231962}
   - component: {fileID: 2114440457439515143}
+  - component: {fileID: 5421748229436026155}
   m_Layer: 0
   m_Name: NavigationManager
   m_TagString: Untagged
@@ -44,3 +45,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f9a612161dd5ce46adf8521cf265a73, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NavigationManager
+--- !u!114 &5421748229436026155
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6324652784237065685}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 35bd6ca900c7eb742b2b42e9bf58e70f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::NodeGraphGenerator
+  boundA: {x: 0, y: 0}
+  boundB: {x: 0, y: 0}
+  spacing: 1
+  nodeRadius: 0.4
+  obstacleMask:
+    serializedVersion: 2
+    m_Bits: 0
+  connectDiagonals: 1
+  nodes: []
