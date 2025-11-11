@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 7083902037903974623}
   - component: {fileID: 7001588978425282347}
   - component: {fileID: 7537635809056698945}
+  - component: {fileID: -4035996203030191068}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -185,6 +186,21 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &-4035996203030191068
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4075680991123313756}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1969a1e1cba98794ea84876217b3674f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Health
+  maxHP: 10
+  hitPoints: 10
+  isPlayer: 1
 --- !u!1 &4118750714536554650
 GameObject:
   m_ObjectHideFlags: 0

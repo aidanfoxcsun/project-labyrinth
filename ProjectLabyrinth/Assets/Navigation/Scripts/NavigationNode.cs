@@ -5,7 +5,9 @@ using UnityEngine;
 public class NavigationNode : MonoBehaviour
 {
     public NavigationNode cameFrom;
-    public List<NavigationNode> connections;
+
+    public Vector2 position;
+    public List<NavigationNode> connections = new List<NavigationNode>();
 
     // A Node for the A* Pathfinding Algorithm
     public float gScore;
@@ -13,19 +15,24 @@ public class NavigationNode : MonoBehaviour
 
     private void Awake()
     {
-        // Verifying two-way connections
-        foreach (var connection in connections)
+        if (position == null)
         {
-            if (connection == this)
-            {
-                connections.Remove(connection);
-                continue;
-            }
-            if (!connection.connections.Contains(this))
-            {
-                connection.connections.Add(this);
-            }
+            position = transform.position;
         }
+
+        // Verifying two-way connections
+        //foreach (var connection in connections)
+        //{
+        //    if (connection == this)
+        //    {
+        //        connections.Remove(connection);
+        //        continue;
+        //    }
+        //    if (!connection.connections.Contains(this))
+        //    {
+        //        connection.connections.Add(this);
+        //    }
+        //}
     }
 
     public float FScore()
@@ -36,6 +43,10 @@ public class NavigationNode : MonoBehaviour
     // Tool for visualizing connections
     private void OnDrawGizmos()
     {
+        Gizmos.color = Color.yellow;
+        Gizmos.DrawSphere(transform.position, 0.1f);
+
+        if (connections == null) return;
 
         if (connections.Count > 0)
         {

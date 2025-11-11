@@ -13,7 +13,7 @@ public class Health : MonoBehaviour
     public event System.Action OnHit;   // Subscribe to this event to enable hit behavior
     // Expand for healing behaviors
 
-    private bool isPlayer = false;
+    public bool isPlayer = false;
 
     public void SetIsPlayer(bool value)
     {
@@ -43,6 +43,7 @@ public class Health : MonoBehaviour
         if (hitPoints <= 0)
         {
             Die();
+            Debug.Log(this.name + " died!");
             return true;
         }
 
@@ -62,7 +63,7 @@ public class Health : MonoBehaviour
         if (damager != null)
         {
             Debug.Log("Damager hit!");
-            // if((isPlayer && damager.PlayerSourced) ||  (!isPlayer && !damager.PlayerSourced)) { return; }
+            if((isPlayer && damager.PlayerSourced) ||  (!isPlayer && !damager.PlayerSourced)) { return; }
             RecieveDamage(damager.DamageAmount);
         }
     }
