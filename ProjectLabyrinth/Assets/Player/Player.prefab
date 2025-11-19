@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 7001588978425282347}
   - component: {fileID: 7537635809056698945}
   - component: {fileID: -4035996203030191068}
+  - component: {fileID: 2862817731064746663}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -140,6 +141,7 @@ MonoBehaviour:
   projectilePrefab: {fileID: 3579003263570803674, guid: 70ece8b9f0fdf7d44873109ad9b455aa, type: 3}
   firePoint: {fileID: 6486080264970639897}
   projectileSpeed: 10
+  playerStats: {fileID: 0}
 --- !u!61 &7537635809056698945
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -201,6 +203,28 @@ MonoBehaviour:
   maxHP: 10
   hitPoints: 10
   isPlayer: 1
+--- !u!114 &2862817731064746663
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4075680991123313756}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be121eb661b732643bc9685e3fba9709, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerStats
+  maxHP: 5
+  flatDamage: 2
+  damageScaling: 1
+  speed: 4
+  range: 2
+  fireRate: 2
+  piercing: 0
+  spectral: 0
+  canFly: 0
+  onHitEffects: []
 --- !u!1 &4118750714536554650
 GameObject:
   m_ObjectHideFlags: 0
