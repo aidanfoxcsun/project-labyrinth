@@ -337,6 +337,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4709087906313719468, guid: a0d0bae450689c94ca7ef4df8919e096, type: 3}
+      propertyPath: standardPool.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4709087906313719468, guid: a0d0bae450689c94ca7ef4df8919e096, type: 3}
+      propertyPath: 'standardPool.Array.data[2]'
+      value: 
+      objectReference: {fileID: 11400000, guid: 95df3793cc63bf740be42e47f6c83742, type: 2}
     - target: {fileID: 7473620139743521285, guid: a0d0bae450689c94ca7ef4df8919e096, type: 3}
       propertyPath: m_Name
       value: _ItemPoolManager
