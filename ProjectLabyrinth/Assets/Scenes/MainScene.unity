@@ -459,6 +459,11 @@ MonoBehaviour:
   - {fileID: 1390904374234985786, guid: 047dea15ebd48ed4e89c054d27ce4032, type: 3}
   minRocksPerRoom: 5
   maxRocksPerRoom: 20
+  enemyPrefabs:
+  - {fileID: 4018953949069595049, guid: 1a304d6b13ea6e149a107fc891162149, type: 3}
+  - {fileID: 3297938121484162359, guid: f7a8abf69f647b74daa351ea10dee625, type: 3}
+  minEnemiesPerRoom: 2
+  maxEnemiesPerRoom: 5
   seed: 0
   targetRooms: 40
   maxBranchDegree: 3
