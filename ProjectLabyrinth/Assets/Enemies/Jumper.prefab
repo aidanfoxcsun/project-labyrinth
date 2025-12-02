@@ -173,6 +173,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyController
   behavior: {fileID: 4455087995396686361}
+  animator: {fileID: 0}
   health: {fileID: 0}
   agent: {fileID: 0}
 --- !u!114 &3018903218568739520

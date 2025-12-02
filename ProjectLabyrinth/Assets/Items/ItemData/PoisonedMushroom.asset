@@ -1,0 +1,39 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d408cbb5d410f444bacf2905f4e5efa6, type: 3}
+  m_Name: PoisonedMushroom
+  m_EditorClassIdentifier: Assembly-CSharp::ItemData
+  itemName: Poisoned Mushroom
+  description: You've been poisoned!
+  icon: {fileID: -6888756438569675735, guid: 9237c90414a31844da1656c8a52e54de, type: 3}
+  weight: 5
+  effects:
+  - rid: 8685533113252315564
+  - rid: 8685533113252315565
+  references:
+    version: 2
+    RefIds:
+    - rid: 8685533113252315564
+      type: {class: StatUpEffect, ns: , asm: Assembly-CSharp}
+      data:
+        hp: -1
+        flatDamage: 2
+        damageScaling: -0.2
+        speed: 0
+        range: 0
+        fireRate: 0
+    - rid: 8685533113252315565
+      type: {class: OnHitEffect, ns: , asm: Assembly-CSharp}
+      data:
+        poisonChance: 0.5
+        burnChance: 0
+        freezeChance: 0

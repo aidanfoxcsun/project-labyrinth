@@ -320,6 +320,8 @@ void ApplyDoors(GameObject room, Vector2Int gridPos, int doorMask)
     if ((doorMask & 8) != 0) EnableDoor(room, gridPos, "Door_W", "Wall_W", new Vector2Int(-1, 0));
 }
 
+        Vector2Int doorGrid = gridPos + offset;
+        Vector2Int nextGrid = doorGrid + dir;
 
     void ApplyDoubleDoors(GameObject room, Vector2Int gridPos)
 {
@@ -377,6 +379,22 @@ void ApplyDoors(GameObject room, Vector2Int gridPos, int doorMask)
 
 
 
+void TryEnablePair(GameObject room, string aName, string bName, bool shouldEnable, Vector2Int dir, Vector2Int parent)
+{
+    if (!shouldEnable) return;
+
+    var a = room.transform.Find(aName);
+    var b = room.transform.Find(bName);
+    if (a != null) { a.gameObject.SetActive(true); var d = a.GetComponent<Door>(); if (d){ d.direction = dir; d.parentGrid = parent; } }
+    if (b != null) { b.gameObject.SetActive(true); var d = b.GetComponent<Door>(); if (d){ d.direction = dir; d.parentGrid = parent; } }
+}
+
+
+    void EnableDoor(GameObject room, Vector2Int gridPos, string doorName, string wallName, Vector2Int dir)
+    {
+        var door = room.transform.Find(doorName);
+        if (door == null) return;
+        door.gameObject.SetActive(true);
 
 
 

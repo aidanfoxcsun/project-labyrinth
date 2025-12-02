@@ -5,6 +5,7 @@ using UnityEngine;
 public class EnemyController : MonoBehaviour
 {
     public EnemyBehavior behavior;
+    public Animator animator;
 
     [HideInInspector] public Health health;
     [HideInInspector] public NavigationAgent agent;
@@ -23,5 +24,23 @@ public class EnemyController : MonoBehaviour
     private void Update()
     {
         behavior?.OnUpdate();
+
+        if (animator != null)
+        {
+            Vector3 dir = agent.GetCurrentDirection();
+
+            if (dir.x < 0)
+            {
+                GetComponent<SpriteRenderer>().flipX = true;
+            }
+            else if (dir.x > 0)
+            {
+                GetComponent<SpriteRenderer>().flipX = false;
+            }
+
+                animator.SetBool("isWalking", agent.GetIsWalking());
+            animator.SetFloat("DirX", dir.x);
+            animator.SetFloat("DirY", dir.y);
+        }
     }
 }
