@@ -14,6 +14,17 @@ public class DungeonGenerator : MonoBehaviour
     public int minRocksPerRoom = 2;
     public int maxRocksPerRoom = 5;
 
+    [Header("Enemy Spawning")]
+    public GameObject[] enemyPrefabs;
+
+    [Header("Enemy Spawning Settings")]
+    public int minEnemiesPerRoom = 2;
+    public int maxEnemiesPerRoom = 5;
+
+    [Header("Treasure Room Settings")]
+    public GameObject treasureItemPrefab;
+
+
     [Header("Generation Settings")]
     public int seed = 0;
     public int targetRooms = 12;
@@ -133,44 +144,77 @@ public class DungeonGenerator : MonoBehaviour
 
     // ======================== ROOM TYPE LOGIC ========================
     void AssignRoomTypes(Vector2Int startPos)
+{
+    // Default: all normal
+    foreach (var pos in occupied)
+        roomTypes[pos] = RoomType.Normal;
+
+    // Start room
+    roomTypes[startPos] = RoomType.Start;
+
+    // ----------------------------
+    // BFS distance map from start
+    // ----------------------------
+    Dictionary<Vector2Int, int> dist = new();
+    Queue<Vector2Int> q = new();
+
+    q.Enqueue(startPos);
+    dist[startPos] = 0;
+
+    while (q.Count > 0)
     {
-        foreach (var pos in occupied)
-            roomTypes[pos] = RoomType.Normal;
-        roomTypes[startPos] = RoomType.Start;
-
-        Dictionary<Vector2Int, int> dist = new();
-        Queue<Vector2Int> q = new();
-        q.Enqueue(startPos);
-        dist[startPos] = 0;
-
-        while (q.Count > 0)
+        var cur = q.Dequeue();
+        foreach (var d in directions)
         {
-            var cur = q.Dequeue();
-            foreach (var d in directions)
+            var nb = cur + d;
+            if (occupied.Contains(nb) && !dist.ContainsKey(nb))
             {
-                var nb = cur + d;
-                if (occupied.Contains(nb) && !dist.ContainsKey(nb))
-                {
-                    dist[nb] = dist[cur] + 1;
-                    q.Enqueue(nb);
-                }
+                dist[nb] = dist[cur] + 1;
+                q.Enqueue(nb);
             }
         }
-
-        Vector2Int farthest = startPos;
-        int maxDist = 0;
-        foreach (var kv in dist)
-        {
-            if (kv.Value > maxDist)
-            {
-                maxDist = kv.Value;
-                farthest = kv.Key;
-            }
-        }
-
-        if (maxDist >= minBossDistance)
-            roomTypes[farthest] = RoomType.Boss;
     }
+
+    // ----------------------------
+    // Find farthest room → Boss
+    // ----------------------------
+    Vector2Int farthest = startPos;
+    int maxDist = 0;
+
+    foreach (var kv in dist)
+    {
+        if (kv.Value > maxDist)
+        {
+            maxDist = kv.Value;
+            farthest = kv.Key;
+        }
+    }
+
+    if (maxDist >= minBossDistance)
+        roomTypes[farthest] = RoomType.Boss;
+
+    Vector2Int treasure = startPos;
+    int treasureDist = -1;
+
+    foreach (var kv in dist)
+    {
+        // skip boss room
+        if (kv.Key == farthest) continue;
+
+        // skip start room
+        if (kv.Key == startPos) continue;
+
+        if (kv.Value > treasureDist)
+        {
+            treasureDist = kv.Value;
+            treasure = kv.Key;
+        }
+    }
+
+    // Only assign if it's not super close to start
+    if (treasureDist >= 2)
+        roomTypes[treasure] = RoomType.Treasure;
+}
 
     // ======================== SPAWN ROOMS ========================
     void SpawnRoom(Vector2Int gridPos, int doorMask, RoomType type)
@@ -211,7 +255,40 @@ public class DungeonGenerator : MonoBehaviour
             ApplyDoors(room, gridPos, doorMask);
 
         SpawnRocksInRoom(gridPos, room, type);
-        
+
+        // === Spawn Treasure Item ===
+if (type == RoomType.Treasure)
+{
+    if (treasureItemPrefab != null)
+    {
+        Instantiate(
+            treasureItemPrefab,
+            room.transform.position, // center of room
+            Quaternion.identity,
+            room.transform
+        );
+    }
+}
+
+
+// === Enemy Spawner Integration ===
+if (type != RoomType.Treasure && type != RoomType.Boss)
+{
+    RoomEnemySpawner spawner = room.GetComponent<RoomEnemySpawner>();
+    if (spawner == null)
+        spawner = room.AddComponent<RoomEnemySpawner>();
+
+    spawner.enemyPrefabs = enemyPrefabs;
+    spawner.minEnemies = minEnemiesPerRoom;
+    spawner.maxEnemies = maxEnemiesPerRoom;
+
+    spawner.obstacleMask = LayerMask.GetMask("Rocks");
+    spawner.doorMask = LayerMask.GetMask("Doors");
+
+    spawner.InitializeSpawner(room.transform, type);
+}
+
+// === Large Room registration ===
 if (isLargeRoom)
 {
     Vector2Int[] offsets =
@@ -233,7 +310,6 @@ else
 {
     spawnedRooms[gridPos] = room;
 }
-
     }
 
 void ApplyDoors(GameObject room, Vector2Int gridPos, int doorMask)
@@ -244,6 +320,8 @@ void ApplyDoors(GameObject room, Vector2Int gridPos, int doorMask)
     if ((doorMask & 8) != 0) EnableDoor(room, gridPos, "Door_W", "Wall_W", new Vector2Int(-1, 0));
 }
 
+        Vector2Int doorGrid = gridPos + offset;
+        Vector2Int nextGrid = doorGrid + dir;
 
     void ApplyDoubleDoors(GameObject room, Vector2Int gridPos)
 {
@@ -301,6 +379,22 @@ void ApplyDoors(GameObject room, Vector2Int gridPos, int doorMask)
 
 
 
+void TryEnablePair(GameObject room, string aName, string bName, bool shouldEnable, Vector2Int dir, Vector2Int parent)
+{
+    if (!shouldEnable) return;
+
+    var a = room.transform.Find(aName);
+    var b = room.transform.Find(bName);
+    if (a != null) { a.gameObject.SetActive(true); var d = a.GetComponent<Door>(); if (d){ d.direction = dir; d.parentGrid = parent; } }
+    if (b != null) { b.gameObject.SetActive(true); var d = b.GetComponent<Door>(); if (d){ d.direction = dir; d.parentGrid = parent; } }
+}
+
+
+    void EnableDoor(GameObject room, Vector2Int gridPos, string doorName, string wallName, Vector2Int dir)
+    {
+        var door = room.transform.Find(doorName);
+        if (door == null) return;
+        door.gameObject.SetActive(true);
 
 
 
@@ -336,7 +430,8 @@ void TryEnablePair(GameObject room, string aName, string bName, bool shouldEnabl
 
     void SpawnRocksInRoom(Vector2Int gridPos, GameObject room, RoomType type)
     {
-        if (type == RoomType.Start || type == RoomType.Boss) return;
+        if (type == RoomType.Start || type == RoomType.Boss || type == RoomType.Treasure)
+        return;
         if (rockPrefabs == null || rockPrefabs.Length == 0) return;
 
         Vector3 basePos = room.transform.position;
@@ -350,29 +445,47 @@ void TryEnablePair(GameObject room, string aName, string bName, bool shouldEnabl
         int height = 5;
 
         // === Isaac-style rock pattern library ===
-        List<int[,]> patterns = new List<int[,]>
-    {
-        new int[,] { {0,0,1,1,1,1,1,0,0}, {0,1,0,0,0,0,0,1,0}, {1,0,0,0,0,0,0,0,1}, {0,1,0,0,0,0,0,1,0}, {0,0,1,1,1,1,1,0,0} },
-        new int[,] { {1,1,0,0,0,0,0,1,1}, {1,0,0,0,0,0,0,0,1}, {0,0,0,0,0,0,0,0,0}, {1,0,0,0,0,0,0,0,1}, {1,1,0,0,0,0,0,1,1} },
-        new int[,] { {1,0,0,0,0,0,0,0,1}, {1,0,0,0,0,0,0,0,1}, {1,0,0,0,0,0,0,0,1}, {1,0,0,0,0,0,0,0,1}, {1,0,0,0,0,0,0,0,1} },
-        new int[,] { {0,0,0,0,0,0,0,0,0}, {1,1,1,1,1,1,1,1,1}, {0,0,0,0,0,0,0,0,0}, {1,1,1,1,1,1,1,1,1}, {0,0,0,0,0,0,0,0,0} },
-        new int[,] { {0,0,0,0,0,0,0,0,0}, {0,1,1,1,1,1,1,1,0}, {0,1,1,1,1,1,1,1,0}, {0,1,1,1,1,1,1,1,0}, {0,0,0,0,0,0,0,0,0} },
-        new int[,] { {1,0,0,0,0,0,0,0,0}, {0,1,0,0,0,0,0,0,0}, {0,0,1,0,0,0,0,0,0}, {0,0,0,1,0,0,0,0,0}, {0,0,0,0,1,0,0,0,0} },
-        new int[,] { {1,0,0,0,0,0,0,0,1}, {0,1,0,0,0,0,0,1,0}, {0,0,1,0,0,0,1,0,0}, {0,1,0,0,0,0,0,1,0}, {1,0,0,0,0,0,0,0,1} },
-        new int[,] { {1,1,1,0,0,0,0,0,0}, {1,0,0,0,0,0,0,0,0}, {1,0,0,0,0,0,0,0,0}, {1,0,0,0,0,0,0,0,0}, {1,1,1,0,0,0,0,0,0} },
-        new int[,] { {0,0,0,0,0,0,1,1,1}, {0,0,0,0,0,0,0,0,1}, {0,0,0,0,0,0,0,0,1}, {0,0,0,0,0,0,0,0,1}, {0,0,0,0,0,0,1,1,1} },
-        new int[,] { {0,1,1,1,0,1,1,1,0}, {1,0,0,0,1,0,0,0,1}, {1,0,0,0,1,0,0,0,1}, {1,0,0,0,1,0,0,0,1}, {0,1,1,1,0,1,1,1,0} },
-        new int[,] { {0,0,0,1,1,1,0,0,0}, {0,0,0,1,1,1,0,0,0}, {1,1,1,1,1,1,1,1,1}, {0,0,0,1,1,1,0,0,0}, {0,0,0,1,1,1,0,0,0} },
-        new int[,] { {1,0,1,0,1,0,1,0,1}, {0,1,0,1,0,1,0,1,0}, {1,0,1,0,1,0,1,0,1}, {0,1,0,1,0,1,0,1,0}, {1,0,1,0,1,0,1,0,1} },
-        new int[,] { {1,1,1,1,1,1,1,1,1}, {1,0,0,0,0,0,0,0,1}, {1,0,0,0,0,0,0,0,1}, {1,0,0,0,0,0,0,0,1}, {1,1,1,1,1,1,1,1,1} },
-        new int[,] { {1,0,0,1,0,0,1,0,0}, {0,1,0,0,1,0,0,1,0}, {0,0,1,0,0,1,0,0,1}, {0,1,0,0,1,0,0,1,0}, {1,0,0,1,0,0,1,0,0} },
-        new int[,] { {0,0,0,0,0,0,0,0,0}, {0,0,0,0,0,0,0,0,0}, {0,1,1,1,1,1,1,1,0}, {1,1,1,1,1,1,1,1,1}, {1,1,1,1,1,1,1,1,1} },
-        new int[,] { {1,1,1,1,1,1,1,1,1}, {1,1,1,1,1,1,1,1,1}, {0,1,1,1,1,1,1,1,0}, {0,0,0,0,0,0,0,0,0}, {0,0,0,0,0,0,0,0,0} },
-        new int[,] { {1,1,1,1,1,1,1,1,1}, {1,0,0,0,0,0,0,0,0}, {1,0,0,0,0,0,0,0,0}, {1,0,0,0,0,0,0,0,0}, {1,1,1,1,1,1,1,1,1} },
-        new int[,] { {0,0,0,0,0,0,0,0,0}, {1,0,0,0,0,0,0,0,1}, {1,0,0,0,0,0,0,0,1}, {1,0,0,0,0,0,0,0,1}, {1,1,1,1,1,1,1,1,1} },
-        new int[,] { {1,1,1,1,1,1,1,1,1}, {1,0,0,0,0,0,0,0,1}, {1,0,0,0,0,0,0,0,1}, {1,0,0,0,0,0,0,0,1}, {0,0,0,0,0,0,0,0,0} },
-        new int[,] { {0,1,0,0,1,0,0,1,0}, {1,0,0,1,0,0,1,0,1}, {0,0,1,0,0,1,0,0,0}, {1,0,0,0,1,0,0,0,1}, {0,1,0,1,0,1,0,1,0} }
-    };
+List<int[,]> patterns = new List<int[,]>
+{
+    new int[,] { {0,0,1,1,1,1,1,0,0}, {0,1,0,0,0,0,0,1,0}, {1,0,0,0,0,0,0,0,1}, {0,1,0,0,0,0,0,1,0}, {0,0,1,1,1,1,1,0,0} },
+
+    new int[,] { {1,1,0,0,0,0,0,1,1}, {1,0,0,0,0,0,0,0,1}, {0,0,0,0,0,0,0,0,0}, {1,0,0,0,0,0,0,0,1}, {1,1,0,0,0,0,0,1,1} },
+
+    new int[,] { {1,0,0,0,0,0,0,0,1}, {1,0,0,0,0,0,0,0,1}, {1,0,0,0,0,0,0,0,1}, {1,0,0,0,0,0,0,0,1}, {1,0,0,0,0,0,0,0,1} },
+
+    new int[,] { {0,0,0,0,0,0,0,0,0}, {1,1,1,1,1,1,1,1,1}, {0,0,0,0,0,0,0,0,0}, {1,1,1,1,1,1,1,1,1}, {0,0,0,0,0,0,0,0,0} },
+
+    new int[,] { {0,0,0,0,0,0,0,0,0}, {0,1,1,1,1,1,1,1,0}, {0,1,1,1,1,1,1,1,0}, {0,1,1,1,1,1,1,1,0}, {0,0,0,0,0,0,0,0,0} },
+
+    new int[,] { {1,0,0,0,0,0,0,0,0}, {0,1,0,0,0,0,0,0,0}, {0,0,1,0,0,0,0,0,0}, {0,0,0,1,0,0,0,0,0}, {0,0,0,0,1,0,0,0,0} },
+
+    new int[,] { {1,0,0,0,0,0,0,0,1}, {0,1,0,0,0,0,0,1,0}, {0,0,1,0,0,0,1,0,0}, {0,1,0,0,0,0,0,1,0}, {1,0,0,0,0,0,0,0,1} },
+
+    new int[,] { {1,1,1,0,0,0,0,0,0}, {1,0,0,0,0,0,0,0,0}, {1,0,0,0,0,0,0,0,0}, {1,0,0,0,0,0,0,0,0}, {1,1,1,0,0,0,0,0,0} },
+
+    new int[,] { {0,0,0,0,0,0,1,1,1}, {0,0,0,0,0,0,0,0,1}, {0,0,0,0,0,0,0,0,1}, {0,0,0,0,0,0,0,0,1}, {0,0,0,0,0,0,1,1,1} },
+
+    new int[,] { {0,1,1,1,0,1,1,1,0}, {1,0,0,0,1,0,0,0,1}, {1,0,0,0,1,0,0,0,1}, {1,0,0,0,1,0,0,0,1}, {0,1,1,1,0,1,1,1,0} },
+
+    new int[,] { {0,0,0,1,1,1,0,0,0}, {0,0,0,1,1,1,0,0,0}, {1,1,1,1,1,1,1,1,1}, {0,0,0,1,1,1,0,0,0}, {0,0,0,1,1,1,0,0,0} },
+
+    new int[,] { {1,0,1,0,1,0,1,0,1}, {0,1,0,1,0,1,0,1,0}, {1,0,1,0,1,0,1,0,1}, {0,1,0,1,0,1,0,1,0}, {1,0,1,0,1,0,1,0,1} },
+
+    new int[,] { {1,0,0,1,0,0,1,0,0}, {0,1,0,0,1,0,0,1,0}, {0,0,1,0,0,1,0,0,1}, {0,1,0,0,1,0,0,1,0}, {1,0,0,1,0,0,1,0,0} },
+
+    new int[,] { {0,0,0,0,0,0,0,0,0}, {0,0,0,0,0,0,0,0,0}, {0,1,1,1,1,1,1,1,0}, {1,1,1,1,1,1,1,1,1}, {1,1,1,1,1,1,1,1,1} },
+
+    new int[,] { {1,1,1,1,1,1,1,1,1}, {1,1,1,1,1,1,1,1,1}, {0,1,1,1,1,1,1,1,0}, {0,0,0,0,0,0,0,0,0}, {0,0,0,0,0,0,0,0,0} },
+
+    new int[,] { {1,1,1,1,1,1,1,1,1}, {1,0,0,0,0,0,0,0,0}, {1,0,0,0,0,0,0,0,0}, {1,0,0,0,0,0,0,0,0}, {1,1,1,1,1,1,1,1,1} },
+
+    new int[,] { {0,0,0,0,0,0,0,0,0}, {1,0,0,0,0,0,0,0,1}, {1,0,0,0,0,0,0,0,1}, {1,0,0,0,0,0,0,0,1}, {1,1,1,1,1,1,1,1,1} },
+
+    new int[,] { {1,1,1,1,1,1,1,1,1}, {1,0,0,0,0,0,0,0,1}, {1,0,0,0,0,0,0,0,1}, {1,0,0,0,0,0,0,0,1}, {0,0,0,0,0,0,0,0,0} },
+
+    new int[,] { {0,1,0,0,1,0,0,1,0}, {1,0,0,1,0,0,1,0,1}, {0,0,1,0,0,1,0,0,0}, {1,0,0,0,1,0,0,0,1}, {0,1,0,1,0,1,0,1,0} }
+};
+
 
         // Pick a valid pattern
         int[,] pattern = patterns[Random.Range(0, patterns.Count)];
@@ -607,10 +720,4 @@ void MarkLargeRoomOccupied(Vector2Int origin)
         occupiedByLargeRooms.Add(c);
     }
 }
-
-
-
-
-
-
 }

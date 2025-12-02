@@ -455,7 +455,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DungeonGenerator
   roomPrefab: {fileID: 3738668724862959439, guid: 03781b73cc420d74eac9b0e109cd457d, type: 3}
-  largeRoomPrefab: {fileID: 3738668724862959439, guid: 6b0f90da112d4df4e9c9fc3a03f903cf, type: 3}
+  largeRoomPrefab: {fileID: 0}
   rockPrefabs:
   - {fileID: 1390904374234985786, guid: 047dea15ebd48ed4e89c054d27ce4032, type: 3}
   minRocksPerRoom: 5
@@ -466,8 +466,7 @@ MonoBehaviour:
   minEnemiesPerRoom: 2
   maxEnemiesPerRoom: 5
   seed: 0
-  targetRooms: 100
-  maxBranchDegree: 3
+  targetRooms: 40
   minBossDistance: 5
   roomSpacing: {x: 12, y: 8}
   autoDetectSpacing: 1

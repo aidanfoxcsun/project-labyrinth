@@ -8,10 +8,27 @@ public class Door : MonoBehaviour
     public Vector2Int parentGrid;
     private DungeonGenerator generator;
 
+    // === Added for room locking ===
+    public bool locked = false;
+
+    public void SetLocked(bool state)
+    {
+        locked = state;
+        // (Optional: change sprite / color later)
+    }
+
+public void SetDoorActive(bool active)
+{
+    var col = GetComponent<Collider2D>();
+    if (col != null)
+        col.enabled = active;
+}
+
     void Start() => generator = FindObjectOfType<DungeonGenerator>();
 
     private void OnTriggerEnter2D(Collider2D other)
     {
+        if (locked) return;   // <--- prevents teleporting when locked
         if (!other.CompareTag("Player")) return;
         if (generator == null) return;
 
@@ -35,12 +52,11 @@ public class Door : MonoBehaviour
             return;
         }
 
-        // Opposite direction
-        Vector2Int opp = -direction;
-        string baseDoor = opp == Vector2Int.up ? "Door_N" :
-                          opp == Vector2Int.down ? "Door_S" :
-                          opp == Vector2Int.right ? "Door_E" :
-                          "Door_W";
+            Vector2Int oppositeDir = -direction;
+            string oppositeDoorName = oppositeDir == Vector2Int.up ? "Door_N" :
+                                      oppositeDir == Vector2Int.down ? "Door_S" :
+                                      oppositeDir == Vector2Int.right ? "Door_E" :
+                                      "Door_W";
 
         // Current suffix
         string thisDoor = gameObject.name;
@@ -94,22 +110,12 @@ public class Door : MonoBehaviour
             d.GetComponent<Collider2D>().enabled = false;
         if (targetDoorCollider) targetDoorCollider.enabled = false;
 
-        // --- nudge player slightly outward from the door to prevent re-trigger ---
-        Vector3 offset = Vector3.zero;
-        if (targetDoorCollider != null)
-        {
-            string n = targetDoorCollider.name;
-            if (n.Contains("N")) offset = Vector3.up * 0.8f;
-            else if (n.Contains("S")) offset = Vector3.down * 0.8f;
-            else if (n.Contains("E")) offset = Vector3.right * 0.8f;
-            else if (n.Contains("W")) offset = Vector3.left * 0.8f;
-        }
+        player.transform.position = targetPos;
 
-        player.transform.position = targetPos + offset;
+        yield return new WaitForSeconds(0.1f);
 
-        yield return new WaitForSeconds(0.15f);
-
-        foreach (Door d in allDoors)
+        Door[] doorsAgain = FindObjectsOfType<Door>();
+        foreach (Door d in doorsAgain)
             d.GetComponent<Collider2D>().enabled = true;
         if (targetDoorCollider) targetDoorCollider.enabled = true;
     }
