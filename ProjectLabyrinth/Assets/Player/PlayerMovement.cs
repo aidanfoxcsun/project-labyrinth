@@ -12,6 +12,8 @@ public class PlayerMovement : MonoBehaviour
     public Transform firePoint;
     public float projectileSpeed = 10f;
 
+    public CameraFollow cam;
+
     // Loading Stats
     public PlayerStats playerStats;
 
@@ -74,5 +76,14 @@ public class PlayerMovement : MonoBehaviour
         if (projCol && playerCol) Physics2D.IgnoreCollision(projCol, playerCol);
 
         proj.GetComponent<Projectile>()?.SetDirection(lastAim);
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Room"))
+        {
+            GameObject room = collision.gameObject;
+            cam.SetTargetDestination(new Vector2(room.transform.position.x, room.transform.position.y));
+        }
     }
 }

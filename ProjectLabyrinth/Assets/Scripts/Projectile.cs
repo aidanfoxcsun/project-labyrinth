@@ -24,7 +24,7 @@ public class Projectile : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("Player")) return; // don't self-hit
+        if (other.CompareTag("Player") || other.CompareTag("Room")) return; // don't self-hit
         Destroy(gameObject, 0.05f);
     }
 }

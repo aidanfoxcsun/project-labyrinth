@@ -1,3 +1,4 @@
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -82,61 +83,61 @@ public class DungeonGenerator : MonoBehaviour
         int placed = 1;
 
         while (placed < targetRooms && frontier.Count > 0)
-{
-    Vector2Int current = frontier[Random.Range(0, frontier.Count)];
-    bool expanded = false;
+        {
+            Vector2Int current = frontier[Random.Range(0, frontier.Count)];
+            bool expanded = false;
 
-    List<int> order = new() { 0, 1, 2, 3 };
-    for (int i = 0; i < order.Count; i++)
-    {
-        int j = Random.Range(i, order.Count);
-        (order[i], order[j]) = (order[j], order[i]);
-    }
+            List<int> order = new() { 0, 1, 2, 3 };
+            for (int i = 0; i < order.Count; i++)
+            {
+                int j = Random.Range(i, order.Count);
+                (order[i], order[j]) = (order[j], order[i]);
+            }
 
-    foreach (int idx in order)
-    {
-        Vector2Int next = current + directions[idx];
-        if (occupied.Contains(next)) continue;
-        if (CountOccupiedNeighbors(next) > 1) continue;
+            foreach (int idx in order)
+            {
+                Vector2Int next = current + directions[idx];
+                if (occupied.Contains(next)) continue;
+                if (CountOccupiedNeighbors(next) > 1) continue;
 
-        // Try 2×2 first
-        bool placeLarge = Random.value < 0.25f && largeRoomPrefab != null && CanPlaceLargeRoom(next);
-        if (placeLarge)
-{
-    MarkLargeRoomOccupied(next);
-    frontier.Add(next);
-    placed += 4;
-    expanded = true;
-    continue;
-}
+                // Try 2×2 first
+                bool placeLarge = Random.value < 0.25f && largeRoomPrefab != null && CanPlaceLargeRoom(next);
+                if (placeLarge)
+                {
+                    MarkLargeRoomOccupied(next);
+                    frontier.Add(next);
+                    placed += 4;
+                    expanded = true;
+                    continue;
+                }
 
 
-        // Otherwise small
-        occupied.Add(next);
-        frontier.Add(next);
-        placed++;
-        expanded = true;
-        break;
-    }
+                // Otherwise small
+                occupied.Add(next);
+                frontier.Add(next);
+                placed++;
+                expanded = true;
+                break;
+            }
 
-    if (!expanded)
-        frontier.Remove(current);
-}
+            if (!expanded)
+                frontier.Remove(current);
+        }
 
         AssignRoomTypes(startPos);
 
         foreach (Vector2Int pos in occupied)
-{
-    // Skip if already spawned
-    if (spawnedRooms.ContainsKey(pos)) continue;
+        {
+            // Skip if already spawned
+            if (spawnedRooms.ContainsKey(pos)) continue;
 
-    // Skip if this cell is part of a large room that has already been spawned
-    if (occupiedByLargeRooms.Contains(pos) && !IsLargeRoomOrigin(pos))
-        continue;
+            // Skip if this cell is part of a large room that has already been spawned
+            if (occupiedByLargeRooms.Contains(pos) && !IsLargeRoomOrigin(pos))
+                continue;
 
-    int mask = ComputeDoorMask(pos);
-    SpawnRoom(pos, mask, roomTypes[pos]);
-}
+            int mask = ComputeDoorMask(pos);
+            SpawnRoom(pos, mask, roomTypes[pos]);
+        }
 
 
         Debug.Log($"Generated {occupied.Count} rooms (including large ones).");
@@ -144,77 +145,77 @@ public class DungeonGenerator : MonoBehaviour
 
     // ======================== ROOM TYPE LOGIC ========================
     void AssignRoomTypes(Vector2Int startPos)
-{
-    // Default: all normal
-    foreach (var pos in occupied)
-        roomTypes[pos] = RoomType.Normal;
-
-    // Start room
-    roomTypes[startPos] = RoomType.Start;
-
-    // ----------------------------
-    // BFS distance map from start
-    // ----------------------------
-    Dictionary<Vector2Int, int> dist = new();
-    Queue<Vector2Int> q = new();
-
-    q.Enqueue(startPos);
-    dist[startPos] = 0;
-
-    while (q.Count > 0)
     {
-        var cur = q.Dequeue();
-        foreach (var d in directions)
+        // Default: all normal
+        foreach (var pos in occupied)
+            roomTypes[pos] = RoomType.Normal;
+
+        // Start room
+        roomTypes[startPos] = RoomType.Start;
+
+        // ----------------------------
+        // BFS distance map from start
+        // ----------------------------
+        Dictionary<Vector2Int, int> dist = new();
+        Queue<Vector2Int> q = new();
+
+        q.Enqueue(startPos);
+        dist[startPos] = 0;
+
+        while (q.Count > 0)
         {
-            var nb = cur + d;
-            if (occupied.Contains(nb) && !dist.ContainsKey(nb))
+            var cur = q.Dequeue();
+            foreach (var d in directions)
             {
-                dist[nb] = dist[cur] + 1;
-                q.Enqueue(nb);
+                var nb = cur + d;
+                if (occupied.Contains(nb) && !dist.ContainsKey(nb))
+                {
+                    dist[nb] = dist[cur] + 1;
+                    q.Enqueue(nb);
+                }
             }
         }
-    }
 
-    // ----------------------------
-    // Find farthest room → Boss
-    // ----------------------------
-    Vector2Int farthest = startPos;
-    int maxDist = 0;
+        // ----------------------------
+        // Find farthest room → Boss
+        // ----------------------------
+        Vector2Int farthest = startPos;
+        int maxDist = 0;
 
-    foreach (var kv in dist)
-    {
-        if (kv.Value > maxDist)
+        foreach (var kv in dist)
         {
-            maxDist = kv.Value;
-            farthest = kv.Key;
+            if (kv.Value > maxDist)
+            {
+                maxDist = kv.Value;
+                farthest = kv.Key;
+            }
         }
-    }
 
-    if (maxDist >= minBossDistance)
-        roomTypes[farthest] = RoomType.Boss;
+        if (maxDist >= minBossDistance)
+            roomTypes[farthest] = RoomType.Boss;
 
-    Vector2Int treasure = startPos;
-    int treasureDist = -1;
+        Vector2Int treasure = startPos;
+        int treasureDist = -1;
 
-    foreach (var kv in dist)
-    {
-        // skip boss room
-        if (kv.Key == farthest) continue;
-
-        // skip start room
-        if (kv.Key == startPos) continue;
-
-        if (kv.Value > treasureDist)
+        foreach (var kv in dist)
         {
-            treasureDist = kv.Value;
-            treasure = kv.Key;
-        }
-    }
+            // skip boss room
+            if (kv.Key == farthest) continue;
 
-    // Only assign if it's not super close to start
-    if (treasureDist >= 2)
-        roomTypes[treasure] = RoomType.Treasure;
-}
+            // skip start room
+            if (kv.Key == startPos) continue;
+
+            if (kv.Value > treasureDist)
+            {
+                treasureDist = kv.Value;
+                treasure = kv.Key;
+            }
+        }
+
+        // Only assign if it's not super close to start
+        if (treasureDist >= 2)
+            roomTypes[treasure] = RoomType.Treasure;
+    }
 
     // ======================== SPAWN ROOMS ========================
     void SpawnRoom(Vector2Int gridPos, int doorMask, RoomType type)
@@ -222,11 +223,11 @@ public class DungeonGenerator : MonoBehaviour
 
         // Skip small rooms if this cell is inside a large room but not its origin
         if (occupiedByLargeRooms.Contains(gridPos) && !IsLargeRoomOrigin(gridPos))
-         return;
+            return;
 
         // Skip duplicates (large or small)
         if (spawnedRooms.ContainsKey(gridPos))
-        return;
+            return;
 
 
         bool isLargeRoom = IsLargeRoomOrigin(gridPos);
@@ -257,75 +258,77 @@ public class DungeonGenerator : MonoBehaviour
         SpawnRocksInRoom(gridPos, room, type);
 
         // === Spawn Treasure Item ===
-if (type == RoomType.Treasure)
-{
-    if (treasureItemPrefab != null)
-    {
-        Instantiate(
-            treasureItemPrefab,
-            room.transform.position, // center of room
-            Quaternion.identity,
-            room.transform
-        );
-    }
-}
+        if (type == RoomType.Treasure)
+        {
+            if (treasureItemPrefab != null)
+            {
+                Instantiate(
+                    treasureItemPrefab,
+                    room.transform.position, // center of room
+                    Quaternion.identity,
+                    room.transform
+                );
+            }
+        }
 
+        room.GetComponentInChildren<NodeGraphGenerator>().GenerateGraph();
 
-// === Enemy Spawner Integration ===
-if (type != RoomType.Treasure && type != RoomType.Boss)
-{
-    RoomEnemySpawner spawner = room.GetComponent<RoomEnemySpawner>();
-    if (spawner == null)
-        spawner = room.AddComponent<RoomEnemySpawner>();
+        // === Enemy Spawner Integration ===
+        if (type != RoomType.Treasure && type != RoomType.Boss)
+        {
+            RoomEnemySpawner spawner = room.GetComponent<RoomEnemySpawner>();
+            if (spawner == null)
+                spawner = room.AddComponent<RoomEnemySpawner>();
 
-    spawner.enemyPrefabs = enemyPrefabs;
-    spawner.minEnemies = minEnemiesPerRoom;
-    spawner.maxEnemies = maxEnemiesPerRoom;
+            spawner.enemyPrefabs = enemyPrefabs;
+            spawner.minEnemies = minEnemiesPerRoom;
+            spawner.maxEnemies = maxEnemiesPerRoom;
 
-    spawner.obstacleMask = LayerMask.GetMask("Rocks");
-    spawner.doorMask = LayerMask.GetMask("Doors");
+            spawner.obstacleMask = LayerMask.GetMask("Rocks");
+            spawner.doorMask = LayerMask.GetMask("Doors");
 
-    spawner.InitializeSpawner(room.transform, type);
-}
+            spawner.InitializeSpawner(room.transform, type);
+        }
 
-// === Large Room registration ===
-if (isLargeRoom)
-{
-    Vector2Int[] offsets =
-    {
+        // === Large Room registration ===
+        if (isLargeRoom)
+        {
+            Vector2Int[] offsets =
+            {
         Vector2Int.zero,
         Vector2Int.right,
         Vector2Int.up,
         new Vector2Int(1, 1)
     };
 
-    foreach (var o in offsets)
+            foreach (var o in offsets)
+            {
+                Vector2Int cell = gridPos + o;
+                if (!spawnedRooms.ContainsKey(cell))
+                    spawnedRooms[cell] = room;
+            }
+        }
+        else
+        {
+            spawnedRooms[gridPos] = room;
+        }
+
+    }
+
+    void ApplyDoors(GameObject room, Vector2Int gridPos, int doorMask)
     {
-        Vector2Int cell = gridPos + o;
-        if (!spawnedRooms.ContainsKey(cell))
-            spawnedRooms[cell] = room;
-    }
-}
-else
-{
-    spawnedRooms[gridPos] = room;
-}
+        if ((doorMask & 1) != 0) EnableDoor(room, gridPos, "Door_N", "Wall_N", new Vector2Int(0, 1));
+        if ((doorMask & 2) != 0) EnableDoor(room, gridPos, "Door_E", "Wall_E", new Vector2Int(1, 0));
+        if ((doorMask & 4) != 0) EnableDoor(room, gridPos, "Door_S", "Wall_S", new Vector2Int(0, -1));
+        if ((doorMask & 8) != 0) EnableDoor(room, gridPos, "Door_W", "Wall_W", new Vector2Int(-1, 0));
     }
 
-void ApplyDoors(GameObject room, Vector2Int gridPos, int doorMask)
-{
-    if ((doorMask & 1) != 0) EnableDoor(room, gridPos, "Door_N", "Wall_N", new Vector2Int(0, 1));
-    if ((doorMask & 2) != 0) EnableDoor(room, gridPos, "Door_E", "Wall_E", new Vector2Int(1, 0));
-    if ((doorMask & 4) != 0) EnableDoor(room, gridPos, "Door_S", "Wall_S", new Vector2Int(0, -1));
-    if ((doorMask & 8) != 0) EnableDoor(room, gridPos, "Door_W", "Wall_W", new Vector2Int(-1, 0));
-}
-
-        Vector2Int doorGrid = gridPos + offset;
-        Vector2Int nextGrid = doorGrid + dir;
+    //Vector2Int doorGrid = gridPos + offset;
+    //Vector2Int nextGrid = doorGrid + dir;
 
     void ApplyDoubleDoors(GameObject room, Vector2Int gridPos)
-{
-    (string name, Vector2Int localOffset, Vector2Int dir)[] doors = {
+    {
+        (string name, Vector2Int localOffset, Vector2Int dir)[] doors = {
         ("Door_N1", new Vector2Int(0,1), new Vector2Int(0,1)),
         ("Door_N2", new Vector2Int(1,1), new Vector2Int(0,1)),
         ("Door_S1", new Vector2Int(0,0), new Vector2Int(0,-1)),
@@ -336,78 +339,79 @@ void ApplyDoors(GameObject room, Vector2Int gridPos, int doorMask)
         ("Door_W2", new Vector2Int(0,1), new Vector2Int(-1,0))
     };
 
-    foreach (var (name, offset, dir) in doors)
-    {
-        var door = room.transform.Find(name);
-        if (door == null) continue;
-
-        Vector2Int doorGrid = gridPos + offset;
-        Vector2Int nextGrid = doorGrid + dir;
-
-        // Only connect if door leads outside the 2×2 block
-        bool connectsOutside =
-            !(
-                nextGrid.x >= gridPos.x && nextGrid.x <= gridPos.x + 1 &&
-                nextGrid.y >= gridPos.y && nextGrid.y <= gridPos.y + 1
-            );
-
-        if (connectsOutside)
+        foreach (var (name, offset, dir) in doors)
         {
-            door.gameObject.SetActive(true);
+            var door = room.transform.Find(name);
+            if (door == null) continue;
 
-            var d = door.GetComponent<Door>();
-            if (d != null)
+            Vector2Int doorGrid = gridPos + offset;
+            Vector2Int nextGrid = doorGrid + dir;
+
+            // Only connect if door leads outside the 2×2 block
+            bool connectsOutside =
+                !(
+                    nextGrid.x >= gridPos.x && nextGrid.x <= gridPos.x + 1 &&
+                    nextGrid.y >= gridPos.y && nextGrid.y <= gridPos.y + 1
+                );
+
+            if (connectsOutside)
             {
-                d.direction = dir;
-                d.parentGrid = doorGrid;
-            }
+                door.gameObject.SetActive(true);
 
-            
-            var col = door.GetComponent<Collider2D>();
-            if (col != null)
-            {
-                Vector3 nudge = new Vector3(dir.x * -0.1f, dir.y * -0.1f, 0);
-                door.transform.position += nudge;
-            }
-            
+                var d = door.GetComponent<Door>();
+                if (d != null)
+                {
+                    d.direction = dir;
+                    d.parentGrid = doorGrid;
+                }
 
-            if (!spawnedRooms.ContainsKey(doorGrid))
-                spawnedRooms[doorGrid] = room;
+
+                var col = door.GetComponent<Collider2D>();
+                if (col != null)
+                {
+                    Vector3 nudge = new Vector3(dir.x * -0.1f, dir.y * -0.1f, 0);
+                    door.transform.position += nudge;
+                }
+
+
+                if (!spawnedRooms.ContainsKey(doorGrid))
+                    spawnedRooms[doorGrid] = room;
+            }
         }
     }
-}
 
 
 
-void TryEnablePair(GameObject room, string aName, string bName, bool shouldEnable, Vector2Int dir, Vector2Int parent)
-{
-    if (!shouldEnable) return;
+    //void TryEnablePair(GameObject room, string aName, string bName, bool shouldEnable, Vector2Int dir, Vector2Int parent)
+    //{
+    //    if (!shouldEnable) return;
 
-    var a = room.transform.Find(aName);
-    var b = room.transform.Find(bName);
-    if (a != null) { a.gameObject.SetActive(true); var d = a.GetComponent<Door>(); if (d){ d.direction = dir; d.parentGrid = parent; } }
-    if (b != null) { b.gameObject.SetActive(true); var d = b.GetComponent<Door>(); if (d){ d.direction = dir; d.parentGrid = parent; } }
-}
+    //    var a = room.transform.Find(aName);
+    //    var b = room.transform.Find(bName);
+    //    if (a != null) { a.gameObject.SetActive(true); var d = a.GetComponent<Door>(); if (d){ d.direction = dir; d.parentGrid = parent; } }
+    //    if (b != null) { b.gameObject.SetActive(true); var d = b.GetComponent<Door>(); if (d){ d.direction = dir; d.parentGrid = parent; } }
+    //}
 
 
-    void EnableDoor(GameObject room, Vector2Int gridPos, string doorName, string wallName, Vector2Int dir)
+    //    void EnableDoor(GameObject room, Vector2Int gridPos, string doorName, string wallName, Vector2Int dir)
+    //    {
+    //        var door = room.transform.Find(doorName);
+    //        if (door == null) return;
+    //        door.gameObject.SetActive(true);
+    //    }
+
+
+
+
+    void TryEnablePair(GameObject room, string aName, string bName, bool shouldEnable, Vector2Int dir, Vector2Int parent)
     {
-        var door = room.transform.Find(doorName);
-        if (door == null) return;
-        door.gameObject.SetActive(true);
+        if (!shouldEnable) return;
 
-
-
-
-void TryEnablePair(GameObject room, string aName, string bName, bool shouldEnable, Vector2Int dir, Vector2Int parent)
-{
-    if (!shouldEnable) return;
-
-    var a = room.transform.Find(aName);
-    var b = room.transform.Find(bName);
-    if (a != null) { a.gameObject.SetActive(true); var d = a.GetComponent<Door>(); if (d){ d.direction = dir; d.parentGrid = parent; } }
-    if (b != null) { b.gameObject.SetActive(true); var d = b.GetComponent<Door>(); if (d){ d.direction = dir; d.parentGrid = parent; } }
-}
+        var a = room.transform.Find(aName);
+        var b = room.transform.Find(bName);
+        if (a != null) { a.gameObject.SetActive(true); var d = a.GetComponent<Door>(); if (d) { d.direction = dir; d.parentGrid = parent; } }
+        if (b != null) { b.gameObject.SetActive(true); var d = b.GetComponent<Door>(); if (d) { d.direction = dir; d.parentGrid = parent; } }
+    }
 
 
     void EnableDoor(GameObject room, Vector2Int gridPos, string doorName, string wallName, Vector2Int dir)
@@ -431,7 +435,7 @@ void TryEnablePair(GameObject room, string aName, string bName, bool shouldEnabl
     void SpawnRocksInRoom(Vector2Int gridPos, GameObject room, RoomType type)
     {
         if (type == RoomType.Start || type == RoomType.Boss || type == RoomType.Treasure)
-        return;
+            return;
         if (rockPrefabs == null || rockPrefabs.Length == 0) return;
 
         Vector3 basePos = room.transform.position;
@@ -445,7 +449,7 @@ void TryEnablePair(GameObject room, string aName, string bName, bool shouldEnabl
         int height = 5;
 
         // === Isaac-style rock pattern library ===
-List<int[,]> patterns = new List<int[,]>
+        List<int[,]> patterns = new List<int[,]>
 {
     new int[,] { {0,0,1,1,1,1,1,0,0}, {0,1,0,0,0,0,0,1,0}, {1,0,0,0,0,0,0,0,1}, {0,1,0,0,0,0,0,1,0}, {0,0,1,1,1,1,1,0,0} },
 
@@ -634,90 +638,90 @@ List<int[,]> patterns = new List<int[,]>
     }
 
     int ComputeDoorMask(Vector2Int pos)
-{
-    int mask = 0;
-    bool IsOccupied(Vector2Int p) => occupied.Contains(p) || occupiedByLargeRooms.Contains(p);
+    {
+        int mask = 0;
+        bool IsOccupied(Vector2Int p) => occupied.Contains(p) || occupiedByLargeRooms.Contains(p);
 
-    if (IsOccupied(pos + directions[0])) mask |= 1; // N
-    if (IsOccupied(pos + directions[1])) mask |= 2; // E
-    if (IsOccupied(pos + directions[2])) mask |= 4; // S
-    if (IsOccupied(pos + directions[3])) mask |= 8; // W
+        if (IsOccupied(pos + directions[0])) mask |= 1; // N
+        if (IsOccupied(pos + directions[1])) mask |= 2; // E
+        if (IsOccupied(pos + directions[2])) mask |= 4; // S
+        if (IsOccupied(pos + directions[3])) mask |= 8; // W
 
-    return mask;
-}
+        return mask;
+    }
 
 
     bool IsLargeRoomOrigin(Vector2Int pos)
-{
-    return largeRoomOrigins.Contains(pos);
-}
+    {
+        return largeRoomOrigins.Contains(pos);
+    }
 
 
     public bool HasRoom(Vector2Int pos)
-{
-    // Treat both normal and large-room cells as occupied
-    return occupied.Contains(pos) || occupiedByLargeRooms.Contains(pos);
-}
-
-
-   public GameObject GetRoom(Vector2Int pos)
-{
-    // Try direct lookup first
-    if (spawnedRooms.TryGetValue(pos, out GameObject room))
-        return room;
-
-    
-    foreach (var origin in largeRoomOrigins)
     {
-        if (pos.x >= origin.x && pos.x <= origin.x + 1 &&
-            pos.y >= origin.y && pos.y <= origin.y + 1)
-        {
-            if (spawnedRooms.TryGetValue(origin, out GameObject largeRoom))
-                return largeRoom;
-        }
+        // Treat both normal and large-room cells as occupied
+        return occupied.Contains(pos) || occupiedByLargeRooms.Contains(pos);
     }
 
-    return null;
-}
+
+    public GameObject GetRoom(Vector2Int pos)
+    {
+        // Try direct lookup first
+        if (spawnedRooms.TryGetValue(pos, out GameObject room))
+            return room;
+
+
+        foreach (var origin in largeRoomOrigins)
+        {
+            if (pos.x >= origin.x && pos.x <= origin.x + 1 &&
+                pos.y >= origin.y && pos.y <= origin.y + 1)
+            {
+                if (spawnedRooms.TryGetValue(origin, out GameObject largeRoom))
+                    return largeRoom;
+            }
+        }
+
+        return null;
+    }
 
 
     bool CanPlaceLargeRoom(Vector2Int origin)
-{
-    // Check if any of the 4 tiles are already occupied by ANY room
-    Vector2Int[] cells =
     {
+        // Check if any of the 4 tiles are already occupied by ANY room
+        Vector2Int[] cells =
+        {
         origin,
         origin + Vector2Int.right,
         origin + Vector2Int.up,
         origin + new Vector2Int(1, 1)
     };
 
-    foreach (var c in cells)
-        if (occupied.Contains(c))
-            return false;
+        foreach (var c in cells)
+            if (occupied.Contains(c))
+                return false;
 
-    return true;
-}
-
-
-
-
-void MarkLargeRoomOccupied(Vector2Int origin)
-{
-    largeRoomOrigins.Add(origin);
-
-    Vector2Int[] cells =
-    {
-        origin,
-        origin + Vector2Int.right,
-        origin + Vector2Int.up,
-        origin + new Vector2Int(1, 1)
-    };
-
-    foreach (var c in cells)
-    {
-        occupied.Add(c);
-        occupiedByLargeRooms.Add(c);
+        return true;
     }
-}
+
+
+
+
+    void MarkLargeRoomOccupied(Vector2Int origin)
+    {
+        largeRoomOrigins.Add(origin);
+
+        Vector2Int[] cells =
+        {
+        origin,
+        origin + Vector2Int.right,
+        origin + Vector2Int.up,
+        origin + new Vector2Int(1, 1)
+    };
+
+        foreach (var c in cells)
+        {
+            occupied.Add(c);
+            occupiedByLargeRooms.Add(c);
+        }
+    }
 }

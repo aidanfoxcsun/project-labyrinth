@@ -17,12 +17,12 @@ public class Door : MonoBehaviour
         // (Optional: change sprite / color later)
     }
 
-public void SetDoorActive(bool active)
-{
-    var col = GetComponent<Collider2D>();
-    if (col != null)
-        col.enabled = active;
-}
+    public void SetDoorActive(bool active)
+    {
+        var col = GetComponent<Collider2D>();
+        if (col != null)
+            col.enabled = active;
+    }
 
     void Start() => generator = FindObjectOfType<DungeonGenerator>();
 
@@ -52,11 +52,11 @@ public void SetDoorActive(bool active)
             return;
         }
 
-            Vector2Int oppositeDir = -direction;
-            string oppositeDoorName = oppositeDir == Vector2Int.up ? "Door_N" :
-                                      oppositeDir == Vector2Int.down ? "Door_S" :
-                                      oppositeDir == Vector2Int.right ? "Door_E" :
-                                      "Door_W";
+        Vector2Int oppositeDir = -direction;
+        string oppositeDoorName = oppositeDir == Vector2Int.up ? "Door_N" :
+                                  oppositeDir == Vector2Int.down ? "Door_S" :
+                                  oppositeDir == Vector2Int.right ? "Door_E" :
+                                  "Door_W";
 
         // Current suffix
         string thisDoor = gameObject.name;
@@ -68,18 +68,18 @@ public void SetDoorActive(bool active)
 
         // 1️⃣ Exact match (Door_W1 → Door_E1)
         if (!string.IsNullOrEmpty(suffix))
-            entry = targetRoom.transform.Find($"{baseDoor}{suffix}/EntryPoint");
+            entry = targetRoom.transform.Find($"{oppositeDoorName}{suffix}/EntryPoint");
 
         // 2️⃣ Fallback to plain door (Door_E)
         if (entry == null)
-            entry = targetRoom.transform.Find($"{baseDoor}/EntryPoint");
+            entry = targetRoom.transform.Find($"{oppositeDoorName}/EntryPoint");
 
         // 3️⃣ If still null (normal → large), pick closest
         if (entry == null)
         {
             var candidates = targetRoom
                 .GetComponentsInChildren<Transform>(true)
-                .Where(t => t.name == "EntryPoint" && t.parent.name.StartsWith(baseDoor))
+                .Where(t => t.name == "EntryPoint" && t.parent.name.StartsWith(oppositeDoorName))
                 .ToArray();
 
             if (candidates.Length > 0)
@@ -93,7 +93,7 @@ public void SetDoorActive(bool active)
 
         if (entry == null)
         {
-            Debug.LogWarning($"[Door] EntryPoint not found in {targetRoom.name} for {baseDoor}{suffix}");
+            Debug.LogWarning($"[Door] EntryPoint not found in {targetRoom.name} for {oppositeDoorName}{suffix}");
             return;
         }
 

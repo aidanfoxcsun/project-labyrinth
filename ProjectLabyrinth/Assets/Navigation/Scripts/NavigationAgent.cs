@@ -1,3 +1,4 @@
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -12,6 +13,13 @@ public class NavigationAgent : MonoBehaviour
 
     private NavigationNode targetNode;
 
+    public NavigationManager manager;
+
+    public void setManager(NavigationManager manager)
+    {
+        this.manager = manager;
+    }
+
     public void SetSpeed(float f)
     {
         speed = f;
@@ -19,25 +27,45 @@ public class NavigationAgent : MonoBehaviour
 
     private void Start()
     {
-        targetPosition = transform.position;
+        StartCoroutine(InitAfterFrame());
+    }
+
+    private IEnumerator InitAfterFrame()
+    {
+        yield return null; // wait so NavigationManager is ready
+
+        if (manager == null)
+        {
+            Debug.LogError($"{name}: NavigationManager not set!");
+            yield break;
+        }
+
+        currentNode = manager.FindNearestNode(transform.position);
+
+        if (currentNode == null)
+        {
+            Debug.LogError($"{name}: No navigation node near spawn position!");
+            yield break;
+        }
+
         targetNode = currentNode;
-        currentNode = NavigationManager.instance.FindNearestNode(targetPosition);
+        targetPosition = transform.position;
     }
 
     public void SetDestination(Vector3 target)
     {
         targetPosition = target;
 
-        currentNode = NavigationManager.instance.FindNearestNode(transform.position);
-        targetNode = NavigationManager.instance.FindNearestNode(targetPosition);
+        currentNode = manager.FindNearestNode(transform.position);
+        targetNode = manager.FindNearestNode(targetPosition);
 
-        path = NavigationManager.instance.GeneratePath(currentNode, targetNode);
-        
+        path = manager.GeneratePath(currentNode, targetNode);
     }
 
     public Vector3 GetCurrentDirection()
     {
-        if (currentNode == null || targetNode == null) return Vector3.zero;
+        if (currentNode == null || path == null || path.Count == 0)
+            return Vector3.zero;
         return (path[0].position - currentNode.position).normalized * speed;
     }
 
