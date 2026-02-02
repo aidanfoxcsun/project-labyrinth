@@ -48,6 +48,24 @@ public class RunnerBehavior : EnemyBehavior, IEntityBehavior
             frameCounter = 0f;
         }
 
+        if (controller.animator != null)
+        {
+            Vector3 dir = controller.agent.GetCurrentDirection();
+
+            if (dir.x < 0)
+            {
+                GetComponent<SpriteRenderer>().flipX = true;
+            }
+            else if (dir.x > 0)
+            {
+                GetComponent<SpriteRenderer>().flipX = false;
+            }
+
+            controller.animator.SetBool("isWalking", controller.agent.GetIsWalking());
+            controller.animator.SetFloat("DirX", dir.x);
+            controller.animator.SetFloat("DirY", dir.y);
+        }
+
         frameCounter += Time.deltaTime;
     }
 }

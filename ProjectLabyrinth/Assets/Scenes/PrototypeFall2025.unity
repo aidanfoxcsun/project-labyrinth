@@ -119,6 +119,75 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1001 &195382457
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4709087906313719468, guid: a0d0bae450689c94ca7ef4df8919e096, type: 3}
+      propertyPath: standardPool.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4709087906313719468, guid: a0d0bae450689c94ca7ef4df8919e096, type: 3}
+      propertyPath: 'standardPool.Array.data[2]'
+      value: 
+      objectReference: {fileID: 11400000, guid: 95df3793cc63bf740be42e47f6c83742, type: 2}
+    - target: {fileID: 4709087906313719468, guid: a0d0bae450689c94ca7ef4df8919e096, type: 3}
+      propertyPath: 'standardPool.Array.data[3]'
+      value: 
+      objectReference: {fileID: 11400000, guid: 5899a453baafb8b478718a64932f5102, type: 2}
+    - target: {fileID: 7473620139743521285, guid: a0d0bae450689c94ca7ef4df8919e096, type: 3}
+      propertyPath: m_Name
+      value: _ItemPoolManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 8190886500934109413, guid: a0d0bae450689c94ca7ef4df8919e096, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 32.50815
+      objectReference: {fileID: 0}
+    - target: {fileID: 8190886500934109413, guid: a0d0bae450689c94ca7ef4df8919e096, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -26.07638
+      objectReference: {fileID: 0}
+    - target: {fileID: 8190886500934109413, guid: a0d0bae450689c94ca7ef4df8919e096, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8190886500934109413, guid: a0d0bae450689c94ca7ef4df8919e096, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8190886500934109413, guid: a0d0bae450689c94ca7ef4df8919e096, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8190886500934109413, guid: a0d0bae450689c94ca7ef4df8919e096, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8190886500934109413, guid: a0d0bae450689c94ca7ef4df8919e096, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8190886500934109413, guid: a0d0bae450689c94ca7ef4df8919e096, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8190886500934109413, guid: a0d0bae450689c94ca7ef4df8919e096, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8190886500934109413, guid: a0d0bae450689c94ca7ef4df8919e096, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: a0d0bae450689c94ca7ef4df8919e096, type: 3}
 --- !u!1001 &701362458
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -377,6 +446,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DungeonGenerator
   roomPrefab: {fileID: 3738668724862959439, guid: 03781b73cc420d74eac9b0e109cd457d, type: 3}
   largeRoomPrefab: {fileID: 0}
+  bossPrefab: {fileID: 3599107784049094890, guid: 5536f4aa30944974dbc9d6c2fafec23c, type: 3}
   rockPrefabs:
   - {fileID: 1390904374234985786, guid: 047dea15ebd48ed4e89c054d27ce4032, type: 3}
   minRocksPerRoom: 5
@@ -386,9 +456,9 @@ MonoBehaviour:
   - {fileID: 3297938121484162359, guid: f7a8abf69f647b74daa351ea10dee625, type: 3}
   minEnemiesPerRoom: 2
   maxEnemiesPerRoom: 5
-  treasureItemPrefab: {fileID: 0}
+  treasureItemPrefab: {fileID: 6388569676009367634, guid: 1ca23eaee3a97ca40b2032c0156992ad, type: 3}
   seed: 0
-  targetRooms: 25
+  targetRooms: 15
   minBossDistance: 5
   roomSpacing: {x: 12, y: 8}
   autoDetectSpacing: 1
@@ -415,3 +485,4 @@ SceneRoots:
   - {fileID: 1588969578}
   - {fileID: 1618396543}
   - {fileID: 701362458}
+  - {fileID: 195382457}

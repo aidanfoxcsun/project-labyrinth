@@ -160,7 +160,7 @@ CircleCollider2D:
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
-  m_Radius: 0.5
+  m_Radius: 0.45
 --- !u!114 &5476488403942429145
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -193,6 +193,7 @@ MonoBehaviour:
   targetPosition: {x: 0, y: 0, z: 0}
   currentNode: {fileID: 0}
   path: []
+  manager: {fileID: 0}
 --- !u!114 &4668738687896793255
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class DungeonGenerator : MonoBehaviour
@@ -9,6 +10,8 @@ public class DungeonGenerator : MonoBehaviour
     [Header("Prefabs")]
     public GameObject roomPrefab;
     public GameObject largeRoomPrefab;
+
+    public GameObject bossPrefab;
 
     [Header("Rock Settings")]
     public GameObject[] rockPrefabs;
@@ -239,14 +242,15 @@ public class DungeonGenerator : MonoBehaviour
 
         GameObject room = Instantiate(prefab, worldPos, Quaternion.identity, transform);
 
-        var sr = room.GetComponent<SpriteRenderer>();
+        var sr = room.GetComponentInChildren<SpriteRenderer>();
         if (sr != null)
         {
             sr.color = type switch
             {
-                RoomType.Start => Color.green,
-                RoomType.Boss => Color.red,
-                _ => Color.white
+                RoomType.Start => new Color(0.2f, 0.6f, 0.6f),
+                RoomType.Boss => new Color(0.4f, 0.1f, 0.1f),
+                RoomType.Treasure => new Color(0.6f,0.6f, 0.2f),
+                _ => new Color(0.3f, 0.3f, 0.3f)
             };
         }
 
@@ -288,6 +292,15 @@ public class DungeonGenerator : MonoBehaviour
             spawner.doorMask = LayerMask.GetMask("Doors");
 
             spawner.InitializeSpawner(room.transform, type);
+        }else if(type == RoomType.Boss)
+        {
+            BossSpawner spawner = room.GetComponent<BossSpawner>();
+            if (spawner == null)
+                spawner = room.AddComponent<BossSpawner>();
+
+            spawner.bossPrefab = bossPrefab;
+
+            spawner.SpawnBoss(room.transform);
         }
 
         // === Large Room registration ===

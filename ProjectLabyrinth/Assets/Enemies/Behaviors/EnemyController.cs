@@ -14,6 +14,7 @@ public class EnemyController : MonoBehaviour
     {
         agent = GetComponent<NavigationAgent>();
         health = GetComponent<Health>();
+        animator = GetComponent<Animator>();
 
         if (behavior != null)
         {
@@ -24,23 +25,5 @@ public class EnemyController : MonoBehaviour
     private void Update()
     {
         behavior?.OnUpdate();
-
-        if (animator != null)
-        {
-            Vector3 dir = agent.GetCurrentDirection();
-
-            if (dir.x < 0)
-            {
-                GetComponent<SpriteRenderer>().flipX = true;
-            }
-            else if (dir.x > 0)
-            {
-                GetComponent<SpriteRenderer>().flipX = false;
-            }
-
-                animator.SetBool("isWalking", agent.GetIsWalking());
-            animator.SetFloat("DirX", dir.x);
-            animator.SetFloat("DirY", dir.y);
-        }
     }
 }
