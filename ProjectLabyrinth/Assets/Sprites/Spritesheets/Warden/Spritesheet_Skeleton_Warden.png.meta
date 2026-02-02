@@ -1,0 +1,3887 @@
+fileFormatVersion: 2
+guid: 54c0bfd7cdc63aa418455333e360e00c
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -3887742357417350912
+    second: Spritesheet_Skeleton_Warden_0
+  - first:
+      213: 6783326062447153021
+    second: Spritesheet_Skeleton_Warden_1
+  - first:
+      213: -6612085900899869423
+    second: Spritesheet_Skeleton_Warden_2
+  - first:
+      213: -8893670225517759232
+    second: Spritesheet_Skeleton_Warden_3
+  - first:
+      213: 1612624843870998548
+    second: Spritesheet_Skeleton_Warden_4
+  - first:
+      213: -9196836545766037107
+    second: Spritesheet_Skeleton_Warden_5
+  - first:
+      213: -3533604470550275592
+    second: Spritesheet_Skeleton_Warden_6
+  - first:
+      213: -4012024118979126561
+    second: Spritesheet_Skeleton_Warden_7
+  - first:
+      213: -548787435302365014
+    second: Spritesheet_Skeleton_Warden_8
+  - first:
+      213: -8245839220184663183
+    second: Spritesheet_Skeleton_Warden_9
+  - first:
+      213: -1100375915737407304
+    second: Spritesheet_Skeleton_Warden_10
+  - first:
+      213: -5243714357148191454
+    second: Spritesheet_Skeleton_Warden_11
+  - first:
+      213: 2305234106914167750
+    second: Spritesheet_Skeleton_Warden_12
+  - first:
+      213: -1020922578225230616
+    second: Spritesheet_Skeleton_Warden_13
+  - first:
+      213: -4669925793002620395
+    second: Spritesheet_Skeleton_Warden_14
+  - first:
+      213: -2065357605021693861
+    second: Spritesheet_Skeleton_Warden_15
+  - first:
+      213: -4761998385732142425
+    second: Spritesheet_Skeleton_Warden_16
+  - first:
+      213: -3976739983268598036
+    second: Spritesheet_Skeleton_Warden_17
+  - first:
+      213: 3651872391822241709
+    second: Spritesheet_Skeleton_Warden_18
+  - first:
+      213: -9186123203046920031
+    second: Spritesheet_Skeleton_Warden_19
+  - first:
+      213: 4878273923373231657
+    second: Spritesheet_Skeleton_Warden_20
+  - first:
+      213: 7503579390422241851
+    second: Spritesheet_Skeleton_Warden_21
+  - first:
+      213: -7594923196231583696
+    second: Spritesheet_Skeleton_Warden_22
+  - first:
+      213: 5196729531432559858
+    second: Spritesheet_Skeleton_Warden_23
+  - first:
+      213: 8552784312157661761
+    second: Spritesheet_Skeleton_Warden_24
+  - first:
+      213: 2386849268598357126
+    second: Spritesheet_Skeleton_Warden_25
+  - first:
+      213: -219540395633550901
+    second: Spritesheet_Skeleton_Warden_26
+  - first:
+      213: -2680392964530013937
+    second: Spritesheet_Skeleton_Warden_27
+  - first:
+      213: -5062116885151479760
+    second: Spritesheet_Skeleton_Warden_28
+  - first:
+      213: -6770418260994645157
+    second: Spritesheet_Skeleton_Warden_29
+  - first:
+      213: -9183013141014346356
+    second: Spritesheet_Skeleton_Warden_30
+  - first:
+      213: -7298849609852912805
+    second: Spritesheet_Skeleton_Warden_31
+  - first:
+      213: -4208278261082160878
+    second: Spritesheet_Skeleton_Warden_32
+  - first:
+      213: -3044833264904810239
+    second: Spritesheet_Skeleton_Warden_33
+  - first:
+      213: -4251404798668115743
+    second: Spritesheet_Skeleton_Warden_34
+  - first:
+      213: 7524673444719554397
+    second: Spritesheet_Skeleton_Warden_35
+  - first:
+      213: -510206285423511922
+    second: Spritesheet_Skeleton_Warden_36
+  - first:
+      213: 1372723243964656656
+    second: Spritesheet_Skeleton_Warden_37
+  - first:
+      213: -1751903467671503853
+    second: Spritesheet_Skeleton_Warden_38
+  - first:
+      213: 7173253900823036224
+    second: Spritesheet_Skeleton_Warden_39
+  - first:
+      213: 8372804819636957469
+    second: Spritesheet_Skeleton_Warden_40
+  - first:
+      213: -4305610619070243029
+    second: Spritesheet_Skeleton_Warden_41
+  - first:
+      213: 3971253180718368381
+    second: Spritesheet_Skeleton_Warden_42
+  - first:
+      213: -815968559646786203
+    second: Spritesheet_Skeleton_Warden_43
+  - first:
+      213: -7342289756248535961
+    second: Spritesheet_Skeleton_Warden_44
+  - first:
+      213: -3128589817866592111
+    second: Spritesheet_Skeleton_Warden_45
+  - first:
+      213: -9099554048212833289
+    second: Spritesheet_Skeleton_Warden_46
+  - first:
+      213: -7004149628987662654
+    second: Spritesheet_Skeleton_Warden_47
+  - first:
+      213: -3690003789400232603
+    second: Spritesheet_Skeleton_Warden_48
+  - first:
+      213: 8531996707482201454
+    second: Spritesheet_Skeleton_Warden_49
+  - first:
+      213: -8085320837025139594
+    second: Spritesheet_Skeleton_Warden_50
+  - first:
+      213: 7396717531134776732
+    second: Spritesheet_Skeleton_Warden_51
+  - first:
+      213: -7791267876050293902
+    second: Spritesheet_Skeleton_Warden_52
+  - first:
+      213: -7959816763834294539
+    second: Spritesheet_Skeleton_Warden_53
+  - first:
+      213: -1551855048186715536
+    second: Spritesheet_Skeleton_Warden_54
+  - first:
+      213: 4966333178321266262
+    second: Spritesheet_Skeleton_Warden_55
+  - first:
+      213: 443582638822327045
+    second: Spritesheet_Skeleton_Warden_56
+  - first:
+      213: 2836756707011497734
+    second: Spritesheet_Skeleton_Warden_57
+  - first:
+      213: -5476429787152015808
+    second: Spritesheet_Skeleton_Warden_58
+  - first:
+      213: 5085261159066102500
+    second: Spritesheet_Skeleton_Warden_59
+  - first:
+      213: -7023334487716843338
+    second: Spritesheet_Skeleton_Warden_60
+  - first:
+      213: 3419042734916955690
+    second: Spritesheet_Skeleton_Warden_61
+  - first:
+      213: -5892985838576822496
+    second: Spritesheet_Skeleton_Warden_62
+  - first:
+      213: -6118837533871889989
+    second: Spritesheet_Skeleton_Warden_63
+  - first:
+      213: -5443908944044550742
+    second: Spritesheet_Skeleton_Warden_64
+  - first:
+      213: -7707427804908955020
+    second: Spritesheet_Skeleton_Warden_65
+  - first:
+      213: 5150759372349165119
+    second: Spritesheet_Skeleton_Warden_66
+  - first:
+      213: -5033078814694241364
+    second: Spritesheet_Skeleton_Warden_67
+  - first:
+      213: 8611909066444383928
+    second: Spritesheet_Skeleton_Warden_68
+  - first:
+      213: -2515007544319677846
+    second: Spritesheet_Skeleton_Warden_69
+  - first:
+      213: -3940190198597953473
+    second: Spritesheet_Skeleton_Warden_70
+  - first:
+      213: 6686476871151896723
+    second: Spritesheet_Skeleton_Warden_71
+  - first:
+      213: -5822982102823258968
+    second: Spritesheet_Skeleton_Warden_72
+  - first:
+      213: -454788868304696027
+    second: Spritesheet_Skeleton_Warden_73
+  - first:
+      213: 7502044209205909668
+    second: Spritesheet_Skeleton_Warden_74
+  - first:
+      213: 3888940532338070726
+    second: Spritesheet_Skeleton_Warden_75
+  - first:
+      213: 1376413674098902738
+    second: Spritesheet_Skeleton_Warden_76
+  - first:
+      213: -997184265219783240
+    second: Spritesheet_Skeleton_Warden_77
+  - first:
+      213: 3748942779297676402
+    second: Spritesheet_Skeleton_Warden_78
+  - first:
+      213: -7863454890338654539
+    second: Spritesheet_Skeleton_Warden_79
+  - first:
+      213: -7045063309537902876
+    second: Spritesheet_Skeleton_Warden_80
+  - first:
+      213: 7448828379801601351
+    second: Spritesheet_Skeleton_Warden_81
+  - first:
+      213: 680758244989885728
+    second: Spritesheet_Skeleton_Warden_82
+  - first:
+      213: 2462423932302776817
+    second: Spritesheet_Skeleton_Warden_83
+  - first:
+      213: 818783251262535469
+    second: Spritesheet_Skeleton_Warden_84
+  - first:
+      213: 146063891986804482
+    second: Spritesheet_Skeleton_Warden_85
+  - first:
+      213: 8391149512013115412
+    second: Spritesheet_Skeleton_Warden_86
+  - first:
+      213: 6051105612510179205
+    second: Spritesheet_Skeleton_Warden_87
+  - first:
+      213: -2299882627736520936
+    second: Spritesheet_Skeleton_Warden_88
+  - first:
+      213: -5728171914158858737
+    second: Spritesheet_Skeleton_Warden_89
+  - first:
+      213: -5291990209355934550
+    second: Spritesheet_Skeleton_Warden_90
+  - first:
+      213: -4168027602486675384
+    second: Spritesheet_Skeleton_Warden_91
+  - first:
+      213: 3007328694191136716
+    second: Spritesheet_Skeleton_Warden_92
+  - first:
+      213: -1640352497776049136
+    second: Spritesheet_Skeleton_Warden_93
+  - first:
+      213: -5850641696429101088
+    second: Spritesheet_Skeleton_Warden_94
+  - first:
+      213: -4253165920635931403
+    second: Spritesheet_Skeleton_Warden_95
+  - first:
+      213: -6112569532068294735
+    second: Spritesheet_Skeleton_Warden_96
+  - first:
+      213: 659438590141782380
+    second: Spritesheet_Skeleton_Warden_97
+  - first:
+      213: 7078011885058662836
+    second: Spritesheet_Skeleton_Warden_98
+  - first:
+      213: -5287356831599377211
+    second: Spritesheet_Skeleton_Warden_99
+  - first:
+      213: 1614986117400583623
+    second: Spritesheet_Skeleton_Warden_100
+  - first:
+      213: 8381010988568209047
+    second: Spritesheet_Skeleton_Warden_101
+  - first:
+      213: -7923197055964698865
+    second: Spritesheet_Skeleton_Warden_102
+  - first:
+      213: 8614855697032108538
+    second: Spritesheet_Skeleton_Warden_103
+  - first:
+      213: -2361118205879330518
+    second: Spritesheet_Skeleton_Warden_104
+  - first:
+      213: -9200538285938830953
+    second: Spritesheet_Skeleton_Warden_105
+  - first:
+      213: -4656049094098918157
+    second: Spritesheet_Skeleton_Warden_106
+  - first:
+      213: 4472739550747316742
+    second: Spritesheet_Skeleton_Warden_107
+  - first:
+      213: -898247686812184185
+    second: Spritesheet_Skeleton_Warden_108
+  - first:
+      213: -3240716475553182313
+    second: Spritesheet_Skeleton_Warden_109
+  - first:
+      213: 3213617919169375929
+    second: Spritesheet_Skeleton_Warden_110
+  - first:
+      213: -3337908839751496065
+    second: Spritesheet_Skeleton_Warden_111
+  - first:
+      213: -7573919861718299770
+    second: Spritesheet_Skeleton_Warden_112
+  - first:
+      213: -3954881427144726238
+    second: Spritesheet_Skeleton_Warden_113
+  - first:
+      213: 7929493230814720462
+    second: Spritesheet_Skeleton_Warden_114
+  - first:
+      213: 8087897055079405512
+    second: Spritesheet_Skeleton_Warden_115
+  - first:
+      213: -7008441556868012939
+    second: Spritesheet_Skeleton_Warden_116
+  - first:
+      213: 693351845548278006
+    second: Spritesheet_Skeleton_Warden_117
+  - first:
+      213: -3872770858209021776
+    second: Spritesheet_Skeleton_Warden_118
+  - first:
+      213: -3423268570650306749
+    second: Spritesheet_Skeleton_Warden_119
+  - first:
+      213: -481799817681526385
+    second: Spritesheet_Skeleton_Warden_120
+  - first:
+      213: -8070386378546213283
+    second: Spritesheet_Skeleton_Warden_121
+  - first:
+      213: -7189181783072353798
+    second: Spritesheet_Skeleton_Warden_122
+  - first:
+      213: 7139772710332561844
+    second: Spritesheet_Skeleton_Warden_123
+  - first:
+      213: 4961740242651636028
+    second: Spritesheet_Skeleton_Warden_124
+  - first:
+      213: -1891344322282399032
+    second: Spritesheet_Skeleton_Warden_125
+  - first:
+      213: -2586231718593179594
+    second: Spritesheet_Skeleton_Warden_126
+  - first:
+      213: -132852837493268805
+    second: Spritesheet_Skeleton_Warden_127
+  - first:
+      213: 3210745424311161261
+    second: Spritesheet_Skeleton_Warden_128
+  - first:
+      213: 5915644625999591384
+    second: Spritesheet_Skeleton_Warden_129
+  - first:
+      213: -4839255395408699680
+    second: Spritesheet_Skeleton_Warden_130
+  - first:
+      213: 4299277049425887666
+    second: Spritesheet_Skeleton_Warden_131
+  - first:
+      213: -3611019720803657967
+    second: Spritesheet_Skeleton_Warden_132
+  - first:
+      213: 1327600870572738438
+    second: Spritesheet_Skeleton_Warden_133
+  - first:
+      213: 866867580299071136
+    second: Spritesheet_Skeleton_Warden_134
+  - first:
+      213: -8862973709443243098
+    second: Spritesheet_Skeleton_Warden_135
+  - first:
+      213: -5630038628879656462
+    second: Spritesheet_Skeleton_Warden_136
+  - first:
+      213: -905906920285167246
+    second: Spritesheet_Skeleton_Warden_137
+  - first:
+      213: -463455909464011325
+    second: Spritesheet_Skeleton_Warden_138
+  - first:
+      213: 782331947576235120
+    second: Spritesheet_Skeleton_Warden_139
+  - first:
+      213: 8432633326112043581
+    second: Spritesheet_Skeleton_Warden_140
+  - first:
+      213: 5138429091111292533
+    second: Spritesheet_Skeleton_Warden_141
+  - first:
+      213: 2097219497941909099
+    second: Spritesheet_Skeleton_Warden_142
+  - first:
+      213: 3218927163573232361
+    second: Spritesheet_Skeleton_Warden_143
+  - first:
+      213: 5583434307460674281
+    second: Spritesheet_Skeleton_Warden_144
+  - first:
+      213: -4149882304056884217
+    second: Spritesheet_Skeleton_Warden_145
+  - first:
+      213: -261384131650309665
+    second: Spritesheet_Skeleton_Warden_146
+  - first:
+      213: 6296984539386285701
+    second: Spritesheet_Skeleton_Warden_147
+  - first:
+      213: -6692666018502434516
+    second: Spritesheet_Skeleton_Warden_148
+  - first:
+      213: 1342652935792665939
+    second: Spritesheet_Skeleton_Warden_149
+  - first:
+      213: 7688455702244855754
+    second: Spritesheet_Skeleton_Warden_150
+  - first:
+      213: -1473620550758495728
+    second: Spritesheet_Skeleton_Warden_151
+  - first:
+      213: 6666462150187341951
+    second: Spritesheet_Skeleton_Warden_152
+  - first:
+      213: 9121698227599770023
+    second: Spritesheet_Skeleton_Warden_153
+  - first:
+      213: 3978271496497076797
+    second: Spritesheet_Skeleton_Warden_154
+  - first:
+      213: 4813541280388133775
+    second: Spritesheet_Skeleton_Warden_155
+  - first:
+      213: 221816967381061694
+    second: Spritesheet_Skeleton_Warden_156
+  - first:
+      213: -6681326369368855044
+    second: Spritesheet_Skeleton_Warden_157
+  - first:
+      213: -4660561934892680597
+    second: Spritesheet_Skeleton_Warden_158
+  - first:
+      213: 1982781932563599202
+    second: Spritesheet_Skeleton_Warden_159
+  - first:
+      213: -341651744274984852
+    second: Spritesheet_Skeleton_Warden_160
+  - first:
+      213: -1043569024593390341
+    second: Spritesheet_Skeleton_Warden_161
+  - first:
+      213: 6523480329161622975
+    second: Spritesheet_Skeleton_Warden_162
+  - first:
+      213: -7996691576772008642
+    second: Spritesheet_Skeleton_Warden_163
+  - first:
+      213: -4641261903419782339
+    second: Spritesheet_Skeleton_Warden_164
+  - first:
+      213: 4213804191497202083
+    second: Spritesheet_Skeleton_Warden_165
+  - first:
+      213: 2777503641828214881
+    second: Spritesheet_Skeleton_Warden_166
+  - first:
+      213: 1994524434606459740
+    second: Spritesheet_Skeleton_Warden_167
+  - first:
+      213: 1411120083551617553
+    second: Spritesheet_Skeleton_Warden_168
+  - first:
+      213: -6692319315595488409
+    second: Spritesheet_Skeleton_Warden_169
+  - first:
+      213: 3293962602255711507
+    second: Spritesheet_Skeleton_Warden_170
+  - first:
+      213: -1326547982523975318
+    second: Spritesheet_Skeleton_Warden_171
+  - first:
+      213: 1649970292703215426
+    second: Spritesheet_Skeleton_Warden_172
+  - first:
+      213: 9067661167356367268
+    second: Spritesheet_Skeleton_Warden_173
+  - first:
+      213: 2408402274442040417
+    second: Spritesheet_Skeleton_Warden_174
+  - first:
+      213: -7844360435607170638
+    second: Spritesheet_Skeleton_Warden_175
+  - first:
+      213: -2374976353801269038
+    second: Spritesheet_Skeleton_Warden_176
+  - first:
+      213: -494822925942902604
+    second: Spritesheet_Skeleton_Warden_177
+  - first:
+      213: 899901861321590634
+    second: Spritesheet_Skeleton_Warden_178
+  - first:
+      213: -6977480464282534952
+    second: Spritesheet_Skeleton_Warden_179
+  - first:
+      213: 6134923296536029345
+    second: Spritesheet_Skeleton_Warden_180
+  - first:
+      213: 342701780443164027
+    second: Spritesheet_Skeleton_Warden_181
+  - first:
+      213: 4396528521423063446
+    second: Spritesheet_Skeleton_Warden_182
+  - first:
+      213: 9097444881548037060
+    second: Spritesheet_Skeleton_Warden_183
+  - first:
+      213: 8872720179553995415
+    second: Spritesheet_Skeleton_Warden_184
+  - first:
+      213: -7611626627495726476
+    second: Spritesheet_Skeleton_Warden_185
+  - first:
+      213: 660093103579956426
+    second: Spritesheet_Skeleton_Warden_186
+  - first:
+      213: -4172483735632118368
+    second: Spritesheet_Skeleton_Warden_187
+  - first:
+      213: 6313828539225885114
+    second: Spritesheet_Skeleton_Warden_188
+  - first:
+      213: -3356870124967190865
+    second: Spritesheet_Skeleton_Warden_189
+  - first:
+      213: -7380194634356472640
+    second: Spritesheet_Skeleton_Warden_190
+  - first:
+      213: 3802002241996662375
+    second: Spritesheet_Skeleton_Warden_191
+  - first:
+      213: -7025642497238306453
+    second: Spritesheet_Skeleton_Warden_192
+  - first:
+      213: 5680042425557300977
+    second: Spritesheet_Skeleton_Warden_193
+  - first:
+      213: 7406453684838569006
+    second: Spritesheet_Skeleton_Warden_194
+  - first:
+      213: -3697204467555110830
+    second: Spritesheet_Skeleton_Warden_195
+  - first:
+      213: -3527891309782268231
+    second: Spritesheet_Skeleton_Warden_196
+  - first:
+      213: -8092488804263750465
+    second: Spritesheet_Skeleton_Warden_197
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 64
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Spritesheet_Skeleton_Warden_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1280
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 00926ef8ce6fb0ac0800000000000000
+      internalID: -3887742357417350912
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Skeleton_Warden_1
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 1280
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d7fcfcb3d17332e50800000000000000
+      internalID: 6783326062447153021
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Skeleton_Warden_2
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 1280
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 11d9e7cc7e62d34a0800000000000000
+      internalID: -6612085900899869423
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Skeleton_Warden_3
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 1280
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 005bb82fc06539480800000000000000
+      internalID: -8893670225517759232
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Skeleton_Warden_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1216
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 41096ee50c1316610800000000000000
+      internalID: 1612624843870998548
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Skeleton_Warden_5
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 1216
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d89e84873e54e5080800000000000000
+      internalID: -9196836545766037107
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Skeleton_Warden_6
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 1216
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8f95e14b47d16fec0800000000000000
+      internalID: -3533604470550275592
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Skeleton_Warden_7
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 1216
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fda13f5025d6258c0800000000000000
+      internalID: -4012024118979126561
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Skeleton_Warden_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1152
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aa8da953cb05268f0800000000000000
+      internalID: -548787435302365014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Skeleton_Warden_9
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 1152
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 17bb8e5eae4e09d80800000000000000
+      internalID: -8245839220184663183
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Skeleton_Warden_10
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 1152
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8b0a3174fedaab0f0800000000000000
+      internalID: -1100375915737407304
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Skeleton_Warden_11
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 1152
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 225f09613959a37b0800000000000000
+      internalID: -5243714357148191454
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Skeleton_Warden_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1088
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6cbdbb2e436ddff10800000000000000
+      internalID: 2305234106914167750
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Skeleton_Warden_13
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 1088
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8ec85bdf254f4d1f0800000000000000
+      internalID: -1020922578225230616
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Skeleton_Warden_14
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 1088
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 51af4accb37113fb0800000000000000
+      internalID: -4669925793002620395
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Skeleton_Warden_15
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 1088
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b58c78273306653e0800000000000000
+      internalID: -2065357605021693861
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Skeleton_Warden_16
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1024
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7aab375c2bbf9edb0800000000000000
+      internalID: -4761998385732142425
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Skeleton_Warden_17
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 1024
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ceeae2d0e08cfc8c0800000000000000
+      internalID: -3976739983268598036
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Skeleton_Warden_18
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 1024
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dafee97879e0ea230800000000000000
+      internalID: 3651872391822241709
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Skeleton_Warden_19
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 1024
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1a03a63fd95548080800000000000000
+      internalID: -9186123203046920031
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Skeleton_Warden_20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 960
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 92e66bf794c13b340800000000000000
+      internalID: 4878273923373231657
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Skeleton_Warden_21
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 960
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b325f0e23b1122860800000000000000
+      internalID: 7503579390422241851
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Skeleton_Warden_22
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 960
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 038fd38b799699690800000000000000
+      internalID: -7594923196231583696
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Skeleton_Warden_23
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 960
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2f4e1d2b9fd7e1840800000000000000
+      internalID: 5196729531432559858
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Skeleton_Warden_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 896
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 14ae0be640891b670800000000000000
+      internalID: 8552784312157661761
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Skeleton_Warden_25
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 896
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 68cb43383cacf1120800000000000000
+      internalID: 2386849268598357126
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Skeleton_Warden_26
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 896
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bc9d9606c2904fcf0800000000000000
+      internalID: -219540395633550901
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Skeleton_Warden_27
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 896
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f097bb2dcc45dcad0800000000000000
+      internalID: -2680392964530013937
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Skeleton_Warden_28
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 896
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0380a01638fbfb9b0800000000000000
+      internalID: -5062116885151479760
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Skeleton_Warden_29
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 896
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b53a89c7674aa02a0800000000000000
+      internalID: -6770418260994645157
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Skeleton_Warden_30
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 832
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c858812b3326f8080800000000000000
+      internalID: -9183013141014346356
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Skeleton_Warden_31
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 832
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b5bf7b763f645ba90800000000000000
+      internalID: -7298849609852912805
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Skeleton_Warden_32
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 832
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 211033cc7313995c0800000000000000
+      internalID: -4208278261082160878
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Skeleton_Warden_33
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 832
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1015e0d17449eb5d0800000000000000
+      internalID: -3044833264904810239
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Skeleton_Warden_34
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 832
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1e0fefa4cd9fff4c0800000000000000
+      internalID: -4251404798668115743
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Skeleton_Warden_35
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 832
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d5fe25b61a20d6860800000000000000
+      internalID: 7524673444719554397
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Skeleton_Warden_36
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 768
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e86f82b26126be8f0800000000000000
+      internalID: -510206285423511922
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Skeleton_Warden_37
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 768
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 01c6f637484ec0310800000000000000
+      internalID: 1372723243964656656
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Skeleton_Warden_38
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 768
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 31c3aa0041dffa7e0800000000000000
+      internalID: -1751903467671503853
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Skeleton_Warden_39
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 768
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0410e32da648c8360800000000000000
+      internalID: 7173253900823036224
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Skeleton_Warden_40
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 768
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d11b3285f9d223470800000000000000
+      internalID: 8372804819636957469
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Skeleton_Warden_41
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 768
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b2f1b2d34f56f34c0800000000000000
+      internalID: -4305610619070243029
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Skeleton_Warden_42
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 704
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d76cbdd2ab9bc1730800000000000000
+      internalID: 3971253180718368381
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Skeleton_Warden_43
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 704
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 56dbd5e0be81da4f0800000000000000
+      internalID: -815968559646786203
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Skeleton_Warden_44
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 704
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 76c01d82e52fa1a90800000000000000
+      internalID: -7342289756248535961
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Skeleton_Warden_45
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 704
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 190682af2240594d0800000000000000
+      internalID: -3128589817866592111
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Skeleton_Warden_46
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 704
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7fb6ecdfdc3e7b180800000000000000
+      internalID: -9099554048212833289
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Skeleton_Warden_47
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 704
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2ce9182a5034cce90800000000000000
+      internalID: -7004149628987662654
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Skeleton_Warden_48
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 704
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 56d24f0aa197accc0800000000000000
+      internalID: -3690003789400232603
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Skeleton_Warden_49
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 704
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e6d674e0dcdb76670800000000000000
+      internalID: 8531996707482201454
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Skeleton_Warden_50
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 704
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6747d0e598b2bcf80800000000000000
+      internalID: -8085320837025139594
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Skeleton_Warden_51
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 704
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c955133b76b66a660800000000000000
+      internalID: 7396717531134776732
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Skeleton_Warden_52
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 640
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 27b2c1a852bdfd390800000000000000
+      internalID: -7791267876050293902
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Skeleton_Warden_53
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 640
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5fe157283dc098190800000000000000
+      internalID: -7959816763834294539
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Skeleton_Warden_54
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 640
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0722fe54e04b67ae0800000000000000
+      internalID: -1551855048186715536
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Skeleton_Warden_55
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 640
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 656631286b5fbe440800000000000000
+      internalID: 4966333178321266262
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Skeleton_Warden_56
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 640
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 503098f4f0ce72600800000000000000
+      internalID: 443582638822327045
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Skeleton_Warden_57
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 640
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 60f80abf13f2e5720800000000000000
+      internalID: 2836756707011497734
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Skeleton_Warden_58
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 640
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 04e9f6bbf10dff3b0800000000000000
+      internalID: -5476429787152015808
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Skeleton_Warden_59
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 640
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4eae930d41a729640800000000000000
+      internalID: 5085261159066102500
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Skeleton_Warden_60
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 640
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6b033e0ae7a188e90800000000000000
+      internalID: -7023334487716843338
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Skeleton_Warden_61
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 640
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a2eea96a041e27f20800000000000000
+      internalID: 3419042734916955690
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Skeleton_Warden_62
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 576
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 02798392a98e73ea0800000000000000
+      internalID: -5892985838576822496
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Skeleton_Warden_63
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 576
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bb12d339ea5851ba0800000000000000
+      internalID: -6118837533871889989
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Skeleton_Warden_64
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 576
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aa517a098a95374b0800000000000000
+      internalID: -5443908944044550742
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Skeleton_Warden_65
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 576
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 47ade644f37b90590800000000000000
+      internalID: -7707427804908955020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Skeleton_Warden_66
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 576
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f3ec268fb5c2b7740800000000000000
+      internalID: 5150759372349165119
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Skeleton_Warden_67
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 576
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cab0b930c79e62ab0800000000000000
+      internalID: -5033078814694241364
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Skeleton_Warden_68
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 576
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8b622670ba5a38770800000000000000
+      internalID: 8611909066444383928
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Skeleton_Warden_69
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 576
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a6ae569a6f5e81dd0800000000000000
+      internalID: -2515007544319677846
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Skeleton_Warden_70
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 576
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f38d711f3e1a159c0800000000000000
+      internalID: -3940190198597953473
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Skeleton_Warden_71
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 576
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 398cfdfa9432bcc50800000000000000
+      internalID: 6686476871151896723
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Skeleton_Warden_72
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 512
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8a433c301ac903fa0800000000000000
+      internalID: -5822982102823258968
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Skeleton_Warden_73
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 512
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 52d85e01fe340b9f0800000000000000
+      internalID: -454788868304696027
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Skeleton_Warden_74
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 512
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4a89ef2f57d9c1860800000000000000
+      internalID: 7502044209205909668
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Skeleton_Warden_75
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 512
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6c411a64fca48f530800000000000000
+      internalID: 3888940532338070726
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Skeleton_Warden_76
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 512
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2d6c7aca1f00a1310800000000000000
+      internalID: 1376413674098902738
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Skeleton_Warden_77
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 512
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8b547ffa13a4922f0800000000000000
+      internalID: -997184265219783240
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Skeleton_Warden_78
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 512
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 27cbd43589be60430800000000000000
+      internalID: 3748942779297676402
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Skeleton_Warden_79
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 512
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5b66e0a80756fd290800000000000000
+      internalID: -7863454890338654539
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Skeleton_Warden_80
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 512
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4eefade0f38ea3e90800000000000000
+      internalID: -7045063309537902876
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Skeleton_Warden_81
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 512
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7454ce222fd8f5760800000000000000
+      internalID: 7448828379801601351
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Skeleton_Warden_82
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 448
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 02d5a8a540a827900800000000000000
+      internalID: 680758244989885728
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Skeleton_Warden_83
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 448
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1f9d35b15894c2220800000000000000
+      internalID: 2462423932302776817
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Skeleton_Warden_84
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 448
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d27fa876707ec5b00800000000000000
+      internalID: 818783251262535469
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Skeleton_Warden_85
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 448
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 20f626cf55ce60200800000000000000
+      internalID: 146063891986804482
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Skeleton_Warden_86
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 448
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 410fbb0e50a537470800000000000000
+      internalID: 8391149512013115412
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Skeleton_Warden_87
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 448
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 58faa049e78d9f350800000000000000
+      internalID: 6051105612510179205
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Skeleton_Warden_88
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 448
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8173ca47fec2510e0800000000000000
+      internalID: -2299882627736520936
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Skeleton_Warden_89
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 448
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f0e11344ef17180b0800000000000000
+      internalID: -5728171914158858737
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Skeleton_Warden_90
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 448
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aa49e7851f21f86b0800000000000000
+      internalID: -5291990209355934550
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Skeleton_Warden_91
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 448
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 84832cb8af03826c0800000000000000
+      internalID: -4168027602486675384
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Skeleton_Warden_92
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 384
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ccf1a1c838d2cb920800000000000000
+      internalID: 3007328694191136716
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Skeleton_Warden_93
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 384
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 01442af181c4c39e0800000000000000
+      internalID: -1640352497776049136
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Skeleton_Warden_94
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 384
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0ef214800685ecea0800000000000000
+      internalID: -5850641696429101088
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Skeleton_Warden_95
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 384
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5f4b2b12128b9f4c0800000000000000
+      internalID: -4253165920635931403
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Skeleton_Warden_96
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 384
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1bf8138756acb2ba0800000000000000
+      internalID: -6112569532068294735
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Skeleton_Warden_97
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 384
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c69d59467ebc62900800000000000000
+      internalID: 659438590141782380
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Skeleton_Warden_98
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 384
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4b12aecfe462a3260800000000000000
+      internalID: 7078011885058662836
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Skeleton_Warden_99
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 384
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5c4c8cba9f88f96b0800000000000000
+      internalID: -5287356831599377211
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Skeleton_Warden_100
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 384
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7cd59d43155996610800000000000000
+      internalID: 1614986117400583623
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Skeleton_Warden_101
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 384
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 796e040f6155f4470800000000000000
+      internalID: 8381010988568209047
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Skeleton_Warden_102
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 320
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f07adc9a1462b0290800000000000000
+      internalID: -7923197055964698865
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Skeleton_Warden_103
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 320
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: af959dcec9d1e8770800000000000000
+      internalID: 8614855697032108538
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Skeleton_Warden_104
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 320
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a29dad1608f9b3fd0800000000000000
+      internalID: -2361118205879330518
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Skeleton_Warden_105
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 320
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7911c3cec2f115080800000000000000
+      internalID: -9200538285938830953
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Skeleton_Warden_106
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 256
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3f464798404626fb0800000000000000
+      internalID: -4656049094098918157
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Skeleton_Warden_107
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 256
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 602522f7cec521e30800000000000000
+      internalID: 4472739550747316742
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Skeleton_Warden_108
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 256
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7815e3bec78c883f0800000000000000
+      internalID: -898247686812184185
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Skeleton_Warden_109
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 256
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 79d85e81989a603d0800000000000000
+      internalID: -3240716475553182313
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Skeleton_Warden_110
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 192
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9beabe39870199c20800000000000000
+      internalID: 3213617919169375929
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Skeleton_Warden_111
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 192
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f7ec9f1689d5da1d0800000000000000
+      internalID: -3337908839751496065
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Skeleton_Warden_112
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 192
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 68b410d930804e690800000000000000
+      internalID: -7573919861718299770
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Skeleton_Warden_113
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 192
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 229af3ebb407d19c0800000000000000
+      internalID: -3954881427144726238
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Skeleton_Warden_114
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 128
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ec17397c4183b0e60800000000000000
+      internalID: 7929493230814720462
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Skeleton_Warden_115
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 128
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8c79fe3258bfd3070800000000000000
+      internalID: 8087897055079405512
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Skeleton_Warden_116
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 128
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 574ebcd49830dbe90800000000000000
+      internalID: -7008441556868012939
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Skeleton_Warden_117
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 128
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6f0444a74d74f9900800000000000000
+      internalID: 693351845548278006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Skeleton_Warden_118
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 128
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0b077fb5c67214ac0800000000000000
+      internalID: -3872770858209021776
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Skeleton_Warden_119
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 128
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 34711ab4f5b1e70d0800000000000000
+      internalID: -3423268570650306749
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Skeleton_Warden_120
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 128
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f81ae365e9d4059f0800000000000000
+      internalID: -481799817681526385
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Skeleton_Warden_121
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 128
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d5e0a92f85a300090800000000000000
+      internalID: -8070386378546213283
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Skeleton_Warden_122
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 64
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: af1534a1245ea3c90800000000000000
+      internalID: -7189181783072353798
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Skeleton_Warden_123
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 64
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4b97660b371951360800000000000000
+      internalID: 7139772710332561844
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Skeleton_Warden_124
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 64
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c31e2075674abd440800000000000000
+      internalID: 4961740242651636028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Skeleton_Warden_125
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 64
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8cad7621c5890c5e0800000000000000
+      internalID: -1891344322282399032
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Skeleton_Warden_126
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 64
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 630d76254fbdb1cd0800000000000000
+      internalID: -2586231718593179594
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Skeleton_Warden_127
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 64
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bbe9fc55c03082ef0800000000000000
+      internalID: -132852837493268805
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Skeleton_Warden_128
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 64
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: da11740c3fbde8c20800000000000000
+      internalID: 3210745424311161261
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Skeleton_Warden_129
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 64
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8d77726e177981250800000000000000
+      internalID: 5915644625999591384
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Skeleton_Warden_130
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0ee954b7bd287dcb0800000000000000
+      internalID: -4839255395408699680
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Skeleton_Warden_131
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2b1050aa2b91aab30800000000000000
+      internalID: 4299277049425887666
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Skeleton_Warden_132
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 117519822b413edc0800000000000000
+      internalID: -3611019720803657967
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Skeleton_Warden_133
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 687ccf535f59c6210800000000000000
+      internalID: 1327600870572738438
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Skeleton_Warden_134
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0ae470fa87bb70c00800000000000000
+      internalID: 866867580299071136
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Skeleton_Warden_135
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6a3620b8e54600580800000000000000
+      internalID: -8862973709443243098
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Skeleton_Warden_136
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2f996ed32b51ed1b0800000000000000
+      internalID: -5630038628879656462
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Skeleton_Warden_137
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 271a5d8a4729d63f0800000000000000
+      internalID: -905906920285167246
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: ce0495bbd1461c244b08b64b38b16487
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      Spritesheet_Skeleton_Warden_0: -3887742357417350912
+      Spritesheet_Skeleton_Warden_1: 6783326062447153021
+      Spritesheet_Skeleton_Warden_10: -1100375915737407304
+      Spritesheet_Skeleton_Warden_100: 1614986117400583623
+      Spritesheet_Skeleton_Warden_101: 8381010988568209047
+      Spritesheet_Skeleton_Warden_102: -7923197055964698865
+      Spritesheet_Skeleton_Warden_103: 8614855697032108538
+      Spritesheet_Skeleton_Warden_104: -2361118205879330518
+      Spritesheet_Skeleton_Warden_105: -9200538285938830953
+      Spritesheet_Skeleton_Warden_106: -4656049094098918157
+      Spritesheet_Skeleton_Warden_107: 4472739550747316742
+      Spritesheet_Skeleton_Warden_108: -898247686812184185
+      Spritesheet_Skeleton_Warden_109: -3240716475553182313
+      Spritesheet_Skeleton_Warden_11: -5243714357148191454
+      Spritesheet_Skeleton_Warden_110: 3213617919169375929
+      Spritesheet_Skeleton_Warden_111: -3337908839751496065
+      Spritesheet_Skeleton_Warden_112: -7573919861718299770
+      Spritesheet_Skeleton_Warden_113: -3954881427144726238
+      Spritesheet_Skeleton_Warden_114: 7929493230814720462
+      Spritesheet_Skeleton_Warden_115: 8087897055079405512
+      Spritesheet_Skeleton_Warden_116: -7008441556868012939
+      Spritesheet_Skeleton_Warden_117: 693351845548278006
+      Spritesheet_Skeleton_Warden_118: -3872770858209021776
+      Spritesheet_Skeleton_Warden_119: -3423268570650306749
+      Spritesheet_Skeleton_Warden_12: 2305234106914167750
+      Spritesheet_Skeleton_Warden_120: -481799817681526385
+      Spritesheet_Skeleton_Warden_121: -8070386378546213283
+      Spritesheet_Skeleton_Warden_122: -7189181783072353798
+      Spritesheet_Skeleton_Warden_123: 7139772710332561844
+      Spritesheet_Skeleton_Warden_124: 4961740242651636028
+      Spritesheet_Skeleton_Warden_125: -1891344322282399032
+      Spritesheet_Skeleton_Warden_126: -2586231718593179594
+      Spritesheet_Skeleton_Warden_127: -132852837493268805
+      Spritesheet_Skeleton_Warden_128: 3210745424311161261
+      Spritesheet_Skeleton_Warden_129: 5915644625999591384
+      Spritesheet_Skeleton_Warden_13: -1020922578225230616
+      Spritesheet_Skeleton_Warden_130: -4839255395408699680
+      Spritesheet_Skeleton_Warden_131: 4299277049425887666
+      Spritesheet_Skeleton_Warden_132: -3611019720803657967
+      Spritesheet_Skeleton_Warden_133: 1327600870572738438
+      Spritesheet_Skeleton_Warden_134: 866867580299071136
+      Spritesheet_Skeleton_Warden_135: -8862973709443243098
+      Spritesheet_Skeleton_Warden_136: -5630038628879656462
+      Spritesheet_Skeleton_Warden_137: -905906920285167246
+      Spritesheet_Skeleton_Warden_14: -4669925793002620395
+      Spritesheet_Skeleton_Warden_15: -2065357605021693861
+      Spritesheet_Skeleton_Warden_16: -4761998385732142425
+      Spritesheet_Skeleton_Warden_17: -3976739983268598036
+      Spritesheet_Skeleton_Warden_18: 3651872391822241709
+      Spritesheet_Skeleton_Warden_19: -9186123203046920031
+      Spritesheet_Skeleton_Warden_2: -6612085900899869423
+      Spritesheet_Skeleton_Warden_20: 4878273923373231657
+      Spritesheet_Skeleton_Warden_21: 7503579390422241851
+      Spritesheet_Skeleton_Warden_22: -7594923196231583696
+      Spritesheet_Skeleton_Warden_23: 5196729531432559858
+      Spritesheet_Skeleton_Warden_24: 8552784312157661761
+      Spritesheet_Skeleton_Warden_25: 2386849268598357126
+      Spritesheet_Skeleton_Warden_26: -219540395633550901
+      Spritesheet_Skeleton_Warden_27: -2680392964530013937
+      Spritesheet_Skeleton_Warden_28: -5062116885151479760
+      Spritesheet_Skeleton_Warden_29: -6770418260994645157
+      Spritesheet_Skeleton_Warden_3: -8893670225517759232
+      Spritesheet_Skeleton_Warden_30: -9183013141014346356
+      Spritesheet_Skeleton_Warden_31: -7298849609852912805
+      Spritesheet_Skeleton_Warden_32: -4208278261082160878
+      Spritesheet_Skeleton_Warden_33: -3044833264904810239
+      Spritesheet_Skeleton_Warden_34: -4251404798668115743
+      Spritesheet_Skeleton_Warden_35: 7524673444719554397
+      Spritesheet_Skeleton_Warden_36: -510206285423511922
+      Spritesheet_Skeleton_Warden_37: 1372723243964656656
+      Spritesheet_Skeleton_Warden_38: -1751903467671503853
+      Spritesheet_Skeleton_Warden_39: 7173253900823036224
+      Spritesheet_Skeleton_Warden_4: 1612624843870998548
+      Spritesheet_Skeleton_Warden_40: 8372804819636957469
+      Spritesheet_Skeleton_Warden_41: -4305610619070243029
+      Spritesheet_Skeleton_Warden_42: 3971253180718368381
+      Spritesheet_Skeleton_Warden_43: -815968559646786203
+      Spritesheet_Skeleton_Warden_44: -7342289756248535961
+      Spritesheet_Skeleton_Warden_45: -3128589817866592111
+      Spritesheet_Skeleton_Warden_46: -9099554048212833289
+      Spritesheet_Skeleton_Warden_47: -7004149628987662654
+      Spritesheet_Skeleton_Warden_48: -3690003789400232603
+      Spritesheet_Skeleton_Warden_49: 8531996707482201454
+      Spritesheet_Skeleton_Warden_5: -9196836545766037107
+      Spritesheet_Skeleton_Warden_50: -8085320837025139594
+      Spritesheet_Skeleton_Warden_51: 7396717531134776732
+      Spritesheet_Skeleton_Warden_52: -7791267876050293902
+      Spritesheet_Skeleton_Warden_53: -7959816763834294539
+      Spritesheet_Skeleton_Warden_54: -1551855048186715536
+      Spritesheet_Skeleton_Warden_55: 4966333178321266262
+      Spritesheet_Skeleton_Warden_56: 443582638822327045
+      Spritesheet_Skeleton_Warden_57: 2836756707011497734
+      Spritesheet_Skeleton_Warden_58: -5476429787152015808
+      Spritesheet_Skeleton_Warden_59: 5085261159066102500
+      Spritesheet_Skeleton_Warden_6: -3533604470550275592
+      Spritesheet_Skeleton_Warden_60: -7023334487716843338
+      Spritesheet_Skeleton_Warden_61: 3419042734916955690
+      Spritesheet_Skeleton_Warden_62: -5892985838576822496
+      Spritesheet_Skeleton_Warden_63: -6118837533871889989
+      Spritesheet_Skeleton_Warden_64: -5443908944044550742
+      Spritesheet_Skeleton_Warden_65: -7707427804908955020
+      Spritesheet_Skeleton_Warden_66: 5150759372349165119
+      Spritesheet_Skeleton_Warden_67: -5033078814694241364
+      Spritesheet_Skeleton_Warden_68: 8611909066444383928
+      Spritesheet_Skeleton_Warden_69: -2515007544319677846
+      Spritesheet_Skeleton_Warden_7: -4012024118979126561
+      Spritesheet_Skeleton_Warden_70: -3940190198597953473
+      Spritesheet_Skeleton_Warden_71: 6686476871151896723
+      Spritesheet_Skeleton_Warden_72: -5822982102823258968
+      Spritesheet_Skeleton_Warden_73: -454788868304696027
+      Spritesheet_Skeleton_Warden_74: 7502044209205909668
+      Spritesheet_Skeleton_Warden_75: 3888940532338070726
+      Spritesheet_Skeleton_Warden_76: 1376413674098902738
+      Spritesheet_Skeleton_Warden_77: -997184265219783240
+      Spritesheet_Skeleton_Warden_78: 3748942779297676402
+      Spritesheet_Skeleton_Warden_79: -7863454890338654539
+      Spritesheet_Skeleton_Warden_8: -548787435302365014
+      Spritesheet_Skeleton_Warden_80: -7045063309537902876
+      Spritesheet_Skeleton_Warden_81: 7448828379801601351
+      Spritesheet_Skeleton_Warden_82: 680758244989885728
+      Spritesheet_Skeleton_Warden_83: 2462423932302776817
+      Spritesheet_Skeleton_Warden_84: 818783251262535469
+      Spritesheet_Skeleton_Warden_85: 146063891986804482
+      Spritesheet_Skeleton_Warden_86: 8391149512013115412
+      Spritesheet_Skeleton_Warden_87: 6051105612510179205
+      Spritesheet_Skeleton_Warden_88: -2299882627736520936
+      Spritesheet_Skeleton_Warden_89: -5728171914158858737
+      Spritesheet_Skeleton_Warden_9: -8245839220184663183
+      Spritesheet_Skeleton_Warden_90: -5291990209355934550
+      Spritesheet_Skeleton_Warden_91: -4168027602486675384
+      Spritesheet_Skeleton_Warden_92: 3007328694191136716
+      Spritesheet_Skeleton_Warden_93: -1640352497776049136
+      Spritesheet_Skeleton_Warden_94: -5850641696429101088
+      Spritesheet_Skeleton_Warden_95: -4253165920635931403
+      Spritesheet_Skeleton_Warden_96: -6112569532068294735
+      Spritesheet_Skeleton_Warden_97: 659438590141782380
+      Spritesheet_Skeleton_Warden_98: 7078011885058662836
+      Spritesheet_Skeleton_Warden_99: -5287356831599377211
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

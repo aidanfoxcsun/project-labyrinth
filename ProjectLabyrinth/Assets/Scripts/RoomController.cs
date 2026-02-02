@@ -6,6 +6,8 @@ public class RoomController : MonoBehaviour
     public List<Door> doors = new List<Door>();
     public List<GameObject> enemies = new List<GameObject>();
 
+    public NavigationManager navigationManager;
+
     private bool activated = false;
     private bool locked = false;
 
@@ -19,6 +21,11 @@ public class RoomController : MonoBehaviour
     {
         enemies.Add(enemy);
         enemy.SetActive(false); // off until player enters
+        enemy.GetComponent<NavigationAgent>().setManager(navigationManager);
+        if (enemy.GetComponent<JumperBehavior>() != null)
+        {
+            enemy.GetComponent<JumperBehavior>().setNavigationManager(navigationManager);
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D other)

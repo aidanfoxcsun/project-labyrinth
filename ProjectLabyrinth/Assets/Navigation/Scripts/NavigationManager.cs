@@ -5,19 +5,16 @@ using UnityEngine;
 // Script for performing the A* Pathfinding Algorithm
 public class NavigationManager : MonoBehaviour
 {
-    // Singleton Class
-    public static NavigationManager instance;
+    //// Singleton Class
+    //public static NavigationManager instance;
 
     public List<NavigationNode> nodes = new List<NavigationNode>();
 
-    private void Awake()
+    private void Start()
     {
-        instance = this;
+        //instance = this;
 
-        foreach (NavigationNode node in FindObjectsByType<NavigationNode>(FindObjectsSortMode.None))
-        {
-            nodes.Add(node);
-        }
+        nodes.AddRange(GetComponentsInChildren<NavigationNode>(true));
     }
 
     // Generates a path based using the A* Pathfinding Algorithm
@@ -94,8 +91,12 @@ public class NavigationManager : MonoBehaviour
         float minDistance = float.MaxValue;
         NavigationNode closest = null;
 
-        foreach(NavigationNode node in FindObjectsByType<NavigationNode>(FindObjectsSortMode.None))
+        foreach(var node in nodes)
         {
+            if (node == null) continue;               // <--- IMPORTANT FIX
+            if (node.gameObject == null) continue;    // <--- DOUBLE SAFE
+            if (!node) continue;
+
             float distanceSqaured = (node.transform.position - position).sqrMagnitude; // Use square magnitudes because I only care about relative distances, not absolute. Save on performance
 
             if(distanceSqaured < minDistance)

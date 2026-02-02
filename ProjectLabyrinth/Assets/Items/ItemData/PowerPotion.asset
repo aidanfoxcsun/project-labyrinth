@@ -10,23 +10,23 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d408cbb5d410f444bacf2905f4e5efa6, type: 3}
-  m_Name: MagicMushroom
+  m_Name: PowerPotion
   m_EditorClassIdentifier: Assembly-CSharp::ItemData
-  itemName: Magic Mushroom
-  description: All Stats Up!
-  icon: {fileID: -2510476293373519475, guid: 62d3977c50eb9cd4b9fa0748d02c2452, type: 3}
-  weight: 1
+  itemName: Power Potion
+  description: You feel strong!
+  icon: {fileID: 21300000, guid: 54ba6b5dce6ee034f9da367d4af3b5ea, type: 3}
+  weight: 5
   effects:
-  - rid: 8685533113252315343
+  - rid: 4525888053118238939
   references:
     version: 2
     RefIds:
-    - rid: 8685533113252315343
+    - rid: 4525888053118238939
       type: {class: StatUpEffect, ns: , asm: Assembly-CSharp}
       data:
-        hp: 2
+        hp: 0
         flatDamage: 2
-        damageScaling: 0.25
-        speed: 0.5
-        range: 1
-        fireRate: 0.5
+        damageScaling: 0.1
+        speed: 1
+        range: 0
+        fireRate: 0

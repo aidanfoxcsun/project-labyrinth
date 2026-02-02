@@ -1,7 +1,7 @@
-using UnityEngine;
+using System.Collections;
 using System.Collections.Generic;
+using UnityEngine;
 
-[ExecuteInEditMode]
 public class NodeGraphGenerator : MonoBehaviour
 {
     [Header("Grid Bounds")]
@@ -17,9 +17,25 @@ public class NodeGraphGenerator : MonoBehaviour
     [HideInInspector]
     public List<NavigationNode> nodes = new List<NavigationNode>();
 
+    //void Start()
+    //{
+    //    StartCoroutine(GenerateNextFrame());
+    //}
+
+    //private IEnumerator GenerateNextFrame()
+    //{
+    //    yield return null;
+    //    boundA += new Vector2(transform.position.x, transform.position.y);
+    //    boundB += new Vector2(transform.position.x, transform.position.y);
+    //    GenerateGraph();
+    //}
+
     public void GenerateGraph()
     {
         ClearGraph();
+
+        boundA += new Vector2(transform.position.x, transform.position.y);
+        boundB += new Vector2(transform.position.x, transform.position.y);
 
         Vector2 min = Vector2.Min(boundA, boundB);
         Vector2 max = Vector2.Max(boundA, boundB);

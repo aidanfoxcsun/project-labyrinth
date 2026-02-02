@@ -12,6 +12,10 @@ public class PlayerMovement : MonoBehaviour
     public Transform firePoint;
     public float projectileSpeed = 10f;
 
+    public GameObject aimDirection;
+
+    public CameraFollow cam;
+
     // Loading Stats
     public PlayerStats playerStats;
 
@@ -32,11 +36,37 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
-        movement.x = Input.GetAxisRaw("Horizontal");
-        movement.y = Input.GetAxisRaw("Vertical");
+        // Updated Shooting Logic
+        // Use Arrow keys, twin stick shooter style.
+        // WASD for movement
+        // Arrow Keys for Shooting
+
+        //movement.x = Input.GetAxisRaw("Horizontal");
+        //movement.y = Input.GetAxisRaw("Vertical");
+
+        movement = Vector2.zero;
+        if (Input.GetKey(KeyCode.W)) movement.y += 1;
+        if (Input.GetKey(KeyCode.S)) movement.y -= 1;
+        if (Input.GetKey(KeyCode.A)) movement.x -= 1;
+        if (Input.GetKey(KeyCode.D)) movement.x += 1;
+
         movement = movement.normalized;
 
-        if (movement.sqrMagnitude > 0.0001f) lastAim = movement;
+        // Arrow key aiming only
+        Vector2 aim = Vector2.zero;
+        if (Input.GetKey(KeyCode.UpArrow)) aim.y += 1;
+        if (Input.GetKey(KeyCode.DownArrow)) aim.y -= 1;
+        if (Input.GetKey(KeyCode.LeftArrow)) aim.x -= 1;
+        if (Input.GetKey(KeyCode.RightArrow)) aim.x += 1;
+
+        if (aim.sqrMagnitude > 0.01f)
+            lastAim = aim.normalized;
+
+        Vector2 pos = transform.position;
+
+        aimDirection.transform.position = Vector2.Lerp(aimDirection.transform.position, 
+            lastAim + pos, 
+            Time.deltaTime * 50.0f);
 
         if (Input.GetKeyDown(KeyCode.Space)) Shoot();
 
@@ -74,5 +104,15 @@ public class PlayerMovement : MonoBehaviour
         if (projCol && playerCol) Physics2D.IgnoreCollision(projCol, playerCol);
 
         proj.GetComponent<Projectile>()?.SetDirection(lastAim);
+    }
+
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Room"))
+        {
+            GameObject room = collision.gameObject;
+            cam.SetTargetDestination(new Vector2(room.transform.position.x, room.transform.position.y));
+        }
     }
 }

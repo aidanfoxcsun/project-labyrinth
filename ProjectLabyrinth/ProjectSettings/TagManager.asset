@@ -3,7 +3,8 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 3
-  tags: []
+  tags:
+  - Room
   layers:
   - Default
   - TransparentFX
@@ -11,11 +12,11 @@ TagManager:
   - Obstacle
   - Water
   - UI
-  - 
-  - 
+  - Wall
+  - Projectile
   - Rocks
   - Doors
-  - 
+  - Boss
   - 
   - 
   - 

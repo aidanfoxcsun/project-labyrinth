@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: BasicPotion
   m_EditorClassIdentifier: Assembly-CSharp::ItemData
   itemName: Basic Potion
-  description: Tghis potion heals you
-  icon: {fileID: 0}
-  weight: 2
+  description: This potion heals you
+  icon: {fileID: 21300000, guid: 849916efa44d9644d935a7067f90fdd3, type: 3}
+  weight: 5
   effects:
   - rid: 8685533161122955506
   references:
@@ -24,7 +24,7 @@ MonoBehaviour:
     - rid: 8685533161122955506
       type: {class: StatUpEffect, ns: , asm: Assembly-CSharp}
       data:
-        hp: 0
+        hp: 2
         flatDamage: 0
         damageScaling: 0
         speed: 0

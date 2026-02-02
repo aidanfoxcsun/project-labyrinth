@@ -1,0 +1,1727 @@
+fileFormatVersion: 2
+guid: 15ff1f420355359469a40035326083b6
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -3556010185996963030
+    second: Spritesheet_Minions_Skeleton_Warden_0
+  - first:
+      213: -916829353650945469
+    second: Spritesheet_Minions_Skeleton_Warden_1
+  - first:
+      213: -8265116427029264938
+    second: Spritesheet_Minions_Skeleton_Warden_2
+  - first:
+      213: -3447201975708067335
+    second: Spritesheet_Minions_Skeleton_Warden_3
+  - first:
+      213: -7395787006001272234
+    second: Spritesheet_Minions_Skeleton_Warden_4
+  - first:
+      213: 7002010588514012095
+    second: Spritesheet_Minions_Skeleton_Warden_5
+  - first:
+      213: 6922301041771158143
+    second: Spritesheet_Minions_Skeleton_Warden_6
+  - first:
+      213: 1882574467221083146
+    second: Spritesheet_Minions_Skeleton_Warden_7
+  - first:
+      213: -3188099144404428673
+    second: Spritesheet_Minions_Skeleton_Warden_8
+  - first:
+      213: 5218538791526359321
+    second: Spritesheet_Minions_Skeleton_Warden_9
+  - first:
+      213: -6103206866001178100
+    second: Spritesheet_Minions_Skeleton_Warden_10
+  - first:
+      213: 6439353069517081657
+    second: Spritesheet_Minions_Skeleton_Warden_11
+  - first:
+      213: -7090421632568604565
+    second: Spritesheet_Minions_Skeleton_Warden_12
+  - first:
+      213: -2753565340209717723
+    second: Spritesheet_Minions_Skeleton_Warden_13
+  - first:
+      213: -5165150081588351667
+    second: Spritesheet_Minions_Skeleton_Warden_14
+  - first:
+      213: 7560541199175971884
+    second: Spritesheet_Minions_Skeleton_Warden_15
+  - first:
+      213: -8165762803995771456
+    second: Spritesheet_Minions_Skeleton_Warden_16
+  - first:
+      213: 6341835815292088973
+    second: Spritesheet_Minions_Skeleton_Warden_17
+  - first:
+      213: 7301813365436762279
+    second: Spritesheet_Minions_Skeleton_Warden_18
+  - first:
+      213: 6785742016076057931
+    second: Spritesheet_Minions_Skeleton_Warden_19
+  - first:
+      213: 6640398976261557137
+    second: Spritesheet_Minions_Skeleton_Warden_20
+  - first:
+      213: 8901172925917652773
+    second: Spritesheet_Minions_Skeleton_Warden_21
+  - first:
+      213: 2492717166653423305
+    second: Spritesheet_Minions_Skeleton_Warden_22
+  - first:
+      213: -3415791529821224196
+    second: Spritesheet_Minions_Skeleton_Warden_23
+  - first:
+      213: 757533378577753362
+    second: Spritesheet_Minions_Skeleton_Warden_24
+  - first:
+      213: -1534478456252808292
+    second: Spritesheet_Minions_Skeleton_Warden_25
+  - first:
+      213: -3424479319537811157
+    second: Spritesheet_Minions_Skeleton_Warden_26
+  - first:
+      213: -5722264524091473612
+    second: Spritesheet_Minions_Skeleton_Warden_27
+  - first:
+      213: -5315538963498699159
+    second: Spritesheet_Minions_Skeleton_Warden_28
+  - first:
+      213: 3468394418818690919
+    second: Spritesheet_Minions_Skeleton_Warden_29
+  - first:
+      213: 2895378290855330925
+    second: Spritesheet_Minions_Skeleton_Warden_30
+  - first:
+      213: 7197072900061267457
+    second: Spritesheet_Minions_Skeleton_Warden_31
+  - first:
+      213: 4737235195755351011
+    second: Spritesheet_Minions_Skeleton_Warden_32
+  - first:
+      213: -3250644004934317758
+    second: Spritesheet_Minions_Skeleton_Warden_33
+  - first:
+      213: -1044552163233038616
+    second: Spritesheet_Minions_Skeleton_Warden_34
+  - first:
+      213: -9119153917429478599
+    second: Spritesheet_Minions_Skeleton_Warden_35
+  - first:
+      213: 1544852181841427462
+    second: Spritesheet_Minions_Skeleton_Warden_36
+  - first:
+      213: -7445307842616694192
+    second: Spritesheet_Minions_Skeleton_Warden_37
+  - first:
+      213: 923599540515073041
+    second: Spritesheet_Minions_Skeleton_Warden_38
+  - first:
+      213: -1836490678154887035
+    second: Spritesheet_Minions_Skeleton_Warden_39
+  - first:
+      213: -4382415966278800767
+    second: Spritesheet_Minions_Skeleton_Warden_40
+  - first:
+      213: 4926920822404162650
+    second: Spritesheet_Minions_Skeleton_Warden_41
+  - first:
+      213: -8455549731881982018
+    second: Spritesheet_Minions_Skeleton_Warden_42
+  - first:
+      213: -7956031081668869335
+    second: Spritesheet_Minions_Skeleton_Warden_43
+  - first:
+      213: 6880413861857718248
+    second: Spritesheet_Minions_Skeleton_Warden_44
+  - first:
+      213: -3781161068788501880
+    second: Spritesheet_Minions_Skeleton_Warden_45
+  - first:
+      213: 4206197995354697676
+    second: Spritesheet_Minions_Skeleton_Warden_46
+  - first:
+      213: -5726208111587122462
+    second: Spritesheet_Minions_Skeleton_Warden_47
+  - first:
+      213: 6539808298597063079
+    second: Spritesheet_Minions_Skeleton_Warden_48
+  - first:
+      213: -1909318202513857547
+    second: Spritesheet_Minions_Skeleton_Warden_49
+  - first:
+      213: 3371642615629174598
+    second: Spritesheet_Minions_Skeleton_Warden_50
+  - first:
+      213: 305703702924610993
+    second: Spritesheet_Minions_Skeleton_Warden_51
+  - first:
+      213: 4069176455128877832
+    second: Spritesheet_Minions_Skeleton_Warden_52
+  - first:
+      213: 5432886527631315332
+    second: Spritesheet_Minions_Skeleton_Warden_53
+  - first:
+      213: 9176532069294210171
+    second: Spritesheet_Minions_Skeleton_Warden_54
+  - first:
+      213: 606508721085590991
+    second: Spritesheet_Minions_Skeleton_Warden_55
+  - first:
+      213: 959301929622456858
+    second: Spritesheet_Minions_Skeleton_Warden_56
+  - first:
+      213: -1098190636428138520
+    second: Spritesheet_Minions_Skeleton_Warden_57
+  - first:
+      213: -489897312408781764
+    second: Spritesheet_Minions_Skeleton_Warden_58
+  - first:
+      213: 2540237260471816806
+    second: Spritesheet_Minions_Skeleton_Warden_59
+  - first:
+      213: -1862447490869123683
+    second: Spritesheet_Minions_Skeleton_Warden_60
+  - first:
+      213: 7676842547418870879
+    second: Spritesheet_Minions_Skeleton_Warden_61
+  - first:
+      213: 4118924356661241993
+    second: Spritesheet_Minions_Skeleton_Warden_62
+  - first:
+      213: -4928286458104108742
+    second: Spritesheet_Minions_Skeleton_Warden_63
+  - first:
+      213: 709194435098317832
+    second: Spritesheet_Minions_Skeleton_Warden_64
+  - first:
+      213: 700154049885970543
+    second: Spritesheet_Minions_Skeleton_Warden_65
+  - first:
+      213: 4047171238640136232
+    second: Spritesheet_Minions_Skeleton_Warden_66
+  - first:
+      213: -6395425255359660548
+    second: Spritesheet_Minions_Skeleton_Warden_67
+  - first:
+      213: 6995438119549525343
+    second: Spritesheet_Minions_Skeleton_Warden_68
+  - first:
+      213: 1804839782604723959
+    second: Spritesheet_Minions_Skeleton_Warden_69
+  - first:
+      213: -714546595857660461
+    second: Spritesheet_Minions_Skeleton_Warden_70
+  - first:
+      213: 3628027290672900824
+    second: Spritesheet_Minions_Skeleton_Warden_71
+  - first:
+      213: -4601392226659940765
+    second: Spritesheet_Minions_Skeleton_Warden_72
+  - first:
+      213: -6155424211250421559
+    second: Spritesheet_Minions_Skeleton_Warden_73
+  - first:
+      213: -3576562524151327396
+    second: Spritesheet_Minions_Skeleton_Warden_74
+  - first:
+      213: -8917111022778868810
+    second: Spritesheet_Minions_Skeleton_Warden_75
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 32
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Spritesheet_Minions_Skeleton_Warden_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 352
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a23fafd839386aec0800000000000000
+      internalID: -3556010185996963030
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Minions_Skeleton_Warden_1
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 352
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3420cf77f84c643f0800000000000000
+      internalID: -916829353650945469
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Minions_Skeleton_Warden_2
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 352
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6d5ccab66686c4d80800000000000000
+      internalID: -8265116427029264938
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Minions_Skeleton_Warden_3
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 352
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9f955e031141920d0800000000000000
+      internalID: -3447201975708067335
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Minions_Skeleton_Warden_4
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 352
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 65a28d017e2ec5990800000000000000
+      internalID: -7395787006001272234
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Minions_Skeleton_Warden_5
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 352
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fbbc6e138832c2160800000000000000
+      internalID: 7002010588514012095
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Minions_Skeleton_Warden_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 320
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f7a161f1f14f01060800000000000000
+      internalID: 6922301041771158143
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Minions_Skeleton_Warden_7
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 320
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a04deede08f302a10800000000000000
+      internalID: 1882574467221083146
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Minions_Skeleton_Warden_8
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 320
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f781c0d28b891c3d0800000000000000
+      internalID: -3188099144404428673
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Minions_Skeleton_Warden_9
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 320
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9116683c169fb6840800000000000000
+      internalID: 5218538791526359321
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Minions_Skeleton_Warden_10
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 320
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c02564901bd0d4ba0800000000000000
+      internalID: -6103206866001178100
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Minions_Skeleton_Warden_11
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 320
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 93c03e3ef7d2d5950800000000000000
+      internalID: 6439353069517081657
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Minions_Skeleton_Warden_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 288
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b68c0038713c99d90800000000000000
+      internalID: -7090421632568604565
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Minions_Skeleton_Warden_13
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 288
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 52ed8fe79ee59c9d0800000000000000
+      internalID: -2753565340209717723
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Minions_Skeleton_Warden_14
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 288
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d4da85fed53b158b0800000000000000
+      internalID: -5165150081588351667
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Minions_Skeleton_Warden_15
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 288
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c24f696c9207ce860800000000000000
+      internalID: 7560541199175971884
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Minions_Skeleton_Warden_16
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 288
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0cdfbbb6ef16dae80800000000000000
+      internalID: -8165762803995771456
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Minions_Skeleton_Warden_17
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 288
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d82b552d21ab20850800000000000000
+      internalID: 6341835815292088973
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Minions_Skeleton_Warden_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 256
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7a8ce07b190455560800000000000000
+      internalID: 7301813365436762279
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Minions_Skeleton_Warden_19
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 256
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b4d08a5496ccb2e50800000000000000
+      internalID: 6785742016076057931
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Minions_Skeleton_Warden_20
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 256
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 19b00f2cfaf672c50800000000000000
+      internalID: 6640398976261557137
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Minions_Skeleton_Warden_21
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 256
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 52765ad9d91578b70800000000000000
+      internalID: 8901172925917652773
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Minions_Skeleton_Warden_22
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 224
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9ce35eb5e09e79220800000000000000
+      internalID: 2492717166653423305
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Minions_Skeleton_Warden_23
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 224
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cf2c73683bba890d0800000000000000
+      internalID: -3415791529821224196
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Minions_Skeleton_Warden_24
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 224
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 215e0af189c438a00800000000000000
+      internalID: 757533378577753362
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Minions_Skeleton_Warden_25
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 224
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c93cf8b59ff64bae0800000000000000
+      internalID: -1534478456252808292
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Minions_Skeleton_Warden_26
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 192
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b21074ad33ec970d0800000000000000
+      internalID: -3424479319537811157
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Minions_Skeleton_Warden_27
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 192
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 43145b2bbbe6690b0800000000000000
+      internalID: -5722264524091473612
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Minions_Skeleton_Warden_28
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 192
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 96679e2c9796b36b0800000000000000
+      internalID: -5315538963498699159
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Minions_Skeleton_Warden_29
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 192
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 76fa2aaf856322030800000000000000
+      internalID: 3468394418818690919
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Minions_Skeleton_Warden_30
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 160
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d644fc417337e2820800000000000000
+      internalID: 2895378290855330925
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Minions_Skeleton_Warden_31
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 160
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1060ebebba321e360800000000000000
+      internalID: 7197072900061267457
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Minions_Skeleton_Warden_32
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 160
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3ebc974cf4a0eb140800000000000000
+      internalID: 4737235195755351011
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Minions_Skeleton_Warden_33
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 160
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 24903aa008463e2d0800000000000000
+      internalID: -3250644004934317758
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Minions_Skeleton_Warden_34
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 160
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8eef02187510181f0800000000000000
+      internalID: -1044552163233038616
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Minions_Skeleton_Warden_35
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 160
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 93b0183d3d1427180800000000000000
+      internalID: -9119153917429478599
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Minions_Skeleton_Warden_36
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 128
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 60c3529dfda607510800000000000000
+      internalID: 1544852181841427462
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Minions_Skeleton_Warden_37
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 128
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 05ae66dc6f3fca890800000000000000
+      internalID: -7445307842616694192
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Minions_Skeleton_Warden_38
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 128
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 11c6d1f73e841dc00800000000000000
+      internalID: 923599540515073041
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Minions_Skeleton_Warden_39
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 128
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 580034755797386e0800000000000000
+      internalID: -1836490678154887035
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Minions_Skeleton_Warden_40
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 128
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 18aa3ffc5e78e23c0800000000000000
+      internalID: -4382415966278800767
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Minions_Skeleton_Warden_41
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 128
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a5420ef4260ff5440800000000000000
+      internalID: 4926920822404162650
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Minions_Skeleton_Warden_42
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eb7668a715ad7aa80800000000000000
+      internalID: -8455549731881982018
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Minions_Skeleton_Warden_43
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 923092352ef769190800000000000000
+      internalID: -7956031081668869335
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Minions_Skeleton_Warden_44
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8efe3bf04f32c7f50800000000000000
+      internalID: 6880413861857718248
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Minions_Skeleton_Warden_45
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 88233589a0e968bc0800000000000000
+      internalID: -3781161068788501880
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Minions_Skeleton_Warden_46
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ccfa3189aca6f5a30800000000000000
+      internalID: 4206197995354697676
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Minions_Skeleton_Warden_47
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2e2a3eeaf0c6880b0800000000000000
+      internalID: -5726208111587122462
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Minions_Skeleton_Warden_48
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7a997098ff012ca50800000000000000
+      internalID: 6539808298597063079
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Minions_Skeleton_Warden_49
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5f369f7f53db085e0800000000000000
+      internalID: -1909318202513857547
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Minions_Skeleton_Warden_50
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 647552e581b7ace20800000000000000
+      internalID: 3371642615629174598
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Minions_Skeleton_Warden_51
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1bdc75be5e31e3400800000000000000
+      internalID: 305703702924610993
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Minions_Skeleton_Warden_52
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 80b07503d6e987830800000000000000
+      internalID: 4069176455128877832
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Minions_Skeleton_Warden_53
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4815870238d756b40800000000000000
+      internalID: 5432886527631315332
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Minions_Skeleton_Warden_54
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b7cf2443c47995f70800000000000000
+      internalID: 9176532069294210171
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Minions_Skeleton_Warden_55
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fcdab79e770ca6800800000000000000
+      internalID: 606508721085590991
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Minions_Skeleton_Warden_56
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a1a4e7bb500205d00800000000000000
+      internalID: 959301929622456858
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Minions_Skeleton_Warden_57
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8e76a044f6172c0f0800000000000000
+      internalID: -1098190636428138520
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Minions_Skeleton_Warden_58
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c3cb47d6df88339f0800000000000000
+      internalID: -489897312408781764
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Minions_Skeleton_Warden_59
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 66252a3645cb04320800000000000000
+      internalID: 2540237260471816806
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: afea49a0c704033448741030b757a4ed
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":32.0,"y":32.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      Spritesheet_Minions_Skeleton_Warden_0: -3556010185996963030
+      Spritesheet_Minions_Skeleton_Warden_1: -916829353650945469
+      Spritesheet_Minions_Skeleton_Warden_10: -6103206866001178100
+      Spritesheet_Minions_Skeleton_Warden_11: 6439353069517081657
+      Spritesheet_Minions_Skeleton_Warden_12: -7090421632568604565
+      Spritesheet_Minions_Skeleton_Warden_13: -2753565340209717723
+      Spritesheet_Minions_Skeleton_Warden_14: -5165150081588351667
+      Spritesheet_Minions_Skeleton_Warden_15: 7560541199175971884
+      Spritesheet_Minions_Skeleton_Warden_16: -8165762803995771456
+      Spritesheet_Minions_Skeleton_Warden_17: 6341835815292088973
+      Spritesheet_Minions_Skeleton_Warden_18: 7301813365436762279
+      Spritesheet_Minions_Skeleton_Warden_19: 6785742016076057931
+      Spritesheet_Minions_Skeleton_Warden_2: -8265116427029264938
+      Spritesheet_Minions_Skeleton_Warden_20: 6640398976261557137
+      Spritesheet_Minions_Skeleton_Warden_21: 8901172925917652773
+      Spritesheet_Minions_Skeleton_Warden_22: 2492717166653423305
+      Spritesheet_Minions_Skeleton_Warden_23: -3415791529821224196
+      Spritesheet_Minions_Skeleton_Warden_24: 757533378577753362
+      Spritesheet_Minions_Skeleton_Warden_25: -1534478456252808292
+      Spritesheet_Minions_Skeleton_Warden_26: -3424479319537811157
+      Spritesheet_Minions_Skeleton_Warden_27: -5722264524091473612
+      Spritesheet_Minions_Skeleton_Warden_28: -5315538963498699159
+      Spritesheet_Minions_Skeleton_Warden_29: 3468394418818690919
+      Spritesheet_Minions_Skeleton_Warden_3: -3447201975708067335
+      Spritesheet_Minions_Skeleton_Warden_30: 2895378290855330925
+      Spritesheet_Minions_Skeleton_Warden_31: 7197072900061267457
+      Spritesheet_Minions_Skeleton_Warden_32: 4737235195755351011
+      Spritesheet_Minions_Skeleton_Warden_33: -3250644004934317758
+      Spritesheet_Minions_Skeleton_Warden_34: -1044552163233038616
+      Spritesheet_Minions_Skeleton_Warden_35: -9119153917429478599
+      Spritesheet_Minions_Skeleton_Warden_36: 1544852181841427462
+      Spritesheet_Minions_Skeleton_Warden_37: -7445307842616694192
+      Spritesheet_Minions_Skeleton_Warden_38: 923599540515073041
+      Spritesheet_Minions_Skeleton_Warden_39: -1836490678154887035
+      Spritesheet_Minions_Skeleton_Warden_4: -7395787006001272234
+      Spritesheet_Minions_Skeleton_Warden_40: -4382415966278800767
+      Spritesheet_Minions_Skeleton_Warden_41: 4926920822404162650
+      Spritesheet_Minions_Skeleton_Warden_42: -8455549731881982018
+      Spritesheet_Minions_Skeleton_Warden_43: -7956031081668869335
+      Spritesheet_Minions_Skeleton_Warden_44: 6880413861857718248
+      Spritesheet_Minions_Skeleton_Warden_45: -3781161068788501880
+      Spritesheet_Minions_Skeleton_Warden_46: 4206197995354697676
+      Spritesheet_Minions_Skeleton_Warden_47: -5726208111587122462
+      Spritesheet_Minions_Skeleton_Warden_48: 6539808298597063079
+      Spritesheet_Minions_Skeleton_Warden_49: -1909318202513857547
+      Spritesheet_Minions_Skeleton_Warden_5: 7002010588514012095
+      Spritesheet_Minions_Skeleton_Warden_50: 3371642615629174598
+      Spritesheet_Minions_Skeleton_Warden_51: 305703702924610993
+      Spritesheet_Minions_Skeleton_Warden_52: 4069176455128877832
+      Spritesheet_Minions_Skeleton_Warden_53: 5432886527631315332
+      Spritesheet_Minions_Skeleton_Warden_54: 9176532069294210171
+      Spritesheet_Minions_Skeleton_Warden_55: 606508721085590991
+      Spritesheet_Minions_Skeleton_Warden_56: 959301929622456858
+      Spritesheet_Minions_Skeleton_Warden_57: -1098190636428138520
+      Spritesheet_Minions_Skeleton_Warden_58: -489897312408781764
+      Spritesheet_Minions_Skeleton_Warden_59: 2540237260471816806
+      Spritesheet_Minions_Skeleton_Warden_6: 6922301041771158143
+      Spritesheet_Minions_Skeleton_Warden_7: 1882574467221083146
+      Spritesheet_Minions_Skeleton_Warden_8: -3188099144404428673
+      Spritesheet_Minions_Skeleton_Warden_9: 5218538791526359321
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
