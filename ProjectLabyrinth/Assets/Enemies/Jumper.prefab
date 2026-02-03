@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 6541515243163235385}
   - component: {fileID: 952518583488110357}
   - component: {fileID: 4455087995396686361}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Jumper
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -192,6 +192,7 @@ MonoBehaviour:
   targetPosition: {x: 0, y: 0, z: 0}
   currentNode: {fileID: 0}
   path: []
+  manager: {fileID: 0}
 --- !u!114 &6541515243163235385
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -238,3 +239,4 @@ MonoBehaviour:
   maxJumpDistance: 2.5
   playerBias: 0.95
   jumpCooldownRange: {x: 0.5, y: 1.5}
+  manager: {fileID: 0}
