@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class DungeonGenerator : MonoBehaviour
 {
-    public enum RoomType { Normal, Start, Boss, Treasure }
+    public enum RoomType { Normal, Start, Boss, Treasure, Upgrade }
 
     [Header("Prefabs")]
     public GameObject roomPrefab;
@@ -144,83 +144,148 @@ public class DungeonGenerator : MonoBehaviour
 
 
         Debug.Log($"Generated {occupied.Count} rooms (including large ones).");
+        
     }
 
-    // ======================== ROOM TYPE LOGIC ========================
+    // Room Logic
     void AssignRoomTypes(Vector2Int startPos)
+{
+    // Default: all normal
+    foreach (var pos in occupied)
+        roomTypes[pos] = RoomType.Normal;
+
+    // Start room
+    roomTypes[startPos] = RoomType.Start;
+
+    // BFS distance map from start
+    Dictionary<Vector2Int, int> dist = new();
+    Queue<Vector2Int> q = new();
+
+    q.Enqueue(startPos);
+    dist[startPos] = 0;
+
+    while (q.Count > 0)
     {
-        // Default: all normal
-        foreach (var pos in occupied)
-            roomTypes[pos] = RoomType.Normal;
-
-        // Start room
-        roomTypes[startPos] = RoomType.Start;
-
-        // ----------------------------
-        // BFS distance map from start
-        // ----------------------------
-        Dictionary<Vector2Int, int> dist = new();
-        Queue<Vector2Int> q = new();
-
-        q.Enqueue(startPos);
-        dist[startPos] = 0;
-
-        while (q.Count > 0)
+        var cur = q.Dequeue();
+        foreach (var d in directions)
         {
-            var cur = q.Dequeue();
-            foreach (var d in directions)
+            var nb = cur + d;
+            if (occupied.Contains(nb) && !dist.ContainsKey(nb))
             {
-                var nb = cur + d;
-                if (occupied.Contains(nb) && !dist.ContainsKey(nb))
-                {
-                    dist[nb] = dist[cur] + 1;
-                    q.Enqueue(nb);
-                }
+                dist[nb] = dist[cur] + 1;
+                q.Enqueue(nb);
             }
         }
-
-        // ----------------------------
-        // Find farthest room → Boss
-        // ----------------------------
-        Vector2Int farthest = startPos;
-        int maxDist = 0;
-
-        foreach (var kv in dist)
-        {
-            if (kv.Value > maxDist)
-            {
-                maxDist = kv.Value;
-                farthest = kv.Key;
-            }
-        }
-
-        if (maxDist >= minBossDistance)
-            roomTypes[farthest] = RoomType.Boss;
-
-        Vector2Int treasure = startPos;
-        int treasureDist = -1;
-
-        foreach (var kv in dist)
-        {
-            // skip boss room
-            if (kv.Key == farthest) continue;
-
-            // skip start room
-            if (kv.Key == startPos) continue;
-
-            if (kv.Value > treasureDist)
-            {
-                treasureDist = kv.Value;
-                treasure = kv.Key;
-            }
-        }
-
-        // Only assign if it's not super close to start
-        if (treasureDist >= 2)
-            roomTypes[treasure] = RoomType.Treasure;
     }
 
-    // ======================== SPAWN ROOMS ========================
+    // Farthest room from spawn → Boss
+    Vector2Int farthest = startPos;
+    int maxDist = 0;
+
+    foreach (var kv in dist)
+    {
+        if (kv.Value > maxDist)
+        {
+            maxDist = kv.Value;
+            farthest = kv.Key;
+        }
+    }
+
+    if (maxDist >= minBossDistance)
+        roomTypes[farthest] = RoomType.Boss;
+
+    // ---- KEY FIX: only choose special rooms from cells that will actually spawn ----
+    // Match your GenerateDungeon skip rule: skip non-origin large-room cells
+    List<Vector2Int> spawnable = new();
+    foreach (var p in occupied)
+    {
+        if (!dist.ContainsKey(p)) continue; // must be connected to start
+
+        if (occupiedByLargeRooms.Contains(p) && !IsLargeRoomOrigin(p))
+            continue;
+
+        spawnable.Add(p);
+    }
+
+    // Candidate list for Treasure + Upgrade
+    List<Vector2Int> candidates = new();
+    foreach (var pos in spawnable)
+    {
+        int d = dist[pos];
+
+        if (pos == startPos) continue;
+        if (pos == farthest) continue;
+
+        // Keep specials away from boss adjacency
+        if (IsAdjacent(pos, farthest)) continue;
+
+        // Keep specials away from spawn
+        if (d < 2) continue;
+
+        candidates.Add(pos);
+    }
+
+    // deeper first
+    candidates.Sort((a, b) => dist[b].CompareTo(dist[a]));
+
+    // Treasure then Upgrade
+    if (candidates.Count > 0)
+    {
+        roomTypes[candidates[0]] = RoomType.Treasure;
+        candidates.RemoveAt(0);
+    }
+
+    if (candidates.Count > 0)
+    {
+        roomTypes[candidates[0]] = RoomType.Upgrade;
+        candidates.RemoveAt(0);
+    }
+
+    // Fallback Treasure (FORCE IT BY WILL)
+    if (!roomTypes.ContainsValue(RoomType.Treasure))
+    {
+        Vector2Int bestPos = startPos;
+        int best = -1;
+
+        foreach (var p in spawnable)
+        {
+            if (p == startPos || p == farthest) continue;
+            int d = dist[p];
+            if (d > best) { best = d; bestPos = p; }
+        }
+
+        if (best >= 1)
+            roomTypes[bestPos] = RoomType.Treasure;
+    }
+
+    // Fallback Upgrade (FORCE IT BY WILL)
+    if (!roomTypes.ContainsValue(RoomType.Upgrade))
+    {
+        Vector2Int bestPos = startPos;
+        int best = -1;
+
+        foreach (var p in spawnable)
+        {
+            if (p == startPos || p == farthest) continue;
+            if (roomTypes[p] == RoomType.Treasure) continue;
+
+            int d = dist[p];
+            if (d > best) { best = d; bestPos = p; }
+        }
+
+        if (best >= 1)
+            roomTypes[bestPos] = RoomType.Upgrade;
+    }
+}
+
+
+bool IsAdjacent(Vector2Int a, Vector2Int b)
+{
+    return Mathf.Abs(a.x - b.x) + Mathf.Abs(a.y - b.y) == 1;
+
+}
+
+    //Spawning Rooms
     void SpawnRoom(Vector2Int gridPos, int doorMask, RoomType type)
     {
 
@@ -250,6 +315,8 @@ public class DungeonGenerator : MonoBehaviour
                 RoomType.Start => new Color(0.2f, 0.6f, 0.6f),
                 RoomType.Boss => new Color(0.4f, 0.1f, 0.1f),
                 RoomType.Treasure => new Color(0.6f,0.6f, 0.2f),
+                RoomType.Upgrade => new Color(0.2f, 0.7f, 0.2f),
+
                 _ => new Color(0.3f, 0.3f, 0.3f)
             };
         }
@@ -261,14 +328,14 @@ public class DungeonGenerator : MonoBehaviour
 
         SpawnRocksInRoom(gridPos, room, type);
 
-        // === Spawn Treasure Item ===
+        // Treasure Item Spawner 
         if (type == RoomType.Treasure)
         {
             if (treasureItemPrefab != null)
             {
                 Instantiate(
                     treasureItemPrefab,
-                    room.transform.position, // center of room
+                    room.transform.position, // Currently placed in center; could be altered
                     Quaternion.identity,
                     room.transform
                 );
@@ -277,8 +344,8 @@ public class DungeonGenerator : MonoBehaviour
 
         room.GetComponentInChildren<NodeGraphGenerator>().GenerateGraph();
 
-        // === Enemy Spawner Integration ===
-        if (type != RoomType.Treasure && type != RoomType.Boss)
+        //Used to spawn Enemies properly in their respected rooms
+        if (type != RoomType.Treasure && type != RoomType.Boss && type != RoomType.Upgrade)
         {
             RoomEnemySpawner spawner = room.GetComponent<RoomEnemySpawner>();
             if (spawner == null)
@@ -303,7 +370,7 @@ public class DungeonGenerator : MonoBehaviour
             spawner.SpawnBoss(room.transform);
         }
 
-        // === Large Room registration ===
+        //Large Room registration 
         if (isLargeRoom)
         {
             Vector2Int[] offsets =
@@ -447,7 +514,7 @@ public class DungeonGenerator : MonoBehaviour
 
     void SpawnRocksInRoom(Vector2Int gridPos, GameObject room, RoomType type)
     {
-        if (type == RoomType.Start || type == RoomType.Boss || type == RoomType.Treasure)
+        if (type == RoomType.Start || type == RoomType.Boss || type == RoomType.Treasure || type == RoomType.Upgrade)
             return;
         if (rockPrefabs == null || rockPrefabs.Length == 0) return;
 
@@ -461,7 +528,7 @@ public class DungeonGenerator : MonoBehaviour
         int width = 9;
         int height = 5;
 
-        // === Isaac-style rock pattern library ===
+        // Rock Patterns currently used
         List<int[,]> patterns = new List<int[,]>
 {
     new int[,] { {0,0,1,1,1,1,1,0,0}, {0,1,0,0,0,0,0,1,0}, {1,0,0,0,0,0,0,0,1}, {0,1,0,0,0,0,0,1,0}, {0,0,1,1,1,1,1,0,0} },
@@ -504,7 +571,7 @@ public class DungeonGenerator : MonoBehaviour
 };
 
 
-        // Pick a valid pattern
+        // Patterns to ensure rock spawn is valid
         int[,] pattern = patterns[Random.Range(0, patterns.Count)];
         if (!IsPatternWalkable(pattern))
         {
@@ -529,7 +596,7 @@ public class DungeonGenerator : MonoBehaviour
         bool hasEastDoor = HasRoom(gridPos + new Vector2Int(1, 0));
         bool hasWestDoor = HasRoom(gridPos + new Vector2Int(-1, 0));
 
-        // === Place rocks ===
+        //Place rocks based on coordinates
         for (int y = 0; y < height; y++)
         {
             for (int x = 0; x < width; x++)
@@ -560,7 +627,7 @@ public class DungeonGenerator : MonoBehaviour
         int height = grid.GetLength(0);
         bool[,] visited = new bool[width, height];
 
-        // Find an open start cell
+        // Find an opening
         Vector2Int start = new Vector2Int(-1, -1);
         for (int y = 0; y < height && start.x == -1; y++)
             for (int x = 0; x < width; x++)
@@ -597,7 +664,7 @@ public class DungeonGenerator : MonoBehaviour
 
 
 
-    // === Helper Methods for Pattern Transforms ===
+    //Helper Methods for Pattern Transforms 
     int[,] MirrorPattern(int[,] pattern, bool horizontal, bool vertical)
     {
         int h = pattern.GetLength(0);
@@ -700,7 +767,7 @@ public class DungeonGenerator : MonoBehaviour
 
     bool CanPlaceLargeRoom(Vector2Int origin)
     {
-        // Check if any of the 4 tiles are already occupied by ANY room
+        // Check if any of the 4 tiles are already occupied
         Vector2Int[] cells =
         {
         origin,
