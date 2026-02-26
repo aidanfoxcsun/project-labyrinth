@@ -48,7 +48,7 @@ public class WardenBehavior : EnemyBehavior, IEntityBehavior
 
     public void OnHit()
     {
-        // Optional reaction to being hit
+        // Optional reaction to being hit. Play hit animation or enter second phase at some point.
     }
 
     private void ShootAtPlayer()

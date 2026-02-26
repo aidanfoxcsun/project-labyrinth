@@ -17,6 +17,12 @@ public class NavigationManager : MonoBehaviour
         nodes.AddRange(GetComponentsInChildren<NavigationNode>(true));
     }
 
+    public NavigationNode GetRandomNode()
+    {
+        if (nodes == null || nodes.Count == 0) return null;
+        return nodes[Random.Range(0, nodes.Count)];
+    }
+
     // Generates a path based using the A* Pathfinding Algorithm
     public List<NavigationNode> GeneratePath(NavigationNode start, NavigationNode end, bool skipFirstNode = false)
     {

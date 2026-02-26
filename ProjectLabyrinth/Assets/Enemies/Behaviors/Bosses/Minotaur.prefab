@@ -12,12 +12,13 @@ GameObject:
   - component: {fileID: 8377724113494804595}
   - component: {fileID: 6366429951801402847}
   - component: {fileID: 2094449604536643472}
-  - component: {fileID: 1035218193351516223}
   - component: {fileID: 6728831302485613048}
   - component: {fileID: 5924921465818051086}
   - component: {fileID: 8039093540690310303}
+  - component: {fileID: -6755711140151044636}
+  - component: {fileID: -8953828011250620126}
   m_Layer: 10
-  m_Name: Warden
+  m_Name: Minotaur
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -145,23 +146,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1969a1e1cba98794ea84876217b3674f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Health
-  maxHP: 100
-  hitPoints: 100
+  maxHP: 50
+  hitPoints: 50
   isPlayer: 0
---- !u!114 &1035218193351516223
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3599107784049094890}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c8403d21638914746811a6642d3b9298, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::WardenBehavior
-  fireInterval: 2
-  projectilePrefab: {fileID: 187018651145067130, guid: 9c9b559d2dc2ae74da4aa55fe56b31de, type: 3}
 --- !u!114 &6728831302485613048
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -191,7 +178,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 274d0863f3736434195f35f05a8d5d97, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyController
-  behavior: {fileID: 1035218193351516223}
+  behavior: {fileID: -6755711140151044636}
   animator: {fileID: 8039093540690310303}
   health: {fileID: 0}
   agent: {fileID: 0}
@@ -217,3 +204,45 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &-6755711140151044636
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3599107784049094890}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 32ce9da6e0bf27e4d8aa3facbcef2bb1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MinotaurBehavior
+  attackInterval: 3
+  attackIntervalRandomOffsetMax: 1
+  chargeSpeed: 15
+--- !u!50 &-8953828011250620126
+Rigidbody2D:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3599107784049094890}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDamping: 1
+  m_AngularDamping: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 4

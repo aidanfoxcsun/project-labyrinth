@@ -93,6 +93,24 @@ public class NavigationAgent : MonoBehaviour
         FollowPath();
     }
 
+    public void Stop()
+    {
+        // Clear the path so FollowPath() has nothing to loop through
+        if (path != null)
+        {
+            path.Clear();
+        }
+
+        // Set targetPosition to current position to stop the fallback "MoveTowards"
+        targetPosition = transform.position;
+
+        // Optional: Reset current node to the closest one if you want to be precise
+        if (manager != null)
+        {
+            currentNode = manager.FindNearestNode(transform.position);
+        }
+    }
+
     public void FollowPath()
     {
         if (path == null || path.Count == 0)
