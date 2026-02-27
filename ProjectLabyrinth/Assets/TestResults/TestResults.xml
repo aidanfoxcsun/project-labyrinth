@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<test-run id="2" testcasecount="3" result="Passed" total="3" passed="3" failed="0" inconclusive="0" skipped="0" asserts="0" engine-version="3.5.0.0" clr-version="4.0.30319.42000" start-time="2026-02-15 05:58:07Z" end-time="2026-02-15 05:58:07Z" duration="0.0133085">
+  <test-suite type="TestSuite" id="1012" name="ProjectLabyrinth" fullname="ProjectLabyrinth" runstate="Runnable" testcasecount="3" result="Passed" start-time="2026-02-15 05:58:07Z" end-time="2026-02-15 05:58:07Z" duration="0.013309" total="3" passed="3" failed="0" inconclusive="0" skipped="0" asserts="0">
+    <properties>
+      <property name="platform" value="EditMode" />
+    </properties>
+    <test-suite type="Assembly" id="1006" name="Tests.dll" fullname="C:/CSUN Projects/project-labyrinth/ProjectLabyrinth/Library/ScriptAssemblies/Tests.dll" runstate="Runnable" testcasecount="3" result="Passed" start-time="2026-02-15 05:58:07Z" end-time="2026-02-15 05:58:07Z" duration="0.010302" total="3" passed="3" failed="0" inconclusive="0" skipped="0" asserts="0">
+      <properties>
+        <property name="_PID" value="11168" />
+        <property name="_APPDOMAIN" value="Unity Child Domain" />
+        <property name="platform" value="EditMode" />
+        <property name="EditorOnly" value="True" />
+      </properties>
+      <test-suite type="TestFixture" id="1001" name="DungeonGeneratorTests" fullname="DungeonGeneratorTests" classname="DungeonGeneratorTests" runstate="Runnable" testcasecount="2" result="Passed" start-time="2026-02-15 05:58:07Z" end-time="2026-02-15 05:58:07Z" duration="0.003435" total="2" passed="2" failed="0" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <test-case id="1003" name="Regression_AssignRoomTypes_AssignsOneTreasureAndOneUpgrade" fullname="DungeonGeneratorTests.Regression_AssignRoomTypes_AssignsOneTreasureAndOneUpgrade" methodname="Regression_AssignRoomTypes_AssignsOneTreasureAndOneUpgrade" classname="DungeonGeneratorTests" runstate="Runnable" seed="1249042868" result="Passed" start-time="2026-02-15 05:58:07Z" end-time="2026-02-15 05:58:07Z" duration="0.000496" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+        <test-case id="1002" name="Unit_IsAdjacent_ManhattanDistance1" fullname="DungeonGeneratorTests.Unit_IsAdjacent_ManhattanDistance1" methodname="Unit_IsAdjacent_ManhattanDistance1" classname="DungeonGeneratorTests" runstate="Runnable" seed="1942355045" result="Passed" start-time="2026-02-15 05:58:07Z" end-time="2026-02-15 05:58:07Z" duration="0.001035" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+      </test-suite>
+      <test-suite type="TestFixture" id="1004" name="SanityTests" fullname="SanityTests" classname="SanityTests" runstate="Runnable" testcasecount="1" result="Passed" start-time="2026-02-15 05:58:07Z" end-time="2026-02-15 05:58:07Z" duration="0.005263" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <test-case id="1005" name="Sanity" fullname="SanityTests.Sanity" methodname="Sanity" classname="SanityTests" runstate="Runnable" seed="997197892" result="Passed" start-time="2026-02-15 05:58:07Z" end-time="2026-02-15 05:58:07Z" duration="0.001134" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+          <reason>
+            <message><![CDATA[]]></message>
+          </reason>
+          <output><![CDATA[Saving results to: C:/Users/derek/AppData/LocalLow/DefaultCompany/ProjectLabyrinth\TestResults.xml
+]]></output>
+        </test-case>
+      </test-suite>
+    </test-suite>
+  </test-suite>
+</test-run>

@@ -456,6 +456,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DungeonGenerator
   roomPrefab: {fileID: 3738668724862959439, guid: 03781b73cc420d74eac9b0e109cd457d, type: 3}
   largeRoomPrefab: {fileID: 0}
+  bossPrefab: {fileID: 0}
   rockPrefabs:
   - {fileID: 1390904374234985786, guid: 047dea15ebd48ed4e89c054d27ce4032, type: 3}
   minRocksPerRoom: 5
@@ -487,6 +488,53 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2090364253
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2090364255}
+  - component: {fileID: 2090364254}
+  m_Layer: 0
+  m_Name: FloorManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2090364254
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2090364253}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e95096152eaaf34685b10ecd6eac689, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::FloorManager
+  dungeonGenerator: {fileID: 1632927079}
+  startingRooms: 12
+  roomsPerFloor: 3
+--- !u!4 &2090364255
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2090364253}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.00915, y: -1.14871, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -494,3 +542,4 @@ SceneRoots:
   - {fileID: 1491054225}
   - {fileID: 1632927080}
   - {fileID: 1402492390}
+  - {fileID: 2090364255}
