@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:ProjectLabyrinth/Assets/Scenes/ItemTesting.unity.meta
 guid: 378f91f869b91a5429b603504829cb6a
+========
+guid: 3b38a6ba32b869f48812e595baf39746
+>>>>>>>> Austen-HUD:ProjectLabyrinth/Assets/TextMesh Pro/Examples & Extras/Scenes/27 - Double Pass Shader Example.unity.meta
 DefaultImporter:
   externalObjects: {}
   userData: 

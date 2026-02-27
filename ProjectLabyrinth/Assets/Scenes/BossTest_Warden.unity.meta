@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:ProjectLabyrinth/Assets/Scenes/BossTest_Warden.unity.meta
 guid: e32f38cc352ed134db4737c212185ecc
+========
+guid: 0851605490a599b46b6ac5cb681d93ea
+>>>>>>>> Austen-HUD:ProjectLabyrinth/Assets/TextMesh Pro/Examples & Extras/Scenes/26 - Dropdown Placeholder Example.unity.meta
 DefaultImporter:
   externalObjects: {}
   userData: 

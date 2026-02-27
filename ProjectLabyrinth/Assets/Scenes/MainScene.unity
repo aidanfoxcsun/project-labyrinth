@@ -131,7 +131,6 @@ GameObject:
   - component: {fileID: 1402492389}
   - component: {fileID: 1402492388}
   - component: {fileID: 1402492387}
-  - component: {fileID: 1402492386}
   m_Layer: 0
   m_Name: PlayerTEST
   m_TagString: Player
@@ -139,19 +138,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1402492386
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1402492385}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f588d56b0d8955243880d3fe622321e5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PlayerMovement
-  moveSpeed: 5
 --- !u!58 &1402492387
 CircleCollider2D:
   m_ObjectHideFlags: 0

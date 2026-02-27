@@ -36,7 +36,7 @@ public class FloorManager : MonoBehaviour
         Vector3 spawn = dungeonGenerator.GetStartWorldPosition();
 
         player.rb.position = spawn;
-        player.rb.velocity = Vector2.zero;
+        player.rb.linearVelocity = Vector2.zero;
 
         if (player.cam != null)
             player.cam.SetTargetDestination(new Vector2(spawn.x, spawn.y));

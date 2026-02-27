@@ -172,7 +172,11 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
+<<<<<<< HEAD
     filterMode: 0
+=======
+    filterMode: 1
+>>>>>>> Austen-HUD
     aniso: 1
     mipBias: 0
     wrapU: 1

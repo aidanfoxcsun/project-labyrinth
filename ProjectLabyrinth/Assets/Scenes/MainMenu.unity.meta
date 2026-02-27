@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:ProjectLabyrinth/Assets/Scenes/MainMenu.unity.meta
 guid: c59e3278a7fe81345abe218f4e36a484
+========
+guid: eea2b7206368b444e84fbec4ec32b64a
+>>>>>>>> Austen-HUD:ProjectLabyrinth/Assets/TextMesh Pro/Examples & Extras/Scenes/28 - HDRP Shader Example.unity.meta
 DefaultImporter:
   externalObjects: {}
   userData: 
