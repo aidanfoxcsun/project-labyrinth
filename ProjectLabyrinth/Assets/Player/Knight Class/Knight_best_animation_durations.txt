@@ -1,0 +1,13 @@
+for best results set frame durations like this:
+
+Walk      - Frame1: 100 Frame2: 200 Frame3: 100 Frame4: 200
+
+Idle      - Frame1: 300 Frame2: 200 Frame3: 300 Frame4: 300
+
+Attack    - Frame1: 100 Frame2: 100 Frame3: 100 Frame4: 100
+
+Shield Block and Bash - all 100
+
+Hit flash - Frame1: 100 Frame2: 100 Frame3: 200 Frame4: 100
+
+Death     - all 100, stop last frame as long as you like
