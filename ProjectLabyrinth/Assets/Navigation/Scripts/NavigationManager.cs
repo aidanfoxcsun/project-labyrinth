@@ -17,15 +17,28 @@ public class NavigationManager : MonoBehaviour
         nodes.AddRange(GetComponentsInChildren<NavigationNode>(true));
     }
 
+    public NavigationNode GetRandomNode()
+    {
+        if (nodes == null || nodes.Count == 0) return null;
+        return nodes[Random.Range(0, nodes.Count)];
+    }
+
     // Generates a path based using the A* Pathfinding Algorithm
     public List<NavigationNode> GeneratePath(NavigationNode start, NavigationNode end, bool skipFirstNode = false)
     {
-        List<NavigationNode> openSet = new List<NavigationNode>();
-        List<NavigationNode> path = openSet;
+        if (start == null || end == null) return null;
 
-        foreach(NavigationNode node in nodes)
+        List<NavigationNode> openSet = new List<NavigationNode>();
+        // Use a separate list for the resulting path (avoid aliasing with openSet).
+        List<NavigationNode> resultPath = null;
+
+        // Reset node scores / cameFrom
+        foreach (NavigationNode node in nodes)
         {
+            if (node == null) continue;
             node.gScore = float.MaxValue;
+            node.cameFrom = null;
+            node.hScore = 0f;
         }
 
         start.gScore = 0;
@@ -36,7 +49,7 @@ public class NavigationManager : MonoBehaviour
         while (openSet.Count > 0)
         {
             int lowestF = 0;
-            for(int i = 0; i < openSet.Count; i++) 
+            for (int i = 0; i < openSet.Count; i++)
             {
                 if (openSet[i].FScore() < openSet[lowestF].FScore())
                 {
@@ -45,32 +58,39 @@ public class NavigationManager : MonoBehaviour
             }
 
             NavigationNode currentNode = openSet[lowestF];
-            openSet.Remove(currentNode);
+            openSet.RemoveAt(lowestF);
 
             if (currentNode == end)
             {
-                path.Insert(0, end);
+                // Build path by walking back through cameFrom
+                resultPath = new List<NavigationNode>();
+                NavigationNode temp = currentNode;
+                resultPath.Add(temp);
 
-
-                while(currentNode != start)
+                while (temp != start)
                 {
-                    currentNode = currentNode.cameFrom;
-                    path.Add(currentNode);
+                    temp = temp.cameFrom;
+                    // Defensive: if there's a null cameFrom, path is invalid
+                    if (temp == null) break;
+                    resultPath.Add(temp);
                 }
 
-                path.Reverse();
-                if (skipFirstNode) path.RemoveAt(0);
-                return path;
+                resultPath.Reverse();
+                if (skipFirstNode && resultPath.Count > 0) resultPath.RemoveAt(0);
+                return resultPath;
             }
 
-            foreach(NavigationNode connectedNode in currentNode.connections)
+            // Expand neighbors
+            foreach (NavigationNode connectedNode in currentNode.connections)
             {
-                float heldGScore = currentNode.gScore + Vector2.Distance(currentNode.transform.position, connectedNode.transform.position);
+                if (connectedNode == null) continue;
 
-                if(heldGScore < connectedNode.gScore)
+                float tentativeG = currentNode.gScore + Vector2.Distance(currentNode.transform.position, connectedNode.transform.position);
+
+                if (tentativeG < connectedNode.gScore)
                 {
                     connectedNode.cameFrom = currentNode;
-                    connectedNode.gScore = heldGScore;
+                    connectedNode.gScore = tentativeG;
                     connectedNode.hScore = Vector2.Distance(connectedNode.transform.position, end.transform.position);
 
                     if (!openSet.Contains(connectedNode))
@@ -81,6 +101,7 @@ public class NavigationManager : MonoBehaviour
             }
         }
 
+        // No path found
         return null;
     }
 
@@ -91,7 +112,7 @@ public class NavigationManager : MonoBehaviour
         float minDistance = float.MaxValue;
         NavigationNode closest = null;
 
-        foreach(var node in nodes)
+        foreach (var node in nodes)
         {
             if (node == null) continue;               // <--- IMPORTANT FIX
             if (node.gameObject == null) continue;    // <--- DOUBLE SAFE
@@ -99,7 +120,7 @@ public class NavigationManager : MonoBehaviour
 
             float distanceSqaured = (node.transform.position - position).sqrMagnitude; // Use square magnitudes because I only care about relative distances, not absolute. Save on performance
 
-            if(distanceSqaured < minDistance)
+            if (distanceSqaured < minDistance)
             {
                 closest = node;
                 minDistance = distanceSqaured;
