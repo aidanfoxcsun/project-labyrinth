@@ -43,7 +43,7 @@ public class Health : MonoBehaviour
         if (hitPoints <= 0)
         {
             Die();
-            Debug.Log(this.name + " died!");
+            //Debug.Log(this.name + " died!");
             return true;
         }
 
@@ -62,7 +62,7 @@ public class Health : MonoBehaviour
         IDamager damager = collision.gameObject.GetComponent<IDamager>();
         if (damager != null)
         {
-            Debug.Log("Damager hit!");
+            //Debug.Log("Damager hit!");
             if((isPlayer && damager.PlayerSourced) ||  (!isPlayer && !damager.PlayerSourced)) { return; }
             RecieveDamage(damager.DamageAmount);
         }
@@ -72,7 +72,7 @@ public class Health : MonoBehaviour
         IDamager damager = collision.gameObject.GetComponent<IDamager>();
         if (damager != null)
         {
-            Debug.Log("Damager hit!");
+            //Debug.Log("Damager hit!");
             // if((isPlayer && damager.PlayerSourced) ||  (!isPlayer && !damager.PlayerSourced)) { return; }
             RecieveDamage(damager.DamageAmount);
         }

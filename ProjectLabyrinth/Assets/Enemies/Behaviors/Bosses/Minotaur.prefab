@@ -182,6 +182,7 @@ MonoBehaviour:
   animator: {fileID: 8039093540690310303}
   health: {fileID: 0}
   agent: {fileID: 0}
+  manager: {fileID: 0}
 --- !u!95 &8039093540690310303
 Animator:
   serializedVersion: 7
@@ -216,9 +217,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 32ce9da6e0bf27e4d8aa3facbcef2bb1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MinotaurBehavior
-  attackInterval: 3
-  attackIntervalRandomOffsetMax: 1
+  currentState: 0
+  obstacleMask:
+    serializedVersion: 2
+    m_Bits: 328
+  patrolSpeed: 3.5
+  patrolRadius: 10
   chargeSpeed: 15
+  detectionRange: 8
 --- !u!50 &-8953828011250620126
 Rigidbody2D:
   serializedVersion: 5

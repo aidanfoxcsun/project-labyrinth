@@ -19,13 +19,6 @@ public class JumperBehavior : EnemyBehavior, IEntityBehavior
     private float cooldownTimer = 0f;
     private float currentJumpCooldown;
 
-    public NavigationManager manager;
-
-    public void setNavigationManager(NavigationManager manager)
-    {
-        this.manager = manager;
-    }
-
     public override void Initialize(EnemyController controller)
     {
         base.Initialize(controller);
@@ -92,7 +85,7 @@ public class JumperBehavior : EnemyBehavior, IEntityBehavior
     {
         // Find reachable nodes
         List<NavigationNode> candidates = new List<NavigationNode>();
-        foreach (var node in manager.nodes)
+        foreach (var node in controller.manager.nodes)
         {
             float distance = Vector3.Distance(node.transform.position, controller.transform.position);
             if (distance <= maxJumpDistance && HasLineOfSight(node.transform.position))

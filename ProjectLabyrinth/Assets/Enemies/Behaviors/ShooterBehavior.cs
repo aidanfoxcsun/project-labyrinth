@@ -66,23 +66,40 @@ public class ShooterBehavior : EnemyBehavior, IEntityBehavior
         Vector2 origin = transform.position;
         Vector2 target = player.transform.position;
         Vector2 dir = (target - origin).normalized;
+        float distToPlayer = Vector2.Distance(origin, target);
 
-        float maxDistance = limitSightByRange ? Vector2.Distance(origin, target) : Mathf.Infinity;
-        if (limitSightByRange && maxDistance > sightRange) return false;
+        if (limitSightByRange && distToPlayer > sightRange) return false;
 
-        // Raycast against blockingMask. If the first hit is the player -> LOS.
-        RaycastHit2D hit = Physics2D.Raycast(origin, dir, maxDistance, blockingMask);
+        // 1. Calculate the offset (perpendicular to the direction)
+        // For 2D, the perpendicular of (x, y) is (-y, x)
+        Vector2 perpDir = new Vector2(-dir.y, dir.x);
+        float bodyWidth = 0.5f; // Adjust this based on your enemy's size
 
-        // If the raycast hit something, check whether it is the player (tag-based).
-        if (hit.collider.CompareTag("Player"))
+        // 2. Define our three starting points
+        Vector2[] origins = new Vector2[] {
+            origin,                             // Center
+            origin + (perpDir * bodyWidth),     // Left side
+            origin - (perpDir * bodyWidth)      // Right side
+        };
+
+        // 3. Cast all rays. If ANY ray is blocked by a wall, we consider LOS blocked.
+        // Or, if you want to be "generous," return true if ANY ray hits the player.
+        foreach (Vector2 startPoint in origins)
         {
-            Debug.DrawRay(origin, dir * maxDistance, Color.green, 0.1f);
-            return true;
+            Vector2 newDir = (target - startPoint).normalized;
+            RaycastHit2D hit = Physics2D.Raycast(startPoint, newDir, distToPlayer, blockingMask);
+
+            // If we hit nothing, or hit something that ISN'T the player, LOS is blocked for this ray
+            if (hit.collider != null)
+            {
+                Debug.DrawRay(startPoint, newDir * distToPlayer, Color.red, 0.1f);
+                return false; // Requirement: All "body" parts must see the player
+            }
+
+            Debug.DrawRay(startPoint, newDir * distToPlayer, Color.green, 0.1f);
         }
 
-        // Hit an obstacle before reaching player
-        Debug.DrawRay(origin, dir * maxDistance, Color.red, 0.1f);
-        return false;
+        return true;
     }
 
     private void ShootAtPlayer()
