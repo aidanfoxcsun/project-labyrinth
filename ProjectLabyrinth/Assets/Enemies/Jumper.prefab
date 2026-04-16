@@ -192,6 +192,7 @@ MonoBehaviour:
   targetPosition: {x: 0, y: 0, z: 0}
   currentNode: {fileID: 0}
   path: []
+  manager: {fileID: 0}
 --- !u!114 &6541515243163235385
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -207,6 +208,8 @@ MonoBehaviour:
   maxHP: 4
   hitPoints: 4
   isPlayer: 0
+  coinPrefab: {fileID: 7682821680327501367, guid: 36599c993abee1349bc93ea331c82d78, type: 3}
+  coinDropAmount: 1
 --- !u!114 &952518583488110357
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -238,3 +241,4 @@ MonoBehaviour:
   maxJumpDistance: 2.5
   playerBias: 0.95
   jumpCooldownRange: {x: 0.5, y: 1.5}
+  manager: {fileID: 0}

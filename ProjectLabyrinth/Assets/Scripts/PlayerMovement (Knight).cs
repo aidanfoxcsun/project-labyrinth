@@ -15,11 +15,14 @@ public class PlayerMelee : MonoBehaviour
     public float attackDuration = 0.18f;   // slash time
     public float attackCooldown = 0.35f;
     public float slashAngle = 110f;        // total arc
-    public int swordDamage = 1;
+    public int swordDamage = 1;            // base damage, scaled by PlayerStats at attack time
 
     Vector2 movement;
     Vector2 lastAim = Vector2.up;
     float nextAttackTime;
+
+    // Cached reference to PlayerStats for damage scaling
+    private PlayerStats stats;
 
     void Awake()
     {
@@ -28,6 +31,8 @@ public class PlayerMelee : MonoBehaviour
         rb.freezeRotation = true;
         rb.collisionDetectionMode = CollisionDetectionMode2D.Continuous;
         rb.interpolation = RigidbodyInterpolation2D.Interpolate;
+
+        stats = GetComponent<PlayerStats>();
     }
 
     void Update()
@@ -77,7 +82,17 @@ public class PlayerMelee : MonoBehaviour
         var col = sword.GetComponent<Collider2D>();
         var rb2d = sword.GetComponent<Rigidbody2D>();
         var swordLogic = sword.GetComponent<Sword>();   // your hitbox script (optional)
-        if (swordLogic) swordLogic.owner = gameObject;
+        if (swordLogic)
+        {
+            swordLogic.owner = gameObject;
+
+            // Apply PlayerStats scaling on top of the base swordDamage
+            // If no PlayerStats found, fall back to swordDamage alone
+            if (stats != null)
+                swordLogic.damage = Mathf.RoundToInt(swordDamage * stats.damageScaling + stats.flatDamage);
+            else
+                swordLogic.damage = swordDamage;
+        }
 
         // ignore self-collision if both colliders exist
         var playerCol = GetComponent<Collider2D>();
