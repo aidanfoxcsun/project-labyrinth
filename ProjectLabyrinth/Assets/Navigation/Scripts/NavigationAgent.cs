@@ -25,6 +25,12 @@ public class NavigationAgent : MonoBehaviour
         speed = f;
     }
 
+    // Added getter for speed (used by behaviors)
+    public float GetSpeed()
+    {
+        return speed;
+    }
+
     private void Start()
     {
         StartCoroutine(InitAfterFrame());
@@ -56,10 +62,17 @@ public class NavigationAgent : MonoBehaviour
     {
         targetPosition = target;
 
+        if (manager == null)
+        {
+            Debug.LogWarning($"{name}: Cannot set destination, NavigationManager is null.");
+            return;
+        }
+
         currentNode = manager.FindNearestNode(transform.position);
         targetNode = manager.FindNearestNode(targetPosition);
 
-        path = manager.GeneratePath(currentNode, targetNode);
+        // Skip the first node so the path does not start with the current node (avoids attempting to move to the node you're already on)
+        path = manager.GeneratePath(currentNode, targetNode, true);
     }
 
     public Vector3 GetCurrentDirection()
@@ -71,13 +84,31 @@ public class NavigationAgent : MonoBehaviour
 
     public bool GetIsWalking()
     {
-        bool walking = Vector3.Magnitude(transform.position - targetPosition) > 0.1; 
+        bool walking = Vector3.Magnitude(transform.position - targetPosition) > 0.1;
         return walking;
     }
 
     private void Update()
     {
         FollowPath();
+    }
+
+    public void Stop()
+    {
+        // Clear the path so FollowPath() has nothing to loop through
+        if (path != null)
+        {
+            path.Clear();
+        }
+
+        // Set targetPosition to current position to stop the fallback "MoveTowards"
+        targetPosition = transform.position;
+
+        // Optional: Reset current node to the closest one if you want to be precise
+        if (manager != null)
+        {
+            currentNode = manager.FindNearestNode(transform.position);
+        }
     }
 
     public void FollowPath()

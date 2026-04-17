@@ -146,8 +146,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1969a1e1cba98794ea84876217b3674f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Health
-  maxHP: 50
-  hitPoints: 50
+  maxHP: 100
+  hitPoints: 100
   isPlayer: 0
 --- !u!114 &1035218193351516223
 MonoBehaviour:
