@@ -445,6 +445,9 @@ MonoBehaviour:
   bossPrefab: {fileID: 0}
   rockPrefabs:
   - {fileID: 1390904374234985786, guid: 047dea15ebd48ed4e89c054d27ce4032, type: 3}
+  - {fileID: 1390904374234985787, guid: b8e591527a74ec54d99f0f297221a1bd, type: 3}
+  - {fileID: 1390904374234985788, guid: 0f41b26f9b22cef43ad948ec98510138, type: 3}
+  - {fileID: 1390904374234985789, guid: ee4b47415ec7917429808f28edab6cb6, type: 3}
   minRocksPerRoom: 5
   maxRocksPerRoom: 20
   enemyPrefabs:
@@ -453,6 +456,7 @@ MonoBehaviour:
   minEnemiesPerRoom: 2
   maxEnemiesPerRoom: 5
   treasureItemPrefab: {fileID: 0}
+  upgradeRoomControllerPrefab: {fileID: 0}
   seed: 0
   targetRooms: 100
   minBossDistance: 5

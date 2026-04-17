@@ -1,0 +1,22 @@
+
+All Tiles 32x32
+
+Ground:
+(on Mockup 17-20)
+Ground is made out of 4 Tiles, edge (17), border parts (18,19), middle part (20)
+
+Walls:
+Wall Edge is build out of 4 Tiles (on Mockup 1,2,8,9)
+Wall middle Part can be repeated (on Mockup 3,10 or 15,16)
+
+Jail:
+(on Mockup 4-7 & 11-14)
+Jail can be repeated, there are two different adapted wall parts, 
+one variant to be repeated with normal wall middle part and one variant to place another jail beside
+
+Holes:
+One narrow hole (33-35), you can stretch it in length, its made out of 3 tiles and middle (34) is repeatable
+One Big Hole set (21-32), you can build multiple big holes out of it, with edges and repeatable parts
+
+Rocks are single Assets with transparency 
+Doors are single Spritesheets with animations
