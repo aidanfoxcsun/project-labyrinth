@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ItemData
   itemName: Savory Pie
   description: A savory meat, carrot, and cabbage pie that restores health.
-  icon: {fileID: 0}
-  weight: 3
+  icon: {fileID: -6373037815891204303, guid: 719d9706b28ae484b8b67437eee224f9, type: 3}
+  weight: 7
   effects:
   - rid: 5411405956543414337
   references:

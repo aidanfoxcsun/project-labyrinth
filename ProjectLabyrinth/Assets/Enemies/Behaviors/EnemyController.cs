@@ -9,6 +9,12 @@ public class EnemyController : MonoBehaviour
 
     [HideInInspector] public Health health;
     [HideInInspector] public NavigationAgent agent;
+    [HideInInspector] public NavigationManager manager;
+
+    public void setNavigationManager(NavigationManager manager)
+    {
+        this.manager = manager;
+    }
 
     private void Awake()
     {

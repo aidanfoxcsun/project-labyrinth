@@ -22,9 +22,9 @@ public class RoomController : MonoBehaviour
         enemies.Add(enemy);
         enemy.SetActive(false); // off until player enters
         enemy.GetComponent<NavigationAgent>().setManager(navigationManager);
-        if (enemy.GetComponent<JumperBehavior>() != null)
+        if (enemy.GetComponent<EnemyController>() != null)
         {
-            enemy.GetComponent<JumperBehavior>().setNavigationManager(navigationManager);
+            enemy.GetComponent<EnemyController>().setNavigationManager(navigationManager);
         }
     }
 

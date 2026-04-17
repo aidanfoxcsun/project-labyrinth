@@ -1,0 +1,16 @@
+for best results set frame durations like this:
+
+Walk      - Frame1: 100 Frame2: 200 Frame3: 100 Frame4: 200
+
+Idle      - Frame1: 300 Frame2: 200 Frame3: 300 Frame4: 300
+
+Attack    - Attack Prep (first): Frame1: 100 Frame2: 200 Frame3: 200 Frame4: 200 
+	    rest all Frames 100 ,first animation is preparation, the second one is the Attack Hold animation  
+	    can be looped as long the player holds the button, 
+	    after release play the last animation for shooting
+
+Evasion   - all frames 100
+
+Hit flash - Frame1: 100 Frame2: 100 Frame3: 200 Frame4: 100
+
+Death     - all 100 accept Frame7: 500 stop Frame8 as long as you like

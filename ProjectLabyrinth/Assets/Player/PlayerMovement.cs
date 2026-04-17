@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody2D))]
@@ -12,6 +13,9 @@ public class PlayerMovement : MonoBehaviour
     public Transform firePoint;
     public float projectileSpeed = 10f;
 
+    
+    [SerializeField] private Health health;
+    
     public GameObject aimDirection;
 
     public CameraFollow cam;
@@ -21,6 +25,8 @@ public class PlayerMovement : MonoBehaviour
 
     Vector2 movement;
     Vector2 lastAim = Vector2.up;
+
+
 
     void Awake()
     {
@@ -32,6 +38,22 @@ public class PlayerMovement : MonoBehaviour
         rb.interpolation = RigidbodyInterpolation2D.Interpolate;
 
         UpdateStats();
+    }
+
+    private void OnEnable()
+    {
+        health.OnHit += Health_OnHit;
+    }
+
+    private void Health_OnHit()
+    {
+        if(animator)
+            animator?.SetTrigger("Hit");
+    }
+
+    private void OnDisable()
+    {
+        health.OnHit -= Health_OnHit;
     }
 
     void Update()
@@ -94,6 +116,14 @@ public class PlayerMovement : MonoBehaviour
     void Shoot()
     {
         if (!projectilePrefab || !firePoint) return;
+
+        if (animator)
+        {
+            animator.SetFloat("FaceX", lastAim.x);
+            animator.SetFloat("FaceY", lastAim.y);
+            animator.SetTrigger("Attack");
+            //Debug.Log("Shoot animation triggered");
+        }
 
         var proj = Instantiate(projectilePrefab, firePoint.position, Quaternion.identity);
         proj.GetComponent<Projectile>().lifetime = playerStats.range;

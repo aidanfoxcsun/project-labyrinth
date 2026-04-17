@@ -7,6 +7,8 @@ public class MinotaurBehavior : EnemyBehavior, IEntityBehavior
     public enum MinotaurState { Patrolling, Telegraphing, Charging, Cooldown }
     public MinotaurState currentState = MinotaurState.Patrolling;
 
+    public LayerMask obstacleMask; // For line of sight checks during charge detection
+
     [Header("Patrol Settings")]
     public float patrolSpeed = 3.5f;
     public float patrolRadius = 10f;
@@ -93,7 +95,7 @@ public class MinotaurBehavior : EnemyBehavior, IEntityBehavior
         {
             if (IsPlayerInCardinalLine(dirToPlayer.normalized))
             {
-                RaycastHit2D hit = Physics2D.Raycast(transform.position, dirToPlayer.normalized, dist, LayerMask.GetMask("Obstacle"));
+                RaycastHit2D hit = Physics2D.Raycast(transform.position, dirToPlayer.normalized, dist, obstacleMask);
 
                 if (hit.collider == null)
                 {
