@@ -14,7 +14,16 @@ public class Door : MonoBehaviour
     public void SetLocked(bool state)
     {
         locked = state;
-        // (Optional: change sprite / color later)
+
+        // Play the matching door animation if a DoorAnimator is present
+        DoorAnimator anim = GetComponent<DoorAnimator>();
+        if (anim != null)
+        {
+            if (locked)
+                anim.PlayClose();
+            else
+                anim.PlayOpen();
+        }
     }
 
     public void SetDoorActive(bool active)

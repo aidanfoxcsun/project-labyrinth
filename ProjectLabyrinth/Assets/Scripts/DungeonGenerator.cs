@@ -28,6 +28,9 @@ public class DungeonGenerator : MonoBehaviour
     [Header("Treasure Room Settings")]
     public GameObject treasureItemPrefab;
 
+    [Header("Upgrade Room Settings")]
+    public GameObject upgradeRoomControllerPrefab;
+
 
     [Header("Generation Settings")]
     public int seed = 0;
@@ -327,7 +330,7 @@ bool IsAdjacent(Vector2Int a, Vector2Int b)
 
         SpawnRocksInRoom(gridPos, room, type);
 
-        // Treasure Item Spawner 
+        // Treasure Item Spawner
         if (type == RoomType.Treasure)
         {
             if (treasureItemPrefab != null)
@@ -335,6 +338,20 @@ bool IsAdjacent(Vector2Int a, Vector2Int b)
                 Instantiate(
                     treasureItemPrefab,
                     room.transform.position, // Currently placed in center; could be altered
+                    Quaternion.identity,
+                    room.transform
+                );
+            }
+        }
+
+        // Upgrade Room Spawner
+        if (type == RoomType.Upgrade)
+        {
+            if (upgradeRoomControllerPrefab != null)
+            {
+                Instantiate(
+                    upgradeRoomControllerPrefab,
+                    room.transform.position, // Centered in the room; UpgradeRoomController offsets items from here
                     Quaternion.identity,
                     room.transform
                 );

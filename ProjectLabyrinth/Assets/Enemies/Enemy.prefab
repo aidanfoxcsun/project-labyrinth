@@ -209,6 +209,8 @@ MonoBehaviour:
   maxHP: 10
   hitPoints: 10
   isPlayer: 0
+  coinPrefab: {fileID: 7682821680327501367, guid: 36599c993abee1349bc93ea331c82d78, type: 3}
+  coinDropAmount: 1
 --- !u!114 &3061389004602083825
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -15,6 +15,10 @@ public class Health : MonoBehaviour
 
     public bool isPlayer = false;
 
+    [Header("Coin Drop (enemies only)")]
+    public GameObject coinPrefab;
+    public int coinDropAmount = 1;
+
     public void SetIsPlayer(bool value)
     {
         isPlayer = value;
@@ -54,6 +58,15 @@ public class Health : MonoBehaviour
     private void Die()
     {
         OnDeath?.Invoke();
+
+        // Drop a coin if this is an enemy and a coin prefab is assigned
+        if (!isPlayer && coinPrefab != null)
+        {
+            GameObject coin = Instantiate(coinPrefab, transform.position, Quaternion.identity);
+            CoinPickup pickup = coin.GetComponent<CoinPickup>();
+            if (pickup != null)
+                pickup.value = coinDropAmount;
+        }
     }
 
     // Reacting to collisions with damagers
