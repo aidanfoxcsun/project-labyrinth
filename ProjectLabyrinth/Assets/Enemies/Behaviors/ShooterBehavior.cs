@@ -104,6 +104,10 @@ public class ShooterBehavior : EnemyBehavior, IEntityBehavior
 
     private void ShootAtPlayer()
     {
+        if(controller.animator != null)
+            controller.animator.SetFloat("FaceX", player.transform.position.x - controller.transform.position.x);
+            controller.animator.SetFloat("FaceY", player.transform.position.y - controller.transform.position.y);
+        controller.animator.SetTrigger("Shoot");
         Vector3 dir = (player.transform.position - controller.transform.position).normalized;
         GameObject proj = Instantiate(projectilePrefab, controller.transform.position, Quaternion.LookRotation(Vector3.forward, dir));
         projectile = proj.GetComponent<BossProjectile>();
@@ -154,18 +158,12 @@ public class ShooterBehavior : EnemyBehavior, IEntityBehavior
         {
             Vector3 dir = controller.agent.GetCurrentDirection();
 
-            if (dir.x < 0)
-            {
-                GetComponent<SpriteRenderer>().flipX = true;
-            }
-            else if (dir.x > 0)
-            {
-                GetComponent<SpriteRenderer>().flipX = false;
-            }
-
-            controller.animator.SetBool("isWalking", controller.agent.GetIsWalking());
-            controller.animator.SetFloat("DirX", dir.x);
-            controller.animator.SetFloat("DirY", dir.y);
+            if(hasLOS)
+                controller.animator.SetBool("isWalking", false);
+            else
+                controller.animator.SetBool("isWalking", true);
+            controller.animator.SetFloat("Horizontal", dir.x);
+            controller.animator.SetFloat("Vertical", dir.y);
         }
 
         frameCounter += Time.deltaTime;

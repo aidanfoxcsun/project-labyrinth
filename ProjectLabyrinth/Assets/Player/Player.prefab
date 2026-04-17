@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: -4035996203030191068}
   - component: {fileID: 2862817731064746663}
   - component: {fileID: 8986347944099614458}
+  - component: {fileID: -3225267209528449044}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -87,7 +88,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: -2413806693520163455, guid: 34e1e2729cb282043a279cbf77c9f936, type: 3}
-  m_Color: {r: 0, g: 0.9433962, b: 0.0076080267, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -138,7 +139,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PlayerMovement
   moveSpeed: 5
   rb: {fileID: 7083902037903974623}
-  animator: {fileID: 0}
+  animator: {fileID: -3225267209528449044}
   projectilePrefab: {fileID: 3579003263570803674, guid: 70ece8b9f0fdf7d44873109ad9b455aa, type: 3}
   firePoint: {fileID: 6486080264970639897}
   projectileSpeed: 10
@@ -178,6 +179,8 @@ MonoBehaviour:
   speed: 4
   range: 2
   fireRate: 2
+  coins: 0
+  bombs: 0
   piercing: 0
   spectral: 0
   canFly: 0
@@ -218,6 +221,28 @@ CircleCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
   m_Radius: 0.5
+--- !u!95 &-3225267209528449044
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4075680991123313756}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: d104f1672d61c164381e2712ac7023f6, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &4118750714536554650
 GameObject:
   m_ObjectHideFlags: 0

@@ -150,7 +150,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DungeonGenerator
   roomPrefab: {fileID: 3738668724862959439, guid: 03781b73cc420d74eac9b0e109cd457d, type: 3}
   largeRoomPrefab: {fileID: 0}
-  bossPrefab: {fileID: 3599107784049094890, guid: 714052953de3a2d4ea65aada7050b22d, type: 3}
+  bossPrefab: {fileID: 3599107784049094890, guid: 5536f4aa30944974dbc9d6c2fafec23c, type: 3}
   rockPrefabs:
   - {fileID: 1390904374234985786, guid: 047dea15ebd48ed4e89c054d27ce4032, type: 3}
   minRocksPerRoom: 2
@@ -183,6 +183,53 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1253474083
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1253474085}
+  - component: {fileID: 1253474084}
+  m_Layer: 0
+  m_Name: FloorManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1253474084
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1253474083}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e95096152eaaf34685b10ecd6eac689, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::FloorManager
+  dungeonGenerator: {fileID: 0}
+  startingRooms: 15
+  roomsPerFloor: 3
+--- !u!4 &1253474085
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1253474083}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 30.42505, y: 6.51902, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1621643425
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -193,11 +240,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1857720049070392485, guid: 0e52b39c546cd1143b9bd8769b25d8fb, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.5757
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1857720049070392485, guid: 0e52b39c546cd1143b9bd8769b25d8fb, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.73019
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1857720049070392485, guid: 0e52b39c546cd1143b9bd8769b25d8fb, type: 3}
       propertyPath: m_LocalPosition.z
@@ -384,7 +431,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 3.5
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -491,3 +538,4 @@ SceneRoots:
   - {fileID: 740584017}
   - {fileID: 1621643425}
   - {fileID: 1812928429}
+  - {fileID: 1253474085}
