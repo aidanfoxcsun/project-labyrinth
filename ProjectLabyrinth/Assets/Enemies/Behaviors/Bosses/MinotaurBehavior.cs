@@ -31,6 +31,10 @@ public class MinotaurBehavior : EnemyBehavior, IEntityBehavior
         }
 
         player = GameObject.FindGameObjectWithTag("Player");
+    }
+
+    private void Start()
+    {
         SetNewPatrolPoint();
     }
 

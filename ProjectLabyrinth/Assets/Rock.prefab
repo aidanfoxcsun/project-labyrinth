@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 3364385010961234782}
   - component: {fileID: 769551753069338279}
   - component: {fileID: 2482399882310861506}
+  - component: {fileID: 5853055150012660901}
   m_Layer: 8
   m_Name: Rock
   m_TagString: Untagged
@@ -81,12 +82,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: ca65044c1fa924349bc6a70ee7552295, type: 3}
+  m_Sprite: {fileID: -8428485211843444938, guid: 3c1626c0a9e87c94391f8812dc3b473e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.32, y: 0.32}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -130,8 +131,8 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
+    oldSize: {x: 0.32, y: 0.32}
+    newSize: {x: 0.32, y: 0.32}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -165,3 +166,20 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &5853055150012660901
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1390904374234985786}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 549342524903f6e4a9c886e744a448b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::RockSprite
+  rockSprites:
+  - {fileID: -4471686798408617622, guid: ca65044c1fa924349bc6a70ee7552295, type: 3}
+  - {fileID: -8428485211843444938, guid: 3c1626c0a9e87c94391f8812dc3b473e, type: 3}
+  - {fileID: 4094216290443417789, guid: 0e8954fca1e74eb43ba767199a112de4, type: 3}
+  - {fileID: -4119761649624032542, guid: 0f845aa83dd6fed4086c048ed1e8bc4c, type: 3}

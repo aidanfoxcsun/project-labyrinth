@@ -11,6 +11,14 @@ public class Door : MonoBehaviour
     // === Added for room locking ===
     public bool locked = false;
 
+    private void OnEnable()
+    {
+        // Pull door to layer above the floor to prevent z-fighting
+        Vector3 pos = transform.position;
+        pos.z = -0.1f;
+        transform.position = pos;
+    }
+
     public void SetLocked(bool state)
     {
         locked = state;
@@ -127,5 +135,9 @@ public class Door : MonoBehaviour
         foreach (Door d in doorsAgain)
             d.GetComponent<Collider2D>().enabled = true;
         if (targetDoorCollider) targetDoorCollider.enabled = true;
+
+        Vector3 pos = transform.position;
+        pos.z = -0.09f;
+        transform.position = pos;
     }
 }
