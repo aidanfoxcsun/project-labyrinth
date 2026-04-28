@@ -1,23 +1,38 @@
 using UnityEngine;
 
-// Health Component for general entities
-
-[RequireComponent (typeof(Collider2D))]
-
+[RequireComponent(typeof(Collider2D))]
 public class Health : MonoBehaviour
 {
     public float maxHP = 10;
     public float hitPoints = 10;
 
-    public event System.Action OnDeath; // Subscribe to this event to enable death behavior
-    public event System.Action OnHit;   // Subscribe to this event to enable hit behavior
-    // Expand for healing behaviors
+    public event System.Action OnDeath;
+    public event System.Action OnHit;
 
     public bool isPlayer = false;
 
     [Header("Coin Drop (enemies only)")]
     public GameObject coinPrefab;
     public int coinDropAmount = 1;
+
+    
+    private PlayerStats playerStats;
+
+    private void Awake()
+    {
+        if (isPlayer)
+        {
+            playerStats = GetComponent<PlayerStats>();
+
+            if (playerStats != null)
+            {
+                // Health is the source of truth for HP values
+                maxHP = playerStats.maxHP;
+                hitPoints = playerStats.currentHP;
+            }
+        }
+    }
+    
 
     public void SetIsPlayer(bool value)
     {
@@ -26,40 +41,42 @@ public class Health : MonoBehaviour
 
     public void Heal(float amount)
     {
-        hitPoints += amount;
-        if (hitPoints > maxHP)
-        {
-            hitPoints = maxHP;
-        }
+        hitPoints = Mathf.Min(hitPoints + amount, maxHP);
+        SyncToPlayerStats();
     }
 
     public void FullHeal()
     {
         hitPoints = maxHP;
+        SyncToPlayerStats();
     }
 
-    // Method to inflict damage on this entity. Returns true if the entity is "killed"
-    public bool RecieveDamage(float damage) 
+    public bool RecieveDamage(float damage)
     {
         OnHit?.Invoke();
         hitPoints -= damage;
+        SyncToPlayerStats();
 
         if (hitPoints <= 0)
         {
             Die();
-            //Debug.Log(this.name + " died!");
             return true;
         }
 
         return false;
     }
 
-    // Triggers the death behavior(s) of the entity
+    // Pushes Health's hitPoints into PlayerStats/HUD after any change
+    private void SyncToPlayerStats()
+    {
+        if (playerStats != null)
+            playerStats.currentHP = hitPoints;
+    }
+
     private void Die()
     {
         OnDeath?.Invoke();
 
-        // Drop a coin if this is an enemy and a coin prefab is assigned
         if (!isPlayer && coinPrefab != null)
         {
             GameObject coin = Instantiate(coinPrefab, transform.position, Quaternion.identity);
@@ -69,26 +86,21 @@ public class Health : MonoBehaviour
         }
     }
 
-    // Reacting to collisions with damagers
     private void OnCollisionEnter2D(Collision2D collision)
     {
         IDamager damager = collision.gameObject.GetComponent<IDamager>();
-        if (damager != null)
-        {
-            //Debug.Log("Damager hit!");
-            if((isPlayer && damager.PlayerSourced) ||  (!isPlayer && !damager.PlayerSourced)) { return; }
-            RecieveDamage(damager.DamageAmount);
-        }
+        if (damager == null) return;
+
+        if ((isPlayer && damager.PlayerSourced) || (!isPlayer && !damager.PlayerSourced)) return;
+
+        RecieveDamage(damager.DamageAmount);
     }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         IDamager damager = collision.gameObject.GetComponent<IDamager>();
-        if (damager != null)
-        {
-            //Debug.Log("Damager hit!");
-            // if((isPlayer && damager.PlayerSourced) ||  (!isPlayer && !damager.PlayerSourced)) { return; }
-            RecieveDamage(damager.DamageAmount);
-        }
-    }
+        if (damager == null) return;
 
+        RecieveDamage(damager.DamageAmount);
+    }
 }

@@ -525,6 +525,15 @@ bool IsAdjacent(Vector2Int a, Vector2Int b)
 
         var wall = room.transform.Find(wallName);
         if (wall != null) wall.gameObject.SetActive(false);
+
+        // Nudge door collider inward so it sits inside the walkable area
+        // regardless of wall thickness
+        var col = door.GetComponent<Collider2D>();
+        if (col != null)
+        {
+            Vector3 nudge = new Vector3(dir.x * -0.15f, dir.y * -0.15f, 0);
+            door.transform.position += nudge;
+        }
     }
 
 

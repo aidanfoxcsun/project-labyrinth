@@ -17,6 +17,7 @@ GameObject:
   - component: {fileID: 8039093540690310303}
   - component: {fileID: -6755711140151044636}
   - component: {fileID: -8953828011250620126}
+  - component: {fileID: -4601847794863077499}
   m_Layer: 10
   m_Name: Minotaur
   m_TagString: Untagged
@@ -149,6 +150,8 @@ MonoBehaviour:
   maxHP: 50
   hitPoints: 50
   isPlayer: 0
+  coinPrefab: {fileID: 0}
+  coinDropAmount: 1
 --- !u!114 &6728831302485613048
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -252,3 +255,16 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &-4601847794863077499
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3599107784049094890}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aaa6f85a0bc0f65418787540f29d9860, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BossBridge
+  bossDisplayName: The Minotaur

@@ -176,6 +176,7 @@ MonoBehaviour:
   animator: {fileID: 0}
   health: {fileID: 0}
   agent: {fileID: 0}
+  manager: {fileID: 0}
 --- !u!114 &3018903218568739520
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -222,7 +223,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f5741e24a6e5be244a54366867f1e704, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Hazard
-  damage: 5
+  damage: 0.5
   isPlayerSourced: 0
 --- !u!114 &4455087995396686361
 MonoBehaviour:
@@ -241,4 +242,3 @@ MonoBehaviour:
   maxJumpDistance: 2.5
   playerBias: 0.95
   jumpCooldownRange: {x: 0.5, y: 1.5}
-  manager: {fileID: 0}

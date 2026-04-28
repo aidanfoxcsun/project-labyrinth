@@ -17,6 +17,7 @@ GameObject:
   - component: {fileID: 5924921465818051086}
   - component: {fileID: 8039093540690310303}
   - component: {fileID: -8305009720733501733}
+  - component: {fileID: -7904484443839927603}
   m_Layer: 10
   m_Name: Warden
   m_TagString: Untagged
@@ -149,6 +150,8 @@ MonoBehaviour:
   maxHP: 100
   hitPoints: 100
   isPlayer: 0
+  coinPrefab: {fileID: 0}
+  coinDropAmount: 1
 --- !u!114 &1035218193351516223
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -196,6 +199,7 @@ MonoBehaviour:
   animator: {fileID: 8039093540690310303}
   health: {fileID: 0}
   agent: {fileID: 0}
+  manager: {fileID: 0}
 --- !u!95 &8039093540690310303
 Animator:
   serializedVersion: 7
@@ -232,3 +236,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::BossPortalOnDeath
   portalPrefab: {fileID: 4081196267222041555, guid: d9a162ca92605f64485db655b17df6e1, type: 3}
   spawnOffset: {x: 0, y: 0, z: 0}
+--- !u!114 &-7904484443839927603
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3599107784049094890}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aaa6f85a0bc0f65418787540f29d9860, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BossBridge
+  bossDisplayName: The Warden
