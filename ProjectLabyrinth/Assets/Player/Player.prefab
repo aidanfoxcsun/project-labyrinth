@@ -32,7 +32,7 @@ Transform:
   m_GameObject: {fileID: 4075680991123313756}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -5}
   m_LocalScale: {x: 0.75, y: 0.75, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -84,8 +84,8 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -1798415723
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: -2413806693520163455, guid: 34e1e2729cb282043a279cbf77c9f936, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -143,6 +143,7 @@ MonoBehaviour:
   projectilePrefab: {fileID: 3579003263570803674, guid: 70ece8b9f0fdf7d44873109ad9b455aa, type: 3}
   firePoint: {fileID: 6486080264970639897}
   projectileSpeed: 10
+  health: {fileID: 0}
   aimDirection: {fileID: 8025673022072033398}
   cam: {fileID: 0}
   playerStats: {fileID: 0}
@@ -161,6 +162,8 @@ MonoBehaviour:
   maxHP: 10
   hitPoints: 10
   isPlayer: 1
+  coinPrefab: {fileID: 0}
+  coinDropAmount: 1
 --- !u!114 &2862817731064746663
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -173,14 +176,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be121eb661b732643bc9685e3fba9709, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerStats
-  maxHP: 5
+  _maxHP: 5
+  _currentHP: 5
   flatDamage: 2
   damageScaling: 1
   speed: 4
   range: 2
   fireRate: 2
-  coins: 0
-  bombs: 0
+  _coins: 0
+  _bombs: 0
   piercing: 0
   spectral: 0
   canFly: 0
@@ -301,7 +305,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
+  m_LocalScale: {x: 0.25, y: 0.25, z: 0.25}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 1857720049070392485}
@@ -350,10 +354,10 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -1798415723
+  m_SortingLayer: 3
   m_SortingOrder: 0
-  m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 9a694f67dda742dbad328d6ca5944d5f, type: 3}
   m_Color: {r: 1, g: 1, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0

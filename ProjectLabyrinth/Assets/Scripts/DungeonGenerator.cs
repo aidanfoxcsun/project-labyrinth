@@ -194,8 +194,8 @@ public class DungeonGenerator : MonoBehaviour
         }
     }
 
-    if (maxDist >= minBossDistance)
-        roomTypes[farthest] = RoomType.Boss;
+    
+    roomTypes[farthest] = RoomType.Boss;
 
     
     List<Vector2Int> spawnable = new();

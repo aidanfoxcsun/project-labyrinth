@@ -9,8 +9,8 @@ EditorBuildSettings:
     path: Assets/Scenes/MainMenu.unity
     guid: c59e3278a7fe81345abe218f4e36a484
   - enabled: 1
-    path: Assets/Scenes/PrototypeFall2025.unity
-    guid: 4d15ce8ec3b8d74498533990371356f8
+    path: Assets/Scenes/Demo-Spring.unity
+    guid: 6ab4f482ea6f111489f37309a5a121c2
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0

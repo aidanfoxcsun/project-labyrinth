@@ -64,24 +64,16 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-<<<<<<< HEAD
-    filterMode: 0
-=======
     filterMode: 1
->>>>>>> Austen-HUD
     aniso: 1
     mipBias: 0
     wrapU: 1
     wrapV: 1
-    wrapW: 1
+    wrapW: 0
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-<<<<<<< HEAD
   spriteMode: 1
-=======
-  spriteMode: 2
->>>>>>> Austen-HUD
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -133,236 +125,12 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites:
-    - serializedVersion: 2
-      name: SELECT FILE_0
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 44
-        height: 60
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 52b562f487adb4660800000000000000
-      internalID: 7371225425380793125
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SELECT FILE_1
-      rect:
-        serializedVersion: 2
-        x: 49
-        y: 0
-        width: 35
-        height: 60
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: e4fd7c9f697dba130800000000000000
-      internalID: 3579191372311682894
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SELECT FILE_2
-      rect:
-        serializedVersion: 2
-        x: 88
-        y: 2
-        width: 32
-        height: 57
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 396593e48d87f2510800000000000000
-      internalID: 1526571669122537107
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SELECT FILE_3
-      rect:
-        serializedVersion: 2
-        x: 124
-        y: 0
-        width: 35
-        height: 60
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: b24c8e3c83dfd4bc0800000000000000
-      internalID: -3797100490556652501
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SELECT FILE_4
-      rect:
-        serializedVersion: 2
-        x: 162
-        y: 0
-        width: 44
-        height: 60
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: b3ab1b6b30eea8410800000000000000
-      internalID: 1480257127262042683
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SELECT FILE_5
-      rect:
-        serializedVersion: 2
-        x: 208
-        y: 1
-        width: 37
-        height: 58
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: d2331369cb104edd0800000000000000
-      internalID: -2457837587152162003
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SELECT FILE_6
-      rect:
-        serializedVersion: 2
-        x: 276
-        y: 1
-        width: 34
-        height: 58
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 77652edefe23e25a0800000000000000
-      internalID: -6544237202453145993
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SELECT FILE_7
-      rect:
-        serializedVersion: 2
-        x: 313
-        y: 1
-        width: 17
-        height: 58
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: bc2da901a5df47b90800000000000000
-      internalID: -7244887337264819509
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SELECT FILE_8
-      rect:
-        serializedVersion: 2
-        x: 337
-        y: 2
-        width: 32
-        height: 57
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: b93227bfb9f2b3c60800000000000000
-      internalID: 7798879526707143579
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SELECT FILE_9
-      rect:
-        serializedVersion: 2
-        x: 373
-        y: 0
-        width: 35
-        height: 60
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: dd5cd139e4f0bdaa0800000000000000
-      internalID: -6135293237212101155
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
+    sprites: []
     outline: []
     customData: 
     physicsShape: []
     bones: []
-<<<<<<< HEAD
     spriteID: 5e97eb03825dee720800000000000000
-=======
-    spriteID: 
->>>>>>> Austen-HUD
     internalID: 0
     vertices: []
     indices: 
@@ -371,17 +139,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      SELECT FILE_0: 7371225425380793125
-      SELECT FILE_1: 3579191372311682894
-      SELECT FILE_2: 1526571669122537107
-      SELECT FILE_3: -3797100490556652501
-      SELECT FILE_4: 1480257127262042683
-      SELECT FILE_5: -2457837587152162003
-      SELECT FILE_6: -6544237202453145993
-      SELECT FILE_7: -7244887337264819509
-      SELECT FILE_8: 7798879526707143579
-      SELECT FILE_9: -6135293237212101155
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
