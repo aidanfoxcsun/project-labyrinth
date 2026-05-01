@@ -12,9 +12,10 @@ public class CoinPickup : MonoBehaviour
         if (!other.CompareTag("Player")) return;
 
         // Find the HUD and add the coin value
-        HUDController hud = FindObjectOfType<HUDController>();
-        if (hud != null)
-            hud.AddCoins(value);
+        PlayerStats stats = other.gameObject.GetComponent<PlayerStats>();
+
+        if (stats != null)
+            stats.coins += value;
 
         Destroy(gameObject);
     }

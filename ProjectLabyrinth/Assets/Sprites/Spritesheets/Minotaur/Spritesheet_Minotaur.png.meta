@@ -788,30 +788,6 @@ TextureImporter:
   - first:
       213: 7633773024896512774
     second: Spritesheet_Minotaur_261
-  - first:
-      213: -5870581369424049507
-    second: Spritesheet_Minotaur_262
-  - first:
-      213: -4565291238664719056
-    second: Spritesheet_Minotaur_263
-  - first:
-      213: 1555744842139634678
-    second: Spritesheet_Minotaur_264
-  - first:
-      213: 2235244690924695423
-    second: Spritesheet_Minotaur_265
-  - first:
-      213: -1731716915950197601
-    second: Spritesheet_Minotaur_266
-  - first:
-      213: -2070637981966000436
-    second: Spritesheet_Minotaur_267
-  - first:
-      213: -335933053440336229
-    second: Spritesheet_Minotaur_268
-  - first:
-      213: -2331738128394086679
-    second: Spritesheet_Minotaur_269
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -858,7 +834,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 64
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -910,8 +886,8 @@ TextureImporter:
       name: Spritesheet_Minotaur_0
       rect:
         serializedVersion: 2
-        x: 25
-        y: 3712
+        x: 2
+        y: 2021
         width: 65
         height: 55
       alignment: 0
@@ -932,10 +908,10 @@ TextureImporter:
       name: Spritesheet_Minotaur_1
       rect:
         serializedVersion: 2
-        x: 153
-        y: 3713
+        x: 130
+        y: 2022
         width: 65
-        height: 55
+        height: 54
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -954,8 +930,8 @@ TextureImporter:
       name: Spritesheet_Minotaur_2
       rect:
         serializedVersion: 2
-        x: 281
-        y: 3712
+        x: 258
+        y: 2021
         width: 65
         height: 55
       alignment: 0
@@ -976,10 +952,10 @@ TextureImporter:
       name: Spritesheet_Minotaur_3
       rect:
         serializedVersion: 2
-        x: 409
-        y: 3713
+        x: 386
+        y: 2022
         width: 65
-        height: 55
+        height: 54
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -998,8 +974,8 @@ TextureImporter:
       name: Spritesheet_Minotaur_4
       rect:
         serializedVersion: 2
-        x: 38
-        y: 3584
+        x: 15
+        y: 1958
         width: 65
         height: 55
       alignment: 0
@@ -1020,8 +996,8 @@ TextureImporter:
       name: Spritesheet_Minotaur_5
       rect:
         serializedVersion: 2
-        x: 166
-        y: 3584
+        x: 143
+        y: 1958
         width: 65
         height: 56
       alignment: 0
@@ -1042,8 +1018,8 @@ TextureImporter:
       name: Spritesheet_Minotaur_6
       rect:
         serializedVersion: 2
-        x: 294
-        y: 3584
+        x: 271
+        y: 1958
         width: 65
         height: 55
       alignment: 0
@@ -1064,8 +1040,8 @@ TextureImporter:
       name: Spritesheet_Minotaur_7
       rect:
         serializedVersion: 2
-        x: 422
-        y: 3584
+        x: 399
+        y: 1958
         width: 65
         height: 56
       alignment: 0
@@ -1086,8 +1062,8 @@ TextureImporter:
       name: Spritesheet_Minotaur_8
       rect:
         serializedVersion: 2
-        x: 45
-        y: 3456
+        x: 22
+        y: 1899
         width: 60
         height: 55
       alignment: 0
@@ -1108,8 +1084,8 @@ TextureImporter:
       name: Spritesheet_Minotaur_9
       rect:
         serializedVersion: 2
-        x: 177
-        y: 3458
+        x: 154
+        y: 1901
         width: 56
         height: 54
       alignment: 0
@@ -1130,8 +1106,8 @@ TextureImporter:
       name: Spritesheet_Minotaur_10
       rect:
         serializedVersion: 2
-        x: 301
-        y: 3456
+        x: 278
+        y: 1899
         width: 60
         height: 55
       alignment: 0
@@ -1152,8 +1128,8 @@ TextureImporter:
       name: Spritesheet_Minotaur_11
       rect:
         serializedVersion: 2
-        x: 433
-        y: 3456
+        x: 410
+        y: 1899
         width: 56
         height: 56
       alignment: 0
@@ -1174,8 +1150,8 @@ TextureImporter:
       name: Spritesheet_Minotaur_12
       rect:
         serializedVersion: 2
-        x: 25
-        y: 3328
+        x: 2
+        y: 1840
         width: 65
         height: 55
       alignment: 0
@@ -1196,8 +1172,8 @@ TextureImporter:
       name: Spritesheet_Minotaur_13
       rect:
         serializedVersion: 2
-        x: 153
-        y: 3328
+        x: 130
+        y: 1840
         width: 65
         height: 56
       alignment: 0
@@ -1218,8 +1194,8 @@ TextureImporter:
       name: Spritesheet_Minotaur_14
       rect:
         serializedVersion: 2
-        x: 281
-        y: 3328
+        x: 258
+        y: 1840
         width: 65
         height: 55
       alignment: 0
@@ -1240,8 +1216,8 @@ TextureImporter:
       name: Spritesheet_Minotaur_15
       rect:
         serializedVersion: 2
-        x: 409
-        y: 3328
+        x: 386
+        y: 1840
         width: 65
         height: 54
       alignment: 0
@@ -1262,8 +1238,8 @@ TextureImporter:
       name: Spritesheet_Minotaur_16
       rect:
         serializedVersion: 2
-        x: 38
-        y: 3200
+        x: 15
+        y: 1777
         width: 65
         height: 55
       alignment: 0
@@ -1284,8 +1260,8 @@ TextureImporter:
       name: Spritesheet_Minotaur_17
       rect:
         serializedVersion: 2
-        x: 166
-        y: 3200
+        x: 143
+        y: 1777
         width: 65
         height: 56
       alignment: 0
@@ -1306,8 +1282,8 @@ TextureImporter:
       name: Spritesheet_Minotaur_18
       rect:
         serializedVersion: 2
-        x: 294
-        y: 3200
+        x: 271
+        y: 1777
         width: 65
         height: 55
       alignment: 0
@@ -1328,8 +1304,8 @@ TextureImporter:
       name: Spritesheet_Minotaur_19
       rect:
         serializedVersion: 2
-        x: 422
-        y: 3200
+        x: 399
+        y: 1777
         width: 65
         height: 54
       alignment: 0
@@ -1350,8 +1326,8 @@ TextureImporter:
       name: Spritesheet_Minotaur_20
       rect:
         serializedVersion: 2
-        x: 45
-        y: 3072
+        x: 22
+        y: 1717
         width: 60
         height: 55
       alignment: 0
@@ -1372,8 +1348,8 @@ TextureImporter:
       name: Spritesheet_Minotaur_21
       rect:
         serializedVersion: 2
-        x: 173
-        y: 3072
+        x: 150
+        y: 1717
         width: 60
         height: 56
       alignment: 0
@@ -1394,8 +1370,8 @@ TextureImporter:
       name: Spritesheet_Minotaur_22
       rect:
         serializedVersion: 2
-        x: 301
-        y: 3072
+        x: 278
+        y: 1717
         width: 60
         height: 55
       alignment: 0
@@ -1416,8 +1392,8 @@ TextureImporter:
       name: Spritesheet_Minotaur_23
       rect:
         serializedVersion: 2
-        x: 429
-        y: 3072
+        x: 406
+        y: 1717
         width: 60
         height: 54
       alignment: 0
@@ -1438,8 +1414,8 @@ TextureImporter:
       name: Spritesheet_Minotaur_24
       rect:
         serializedVersion: 2
-        x: 25
-        y: 2944
+        x: 2
+        y: 1658
         width: 65
         height: 55
       alignment: 0
@@ -1460,8 +1436,8 @@ TextureImporter:
       name: Spritesheet_Minotaur_25
       rect:
         serializedVersion: 2
-        x: 153
-        y: 2944
+        x: 130
+        y: 1658
         width: 65
         height: 53
       alignment: 0
@@ -1482,8 +1458,8 @@ TextureImporter:
       name: Spritesheet_Minotaur_26
       rect:
         serializedVersion: 2
-        x: 281
-        y: 2944
+        x: 258
+        y: 1658
         width: 65
         height: 51
       alignment: 0
@@ -1504,8 +1480,8 @@ TextureImporter:
       name: Spritesheet_Minotaur_27
       rect:
         serializedVersion: 2
-        x: 409
-        y: 2944
+        x: 386
+        y: 1658
         width: 65
         height: 52
       alignment: 0
@@ -1526,8 +1502,8 @@ TextureImporter:
       name: Spritesheet_Minotaur_28
       rect:
         serializedVersion: 2
-        x: 537
-        y: 2944
+        x: 514
+        y: 1658
         width: 65
         height: 51
       alignment: 0
@@ -1548,8 +1524,8 @@ TextureImporter:
       name: Spritesheet_Minotaur_29
       rect:
         serializedVersion: 2
-        x: 665
-        y: 2944
+        x: 642
+        y: 1658
         width: 65
         height: 51
       alignment: 0
@@ -1570,8 +1546,8 @@ TextureImporter:
       name: Spritesheet_Minotaur_30
       rect:
         serializedVersion: 2
-        x: 793
-        y: 2944
+        x: 770
+        y: 1658
         width: 65
         height: 52
       alignment: 0
@@ -1592,8 +1568,8 @@ TextureImporter:
       name: Spritesheet_Minotaur_31
       rect:
         serializedVersion: 2
-        x: 921
-        y: 2944
+        x: 898
+        y: 1658
         width: 65
         height: 51
       alignment: 0
@@ -1614,8 +1590,8 @@ TextureImporter:
       name: Spritesheet_Minotaur_32
       rect:
         serializedVersion: 2
-        x: 1049
-        y: 2944
+        x: 1026
+        y: 1658
         width: 65
         height: 51
       alignment: 0
@@ -1636,8 +1612,8 @@ TextureImporter:
       name: Spritesheet_Minotaur_33
       rect:
         serializedVersion: 2
-        x: 1177
-        y: 2944
+        x: 1154
+        y: 1658
         width: 65
         height: 51
       alignment: 0
@@ -1658,8 +1634,8 @@ TextureImporter:
       name: Spritesheet_Minotaur_34
       rect:
         serializedVersion: 2
-        x: 25
-        y: 2816
+        x: 2
+        y: 1593
         width: 65
         height: 50
       alignment: 0
@@ -1680,8 +1656,8 @@ TextureImporter:
       name: Spritesheet_Minotaur_35
       rect:
         serializedVersion: 2
-        x: 153
-        y: 2817
+        x: 130
+        y: 1594
         width: 66
         height: 50
       alignment: 0
@@ -1702,8 +1678,8 @@ TextureImporter:
       name: Spritesheet_Minotaur_36
       rect:
         serializedVersion: 2
-        x: 281
-        y: 2816
+        x: 258
+        y: 1593
         width: 66
         height: 51
       alignment: 0
@@ -1724,8 +1700,8 @@ TextureImporter:
       name: Spritesheet_Minotaur_37
       rect:
         serializedVersion: 2
-        x: 409
-        y: 2817
+        x: 386
+        y: 1594
         width: 65
         height: 53
       alignment: 0
@@ -1746,8 +1722,8 @@ TextureImporter:
       name: Spritesheet_Minotaur_38
       rect:
         serializedVersion: 2
-        x: 25
-        y: 2688
+        x: 2
+        y: 1528
         width: 65
         height: 50
       alignment: 0
@@ -1768,8 +1744,8 @@ TextureImporter:
       name: Spritesheet_Minotaur_39
       rect:
         serializedVersion: 2
-        x: 153
-        y: 2688
+        x: 130
+        y: 1528
         width: 65
         height: 50
       alignment: 0
@@ -1790,8 +1766,8 @@ TextureImporter:
       name: Spritesheet_Minotaur_40
       rect:
         serializedVersion: 2
-        x: 281
-        y: 2688
+        x: 258
+        y: 1528
         width: 65
         height: 53
       alignment: 0
@@ -1812,8 +1788,8 @@ TextureImporter:
       name: Spritesheet_Minotaur_41
       rect:
         serializedVersion: 2
-        x: 409
-        y: 2688
+        x: 386
+        y: 1528
         width: 66
         height: 55
       alignment: 0
@@ -1834,8 +1810,8 @@ TextureImporter:
       name: Spritesheet_Minotaur_42
       rect:
         serializedVersion: 2
-        x: 537
-        y: 2688
+        x: 514
+        y: 1528
         width: 69
         height: 55
       alignment: 0
@@ -1856,8 +1832,8 @@ TextureImporter:
       name: Spritesheet_Minotaur_43
       rect:
         serializedVersion: 2
-        x: 25
-        y: 2560
+        x: 2
+        y: 1459
         width: 65
         height: 55
       alignment: 0
@@ -1878,8 +1854,8 @@ TextureImporter:
       name: Spritesheet_Minotaur_44
       rect:
         serializedVersion: 2
-        x: 58
-        y: 2608
+        x: 35
+        y: 1507
         width: 19
         height: 11
       alignment: 0
@@ -1900,8 +1876,8 @@ TextureImporter:
       name: Spritesheet_Minotaur_45
       rect:
         serializedVersion: 2
-        x: 153
-        y: 2560
+        x: 130
+        y: 1459
         width: 65
         height: 61
       alignment: 0
@@ -1922,8 +1898,8 @@ TextureImporter:
       name: Spritesheet_Minotaur_46
       rect:
         serializedVersion: 2
-        x: 281
-        y: 2560
+        x: 258
+        y: 1459
         width: 65
         height: 63
       alignment: 0
@@ -1944,8 +1920,8 @@ TextureImporter:
       name: Spritesheet_Minotaur_47
       rect:
         serializedVersion: 2
-        x: 409
-        y: 2560
+        x: 386
+        y: 1459
         width: 65
         height: 58
       alignment: 0
@@ -1966,8 +1942,8 @@ TextureImporter:
       name: Spritesheet_Minotaur_48
       rect:
         serializedVersion: 2
-        x: 537
-        y: 2560
+        x: 514
+        y: 1459
         width: 65
         height: 50
       alignment: 0
@@ -1988,8 +1964,8 @@ TextureImporter:
       name: Spritesheet_Minotaur_49
       rect:
         serializedVersion: 2
-        x: 567
-        y: 2607
+        x: 544
+        y: 1506
         width: 21
         height: 10
       alignment: 0
@@ -2010,8 +1986,8 @@ TextureImporter:
       name: Spritesheet_Minotaur_50
       rect:
         serializedVersion: 2
-        x: 665
-        y: 2560
+        x: 642
+        y: 1459
         width: 65
         height: 52
       alignment: 0
@@ -2032,8 +2008,8 @@ TextureImporter:
       name: Spritesheet_Minotaur_51
       rect:
         serializedVersion: 2
-        x: 696
-        y: 2608
+        x: 673
+        y: 1507
         width: 20
         height: 10
       alignment: 0
@@ -2054,8 +2030,8 @@ TextureImporter:
       name: Spritesheet_Minotaur_52
       rect:
         serializedVersion: 2
-        x: 38
-        y: 2432
+        x: 15
+        y: 1395
         width: 65
         height: 55
       alignment: 0
@@ -2076,8 +2052,8 @@ TextureImporter:
       name: Spritesheet_Minotaur_53
       rect:
         serializedVersion: 2
-        x: 166
-        y: 2431
+        x: 143
+        y: 1394
         width: 65
         height: 54
       alignment: 0
@@ -2098,8 +2074,8 @@ TextureImporter:
       name: Spritesheet_Minotaur_54
       rect:
         serializedVersion: 2
-        x: 294
-        y: 2431
+        x: 271
+        y: 1394
         width: 65
         height: 52
       alignment: 0
@@ -2120,8 +2096,8 @@ TextureImporter:
       name: Spritesheet_Minotaur_55
       rect:
         serializedVersion: 2
-        x: 422
-        y: 2432
+        x: 399
+        y: 1395
         width: 65
         height: 52
       alignment: 0
@@ -2142,8 +2118,8 @@ TextureImporter:
       name: Spritesheet_Minotaur_56
       rect:
         serializedVersion: 2
-        x: 550
-        y: 2431
+        x: 527
+        y: 1394
         width: 65
         height: 52
       alignment: 0
@@ -2164,8 +2140,8 @@ TextureImporter:
       name: Spritesheet_Minotaur_57
       rect:
         serializedVersion: 2
-        x: 678
-        y: 2431
+        x: 655
+        y: 1394
         width: 65
         height: 52
       alignment: 0
@@ -2186,8 +2162,8 @@ TextureImporter:
       name: Spritesheet_Minotaur_58
       rect:
         serializedVersion: 2
-        x: 806
-        y: 2432
+        x: 783
+        y: 1395
         width: 65
         height: 52
       alignment: 0
@@ -2208,8 +2184,8 @@ TextureImporter:
       name: Spritesheet_Minotaur_59
       rect:
         serializedVersion: 2
-        x: 934
-        y: 2431
+        x: 911
+        y: 1394
         width: 65
         height: 52
       alignment: 0
@@ -2230,8 +2206,8 @@ TextureImporter:
       name: Spritesheet_Minotaur_60
       rect:
         serializedVersion: 2
-        x: 1062
-        y: 2431
+        x: 1039
+        y: 1394
         width: 65
         height: 52
       alignment: 0
@@ -2252,8 +2228,8 @@ TextureImporter:
       name: Spritesheet_Minotaur_61
       rect:
         serializedVersion: 2
-        x: 1190
-        y: 2431
+        x: 1167
+        y: 1394
         width: 65
         height: 52
       alignment: 0
@@ -2274,8 +2250,8 @@ TextureImporter:
       name: Spritesheet_Minotaur_62
       rect:
         serializedVersion: 2
-        x: 38
-        y: 2303
+        x: 15
+        y: 1335
         width: 65
         height: 51
       alignment: 0
@@ -2296,8 +2272,8 @@ TextureImporter:
       name: Spritesheet_Minotaur_63
       rect:
         serializedVersion: 2
-        x: 165
-        y: 2303
+        x: 142
+        y: 1335
         width: 66
         height: 52
       alignment: 0
@@ -2318,8 +2294,8 @@ TextureImporter:
       name: Spritesheet_Minotaur_64
       rect:
         serializedVersion: 2
-        x: 293
-        y: 2303
+        x: 270
+        y: 1335
         width: 66
         height: 52
       alignment: 0
@@ -2340,8 +2316,8 @@ TextureImporter:
       name: Spritesheet_Minotaur_65
       rect:
         serializedVersion: 2
-        x: 422
-        y: 2303
+        x: 399
+        y: 1335
         width: 65
         height: 55
       alignment: 0
@@ -2362,8 +2338,8 @@ TextureImporter:
       name: Spritesheet_Minotaur_66
       rect:
         serializedVersion: 2
-        x: 38
-        y: 2175
+        x: 14
+        y: 1275
         width: 65
         height: 51
       alignment: 0
@@ -2384,8 +2360,8 @@ TextureImporter:
       name: Spritesheet_Minotaur_67
       rect:
         serializedVersion: 2
-        x: 166
-        y: 2175
+        x: 142
+        y: 1275
         width: 65
         height: 52
       alignment: 0
@@ -2406,10 +2382,10 @@ TextureImporter:
       name: Spritesheet_Minotaur_68
       rect:
         serializedVersion: 2
-        x: 294
-        y: 2175
+        x: 270
+        y: 1270
         width: 65
-        height: 54
+        height: 59
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2428,8 +2404,8 @@ TextureImporter:
       name: Spritesheet_Minotaur_69
       rect:
         serializedVersion: 2
-        x: 421
-        y: 2176
+        x: 397
+        y: 1276
         width: 66
         height: 55
       alignment: 0
@@ -2450,8 +2426,8 @@ TextureImporter:
       name: Spritesheet_Minotaur_70
       rect:
         serializedVersion: 2
-        x: 545
-        y: 2176
+        x: 521
+        y: 1276
         width: 70
         height: 55
       alignment: 0
@@ -2472,8 +2448,8 @@ TextureImporter:
       name: Spritesheet_Minotaur_71
       rect:
         serializedVersion: 2
-        x: 38
-        y: 2047
+        x: 14
+        y: 1210
         width: 65
         height: 56
       alignment: 0
@@ -2494,8 +2470,8 @@ TextureImporter:
       name: Spritesheet_Minotaur_72
       rect:
         serializedVersion: 2
-        x: 58
-        y: 2096
+        x: 34
+        y: 1259
         width: 19
         height: 11
       alignment: 0
@@ -2516,8 +2492,8 @@ TextureImporter:
       name: Spritesheet_Minotaur_73
       rect:
         serializedVersion: 2
-        x: 166
-        y: 2047
+        x: 142
+        y: 1210
         width: 65
         height: 62
       alignment: 0
@@ -2538,10 +2514,10 @@ TextureImporter:
       name: Spritesheet_Minotaur_74
       rect:
         serializedVersion: 2
-        x: 294
-        y: 2047
+        x: 270
+        y: 1210
         width: 65
-        height: 64
+        height: 58
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2560,8 +2536,8 @@ TextureImporter:
       name: Spritesheet_Minotaur_75
       rect:
         serializedVersion: 2
-        x: 422
-        y: 2047
+        x: 398
+        y: 1210
         width: 65
         height: 59
       alignment: 0
@@ -2582,8 +2558,8 @@ TextureImporter:
       name: Spritesheet_Minotaur_76
       rect:
         serializedVersion: 2
-        x: 550
-        y: 2047
+        x: 526
+        y: 1210
         width: 65
         height: 51
       alignment: 0
@@ -2604,8 +2580,8 @@ TextureImporter:
       name: Spritesheet_Minotaur_77
       rect:
         serializedVersion: 2
-        x: 567
-        y: 2095
+        x: 543
+        y: 1258
         width: 21
         height: 10
       alignment: 0
@@ -2626,8 +2602,8 @@ TextureImporter:
       name: Spritesheet_Minotaur_78
       rect:
         serializedVersion: 2
-        x: 678
-        y: 2047
+        x: 654
+        y: 1210
         width: 65
         height: 53
       alignment: 0
@@ -2648,8 +2624,8 @@ TextureImporter:
       name: Spritesheet_Minotaur_79
       rect:
         serializedVersion: 2
-        x: 696
-        y: 2096
+        x: 672
+        y: 1259
         width: 20
         height: 10
       alignment: 0
@@ -2670,8 +2646,8 @@ TextureImporter:
       name: Spritesheet_Minotaur_80
       rect:
         serializedVersion: 2
-        x: 45
-        y: 1920
+        x: 21
+        y: 1146
         width: 60
         height: 55
       alignment: 0
@@ -2692,8 +2668,8 @@ TextureImporter:
       name: Spritesheet_Minotaur_81
       rect:
         serializedVersion: 2
-        x: 173
-        y: 1920
+        x: 149
+        y: 1146
         width: 60
         height: 53
       alignment: 0
@@ -2714,8 +2690,8 @@ TextureImporter:
       name: Spritesheet_Minotaur_82
       rect:
         serializedVersion: 2
-        x: 301
-        y: 1920
+        x: 277
+        y: 1146
         width: 60
         height: 51
       alignment: 0
@@ -2736,8 +2712,8 @@ TextureImporter:
       name: Spritesheet_Minotaur_83
       rect:
         serializedVersion: 2
-        x: 429
-        y: 1921
+        x: 405
+        y: 1147
         width: 60
         height: 51
       alignment: 0
@@ -2758,8 +2734,8 @@ TextureImporter:
       name: Spritesheet_Minotaur_84
       rect:
         serializedVersion: 2
-        x: 557
-        y: 1920
+        x: 533
+        y: 1146
         width: 60
         height: 51
       alignment: 0
@@ -2780,8 +2756,8 @@ TextureImporter:
       name: Spritesheet_Minotaur_85
       rect:
         serializedVersion: 2
-        x: 685
-        y: 1920
+        x: 661
+        y: 1146
         width: 60
         height: 51
       alignment: 0
@@ -2802,8 +2778,8 @@ TextureImporter:
       name: Spritesheet_Minotaur_86
       rect:
         serializedVersion: 2
-        x: 813
-        y: 1920
+        x: 789
+        y: 1146
         width: 60
         height: 52
       alignment: 0
@@ -2824,8 +2800,8 @@ TextureImporter:
       name: Spritesheet_Minotaur_87
       rect:
         serializedVersion: 2
-        x: 941
-        y: 1920
+        x: 917
+        y: 1146
         width: 60
         height: 51
       alignment: 0
@@ -2846,8 +2822,8 @@ TextureImporter:
       name: Spritesheet_Minotaur_88
       rect:
         serializedVersion: 2
-        x: 1069
-        y: 1920
+        x: 1045
+        y: 1146
         width: 60
         height: 51
       alignment: 0
@@ -2868,8 +2844,8 @@ TextureImporter:
       name: Spritesheet_Minotaur_89
       rect:
         serializedVersion: 2
-        x: 1197
-        y: 1920
+        x: 1173
+        y: 1146
         width: 60
         height: 51
       alignment: 0
@@ -2890,8 +2866,8 @@ TextureImporter:
       name: Spritesheet_Minotaur_90
       rect:
         serializedVersion: 2
-        x: 45
-        y: 1792
+        x: 21
+        y: 1089
         width: 60
         height: 50
       alignment: 0
@@ -2912,8 +2888,8 @@ TextureImporter:
       name: Spritesheet_Minotaur_91
       rect:
         serializedVersion: 2
-        x: 171
-        y: 1794
+        x: 147
+        y: 1091
         width: 62
         height: 50
       alignment: 0
@@ -2934,8 +2910,8 @@ TextureImporter:
       name: Spritesheet_Minotaur_92
       rect:
         serializedVersion: 2
-        x: 304
-        y: 1792
+        x: 280
+        y: 1089
         width: 57
         height: 53
       alignment: 0
@@ -2956,8 +2932,8 @@ TextureImporter:
       name: Spritesheet_Minotaur_93
       rect:
         serializedVersion: 2
-        x: 427
-        y: 1792
+        x: 403
+        y: 1089
         width: 62
         height: 54
       alignment: 0
@@ -2978,8 +2954,8 @@ TextureImporter:
       name: Spritesheet_Minotaur_94
       rect:
         serializedVersion: 2
-        x: 45
-        y: 1664
+        x: 18
+        y: 1029
         width: 60
         height: 50
       alignment: 0
@@ -3000,8 +2976,8 @@ TextureImporter:
       name: Spritesheet_Minotaur_95
       rect:
         serializedVersion: 2
-        x: 173
-        y: 1664
+        x: 146
+        y: 1029
         width: 60
         height: 51
       alignment: 0
@@ -3022,8 +2998,8 @@ TextureImporter:
       name: Spritesheet_Minotaur_96
       rect:
         serializedVersion: 2
-        x: 301
-        y: 1664
+        x: 274
+        y: 1029
         width: 60
         height: 53
       alignment: 0
@@ -3044,8 +3020,8 @@ TextureImporter:
       name: Spritesheet_Minotaur_97
       rect:
         serializedVersion: 2
-        x: 429
-        y: 1664
+        x: 402
+        y: 1029
         width: 60
         height: 55
       alignment: 0
@@ -3066,8 +3042,8 @@ TextureImporter:
       name: Spritesheet_Minotaur_98
       rect:
         serializedVersion: 2
-        x: 557
-        y: 1664
+        x: 530
+        y: 1029
         width: 62
         height: 55
       alignment: 0
@@ -3088,8 +3064,8 @@ TextureImporter:
       name: Spritesheet_Minotaur_99
       rect:
         serializedVersion: 2
-        x: 45
-        y: 1536
+        x: 19
+        y: 962
         width: 60
         height: 53
       alignment: 0
@@ -3110,8 +3086,8 @@ TextureImporter:
       name: Spritesheet_Minotaur_100
       rect:
         serializedVersion: 2
-        x: 67
-        y: 1582
+        x: 41
+        y: 1008
         width: 19
         height: 11
       alignment: 0
@@ -3132,8 +3108,8 @@ TextureImporter:
       name: Spritesheet_Minotaur_101
       rect:
         serializedVersion: 2
-        x: 173
-        y: 1536
+        x: 147
+        y: 962
         width: 60
         height: 59
       alignment: 0
@@ -3154,8 +3130,8 @@ TextureImporter:
       name: Spritesheet_Minotaur_102
       rect:
         serializedVersion: 2
-        x: 301
-        y: 1536
+        x: 275
+        y: 962
         width: 60
         height: 61
       alignment: 0
@@ -3176,8 +3152,8 @@ TextureImporter:
       name: Spritesheet_Minotaur_103
       rect:
         serializedVersion: 2
-        x: 429
-        y: 1536
+        x: 403
+        y: 962
         width: 60
         height: 51
       alignment: 0
@@ -3198,8 +3174,8 @@ TextureImporter:
       name: Spritesheet_Minotaur_104
       rect:
         serializedVersion: 2
-        x: 445
-        y: 1579
+        x: 419
+        y: 1005
         width: 16
         height: 13
       alignment: 0
@@ -3220,8 +3196,8 @@ TextureImporter:
       name: Spritesheet_Minotaur_105
       rect:
         serializedVersion: 2
-        x: 557
-        y: 1536
+        x: 531
+        y: 962
         width: 60
         height: 48
       alignment: 0
@@ -3242,8 +3218,8 @@ TextureImporter:
       name: Spritesheet_Minotaur_106
       rect:
         serializedVersion: 2
-        x: 576
-        y: 1581
+        x: 550
+        y: 1007
         width: 21
         height: 10
       alignment: 0
@@ -3264,8 +3240,8 @@ TextureImporter:
       name: Spritesheet_Minotaur_107
       rect:
         serializedVersion: 2
-        x: 685
-        y: 1536
+        x: 659
+        y: 962
         width: 60
         height: 50
       alignment: 0
@@ -3286,8 +3262,8 @@ TextureImporter:
       name: Spritesheet_Minotaur_108
       rect:
         serializedVersion: 2
-        x: 705
-        y: 1582
+        x: 679
+        y: 1008
         width: 20
         height: 10
       alignment: 0
@@ -3308,9 +3284,9 @@ TextureImporter:
       name: Spritesheet_Minotaur_109
       rect:
         serializedVersion: 2
-        x: 25
-        y: 1408
-        width: 65
+        x: 0
+        y: 860
+        width: 64
         height: 55
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -3330,8 +3306,8 @@ TextureImporter:
       name: Spritesheet_Minotaur_110
       rect:
         serializedVersion: 2
-        x: 153
-        y: 1408
+        x: 127
+        y: 860
         width: 65
         height: 60
       alignment: 0
@@ -3352,8 +3328,8 @@ TextureImporter:
       name: Spritesheet_Minotaur_111
       rect:
         serializedVersion: 2
-        x: 299
-        y: 1408
+        x: 273
+        y: 860
         width: 43
         height: 97
       alignment: 0
@@ -3374,8 +3350,8 @@ TextureImporter:
       name: Spritesheet_Minotaur_112
       rect:
         serializedVersion: 2
-        x: 427
-        y: 1408
+        x: 401
+        y: 860
         width: 43
         height: 100
       alignment: 0
@@ -3396,8 +3372,8 @@ TextureImporter:
       name: Spritesheet_Minotaur_113
       rect:
         serializedVersion: 2
-        x: 559
-        y: 1408
+        x: 533
+        y: 860
         width: 34
         height: 50
       alignment: 0
@@ -3418,8 +3394,8 @@ TextureImporter:
       name: Spritesheet_Minotaur_114
       rect:
         serializedVersion: 2
-        x: 687
-        y: 1408
+        x: 661
+        y: 860
         width: 34
         height: 50
       alignment: 0
@@ -3440,8 +3416,8 @@ TextureImporter:
       name: Spritesheet_Minotaur_115
       rect:
         serializedVersion: 2
-        x: 815
-        y: 1408
+        x: 789
+        y: 860
         width: 34
         height: 50
       alignment: 0
@@ -3462,8 +3438,8 @@ TextureImporter:
       name: Spritesheet_Minotaur_116
       rect:
         serializedVersion: 2
-        x: 933
-        y: 1408
+        x: 907
+        y: 860
         width: 45
         height: 50
       alignment: 0
@@ -3484,8 +3460,8 @@ TextureImporter:
       name: Spritesheet_Minotaur_117
       rect:
         serializedVersion: 2
-        x: 1049
-        y: 1408
+        x: 1023
+        y: 860
         width: 65
         height: 53
       alignment: 0
@@ -3506,8 +3482,8 @@ TextureImporter:
       name: Spritesheet_Minotaur_118
       rect:
         serializedVersion: 2
-        x: 38
-        y: 1280
+        x: 12
+        y: 748
         width: 65
         height: 55
       alignment: 0
@@ -3528,8 +3504,8 @@ TextureImporter:
       name: Spritesheet_Minotaur_119
       rect:
         serializedVersion: 2
-        x: 166
-        y: 1280
+        x: 140
+        y: 748
         width: 65
         height: 58
       alignment: 0
@@ -3550,8 +3526,8 @@ TextureImporter:
       name: Spritesheet_Minotaur_120
       rect:
         serializedVersion: 2
-        x: 299
-        y: 1280
+        x: 273
+        y: 748
         width: 43
         height: 97
       alignment: 0
@@ -3572,8 +3548,8 @@ TextureImporter:
       name: Spritesheet_Minotaur_121
       rect:
         serializedVersion: 2
-        x: 427
-        y: 1280
+        x: 401
+        y: 748
         width: 43
         height: 100
       alignment: 0
@@ -3594,8 +3570,8 @@ TextureImporter:
       name: Spritesheet_Minotaur_122
       rect:
         serializedVersion: 2
-        x: 559
-        y: 1279
+        x: 533
+        y: 747
         width: 34
         height: 51
       alignment: 0
@@ -3616,8 +3592,8 @@ TextureImporter:
       name: Spritesheet_Minotaur_123
       rect:
         serializedVersion: 2
-        x: 687
-        y: 1279
+        x: 661
+        y: 747
         width: 34
         height: 51
       alignment: 0
@@ -3638,8 +3614,8 @@ TextureImporter:
       name: Spritesheet_Minotaur_124
       rect:
         serializedVersion: 2
-        x: 815
-        y: 1279
+        x: 789
+        y: 747
         width: 34
         height: 51
       alignment: 0
@@ -3660,8 +3636,8 @@ TextureImporter:
       name: Spritesheet_Minotaur_125
       rect:
         serializedVersion: 2
-        x: 942
-        y: 1279
+        x: 916
+        y: 747
         width: 36
         height: 51
       alignment: 0
@@ -3682,8 +3658,8 @@ TextureImporter:
       name: Spritesheet_Minotaur_126
       rect:
         serializedVersion: 2
-        x: 1062
-        y: 1279
+        x: 1036
+        y: 747
         width: 65
         height: 54
       alignment: 0
@@ -3704,8 +3680,8 @@ TextureImporter:
       name: Spritesheet_Minotaur_127
       rect:
         serializedVersion: 2
-        x: 45
-        y: 1152
+        x: 19
+        y: 651
         width: 60
         height: 55
       alignment: 0
@@ -3726,8 +3702,8 @@ TextureImporter:
       name: Spritesheet_Minotaur_128
       rect:
         serializedVersion: 2
-        x: 173
-        y: 1152
+        x: 147
+        y: 651
         width: 58
         height: 59
       alignment: 0
@@ -3748,8 +3724,8 @@ TextureImporter:
       name: Spritesheet_Minotaur_129
       rect:
         serializedVersion: 2
-        x: 301
-        y: 1152
+        x: 275
+        y: 651
         width: 42
         height: 84
       alignment: 0
@@ -3770,8 +3746,8 @@ TextureImporter:
       name: Spritesheet_Minotaur_130
       rect:
         serializedVersion: 2
-        x: 429
-        y: 1152
+        x: 403
+        y: 651
         width: 41
         height: 86
       alignment: 0
@@ -3792,10 +3768,10 @@ TextureImporter:
       name: Spritesheet_Minotaur_131
       rect:
         serializedVersion: 2
-        x: 557
-        y: 1152
+        x: 531
+        y: 640
         width: 42
-        height: 48
+        height: 59
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -3814,8 +3790,8 @@ TextureImporter:
       name: Spritesheet_Minotaur_132
       rect:
         serializedVersion: 2
-        x: 685
-        y: 1152
+        x: 659
+        y: 651
         width: 45
         height: 48
       alignment: 0
@@ -3836,8 +3812,8 @@ TextureImporter:
       name: Spritesheet_Minotaur_133
       rect:
         serializedVersion: 2
-        x: 813
-        y: 1152
+        x: 787
+        y: 651
         width: 51
         height: 48
       alignment: 0
@@ -3858,8 +3834,8 @@ TextureImporter:
       name: Spritesheet_Minotaur_134
       rect:
         serializedVersion: 2
-        x: 941
-        y: 1152
+        x: 915
+        y: 651
         width: 60
         height: 50
       alignment: 0
@@ -3880,8 +3856,8 @@ TextureImporter:
       name: Spritesheet_Minotaur_135
       rect:
         serializedVersion: 2
-        x: 1069
-        y: 1152
+        x: 1043
+        y: 651
         width: 60
         height: 53
       alignment: 0
@@ -3902,8 +3878,8 @@ TextureImporter:
       name: Spritesheet_Minotaur_136
       rect:
         serializedVersion: 2
-        x: 281
-        y: 1024
+        x: 255
+        y: 575
         width: 65
         height: 65
       alignment: 0
@@ -3924,10 +3900,10 @@ TextureImporter:
       name: Spritesheet_Minotaur_137
       rect:
         serializedVersion: 2
-        x: 409
-        y: 1024
+        x: 383
+        y: 568
         width: 65
-        height: 67
+        height: 74
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -3946,8 +3922,8 @@ TextureImporter:
       name: Spritesheet_Minotaur_138
       rect:
         serializedVersion: 2
-        x: 434
-        y: 1084
+        x: 408
+        y: 635
         width: 9
         height: 11
       alignment: 0
@@ -3968,8 +3944,8 @@ TextureImporter:
       name: Spritesheet_Minotaur_139
       rect:
         serializedVersion: 2
-        x: 453
-        y: 1084
+        x: 427
+        y: 635
         width: 9
         height: 11
       alignment: 0
@@ -3990,10 +3966,10 @@ TextureImporter:
       name: Spritesheet_Minotaur_140
       rect:
         serializedVersion: 2
-        x: 537
-        y: 1024
+        x: 511
+        y: 573
         width: 65
-        height: 73
+        height: 63
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -4012,9 +3988,9 @@ TextureImporter:
       name: Spritesheet_Minotaur_141
       rect:
         serializedVersion: 2
-        x: 25
-        y: 1024
-        width: 65
+        x: 0
+        y: 575
+        width: 64
         height: 55
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -4034,8 +4010,8 @@ TextureImporter:
       name: Spritesheet_Minotaur_142
       rect:
         serializedVersion: 2
-        x: 153
-        y: 1024
+        x: 127
+        y: 575
         width: 65
         height: 59
       alignment: 0
@@ -4056,8 +4032,8 @@ TextureImporter:
       name: Spritesheet_Minotaur_143
       rect:
         serializedVersion: 2
-        x: 665
-        y: 1024
+        x: 639
+        y: 575
         width: 65
         height: 56
       alignment: 0
@@ -4078,8 +4054,8 @@ TextureImporter:
       name: Spritesheet_Minotaur_144
       rect:
         serializedVersion: 2
-        x: 793
-        y: 1024
+        x: 767
+        y: 575
         width: 65
         height: 50
       alignment: 0
@@ -4100,8 +4076,8 @@ TextureImporter:
       name: Spritesheet_Minotaur_145
       rect:
         serializedVersion: 2
-        x: 921
-        y: 1024
+        x: 895
+        y: 575
         width: 65
         height: 50
       alignment: 0
@@ -4122,8 +4098,8 @@ TextureImporter:
       name: Spritesheet_Minotaur_146
       rect:
         serializedVersion: 2
-        x: 1049
-        y: 1024
+        x: 1023
+        y: 575
         width: 65
         height: 50
       alignment: 0
@@ -4144,8 +4120,8 @@ TextureImporter:
       name: Spritesheet_Minotaur_147
       rect:
         serializedVersion: 2
-        x: 1177
-        y: 1024
+        x: 1151
+        y: 575
         width: 65
         height: 50
       alignment: 0
@@ -4166,8 +4142,8 @@ TextureImporter:
       name: Spritesheet_Minotaur_148
       rect:
         serializedVersion: 2
-        x: 1305
-        y: 1024
+        x: 1279
+        y: 575
         width: 65
         height: 55
       alignment: 0
@@ -4188,8 +4164,8 @@ TextureImporter:
       name: Spritesheet_Minotaur_149
       rect:
         serializedVersion: 2
-        x: 1433
-        y: 1024
+        x: 1407
+        y: 575
         width: 65
         height: 55
       alignment: 0
@@ -4210,8 +4186,8 @@ TextureImporter:
       name: Spritesheet_Minotaur_150
       rect:
         serializedVersion: 2
-        x: 1561
-        y: 1024
+        x: 1535
+        y: 575
         width: 65
         height: 50
       alignment: 0
@@ -4232,8 +4208,8 @@ TextureImporter:
       name: Spritesheet_Minotaur_151
       rect:
         serializedVersion: 2
-        x: 1689
-        y: 1024
+        x: 1612
+        y: 575
         width: 65
         height: 50
       alignment: 0
@@ -4254,8 +4230,8 @@ TextureImporter:
       name: Spritesheet_Minotaur_152
       rect:
         serializedVersion: 2
-        x: 1817
-        y: 1024
+        x: 1698
+        y: 575
         width: 65
         height: 50
       alignment: 0
@@ -4276,8 +4252,8 @@ TextureImporter:
       name: Spritesheet_Minotaur_153
       rect:
         serializedVersion: 2
-        x: 1945
-        y: 1024
+        x: 1785
+        y: 575
         width: 65
         height: 50
       alignment: 0
@@ -4298,8 +4274,8 @@ TextureImporter:
       name: Spritesheet_Minotaur_154
       rect:
         serializedVersion: 2
-        x: 2073
-        y: 1024
+        x: 1872
+        y: 575
         width: 65
         height: 55
       alignment: 0
@@ -4320,8 +4296,8 @@ TextureImporter:
       name: Spritesheet_Minotaur_155
       rect:
         serializedVersion: 2
-        x: 2201
-        y: 1024
+        x: 12
+        y: 508
         width: 65
         height: 55
       alignment: 0
@@ -4342,10 +4318,10 @@ TextureImporter:
       name: Spritesheet_Minotaur_156
       rect:
         serializedVersion: 2
-        x: 2329
-        y: 1024
+        x: 140
+        y: 508
         width: 65
-        height: 55
+        height: 57
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -4364,8 +4340,8 @@ TextureImporter:
       name: Spritesheet_Minotaur_157
       rect:
         serializedVersion: 2
-        x: 294
-        y: 896
+        x: 268
+        y: 508
         width: 65
         height: 65
       alignment: 0
@@ -4386,10 +4362,10 @@ TextureImporter:
       name: Spritesheet_Minotaur_158
       rect:
         serializedVersion: 2
-        x: 422
-        y: 896
+        x: 396
+        y: 508
         width: 65
-        height: 67
+        height: 60
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -4408,10 +4384,10 @@ TextureImporter:
       name: Spritesheet_Minotaur_159
       rect:
         serializedVersion: 2
-        x: 434
-        y: 956
-        width: 9
-        height: 11
+        x: 524
+        y: 508
+        width: 65
+        height: 60
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -4430,10 +4406,10 @@ TextureImporter:
       name: Spritesheet_Minotaur_160
       rect:
         serializedVersion: 2
-        x: 453
-        y: 956
-        width: 9
-        height: 11
+        x: 652
+        y: 507
+        width: 65
+        height: 56
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -4452,10 +4428,10 @@ TextureImporter:
       name: Spritesheet_Minotaur_161
       rect:
         serializedVersion: 2
-        x: 550
-        y: 896
+        x: 780
+        y: 507
         width: 65
-        height: 73
+        height: 51
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -4474,10 +4450,10 @@ TextureImporter:
       name: Spritesheet_Minotaur_162
       rect:
         serializedVersion: 2
-        x: 38
-        y: 896
+        x: 908
+        y: 507
         width: 65
-        height: 55
+        height: 51
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -4496,10 +4472,10 @@ TextureImporter:
       name: Spritesheet_Minotaur_163
       rect:
         serializedVersion: 2
-        x: 166
-        y: 896
+        x: 1036
+        y: 507
         width: 65
-        height: 57
+        height: 51
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -4518,10 +4494,10 @@ TextureImporter:
       name: Spritesheet_Minotaur_164
       rect:
         serializedVersion: 2
-        x: 678
-        y: 895
+        x: 1164
+        y: 507
         width: 65
-        height: 56
+        height: 51
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -4540,10 +4516,10 @@ TextureImporter:
       name: Spritesheet_Minotaur_165
       rect:
         serializedVersion: 2
-        x: 806
-        y: 895
+        x: 1292
+        y: 508
         width: 65
-        height: 51
+        height: 57
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -4562,10 +4538,10 @@ TextureImporter:
       name: Spritesheet_Minotaur_166
       rect:
         serializedVersion: 2
-        x: 934
-        y: 895
+        x: 1420
+        y: 508
         width: 65
-        height: 51
+        height: 57
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -4584,8 +4560,8 @@ TextureImporter:
       name: Spritesheet_Minotaur_167
       rect:
         serializedVersion: 2
-        x: 1062
-        y: 895
+        x: 1548
+        y: 507
         width: 65
         height: 51
       alignment: 0
@@ -4606,8 +4582,8 @@ TextureImporter:
       name: Spritesheet_Minotaur_168
       rect:
         serializedVersion: 2
-        x: 1190
-        y: 895
+        x: 1625
+        y: 507
         width: 65
         height: 51
       alignment: 0
@@ -4628,10 +4604,10 @@ TextureImporter:
       name: Spritesheet_Minotaur_169
       rect:
         serializedVersion: 2
-        x: 1318
-        y: 896
+        x: 1711
+        y: 507
         width: 65
-        height: 57
+        height: 51
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -4650,10 +4626,10 @@ TextureImporter:
       name: Spritesheet_Minotaur_170
       rect:
         serializedVersion: 2
-        x: 1446
-        y: 896
+        x: 1798
+        y: 507
         width: 65
-        height: 57
+        height: 51
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -4672,10 +4648,10 @@ TextureImporter:
       name: Spritesheet_Minotaur_171
       rect:
         serializedVersion: 2
-        x: 1574
-        y: 895
+        x: 1885
+        y: 508
         width: 65
-        height: 51
+        height: 55
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -4694,10 +4670,10 @@ TextureImporter:
       name: Spritesheet_Minotaur_172
       rect:
         serializedVersion: 2
-        x: 1702
-        y: 895
-        width: 65
-        height: 51
+        x: 275
+        y: 424
+        width: 60
+        height: 65
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -4716,10 +4692,10 @@ TextureImporter:
       name: Spritesheet_Minotaur_173
       rect:
         serializedVersion: 2
-        x: 1830
-        y: 895
-        width: 65
-        height: 51
+        x: 407
+        y: 424
+        width: 56
+        height: 67
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -4738,10 +4714,10 @@ TextureImporter:
       name: Spritesheet_Minotaur_174
       rect:
         serializedVersion: 2
-        x: 1958
-        y: 895
-        width: 65
-        height: 51
+        x: 422
+        y: 484
+        width: 9
+        height: 11
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -4760,10 +4736,10 @@ TextureImporter:
       name: Spritesheet_Minotaur_175
       rect:
         serializedVersion: 2
-        x: 2086
-        y: 896
-        width: 65
-        height: 55
+        x: 441
+        y: 484
+        width: 9
+        height: 11
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -4782,10 +4758,10 @@ TextureImporter:
       name: Spritesheet_Minotaur_176
       rect:
         serializedVersion: 2
-        x: 2214
-        y: 896
-        width: 65
-        height: 55
+        x: 538
+        y: 425
+        width: 53
+        height: 72
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -4804,9 +4780,9 @@ TextureImporter:
       name: Spritesheet_Minotaur_177
       rect:
         serializedVersion: 2
-        x: 2342
-        y: 896
-        width: 65
+        x: 19
+        y: 424
+        width: 60
         height: 55
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -4826,10 +4802,10 @@ TextureImporter:
       name: Spritesheet_Minotaur_178
       rect:
         serializedVersion: 2
-        x: 301
-        y: 768
-        width: 60
-        height: 65
+        x: 151
+        y: 424
+        width: 56
+        height: 58
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -4848,10 +4824,10 @@ TextureImporter:
       name: Spritesheet_Minotaur_179
       rect:
         serializedVersion: 2
-        x: 433
-        y: 768
-        width: 56
-        height: 67
+        x: 666
+        y: 424
+        width: 53
+        height: 55
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -4870,10 +4846,10 @@ TextureImporter:
       name: Spritesheet_Minotaur_180
       rect:
         serializedVersion: 2
-        x: 448
-        y: 828
-        width: 9
-        height: 11
+        x: 794
+        y: 424
+        width: 53
+        height: 50
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -4892,10 +4868,10 @@ TextureImporter:
       name: Spritesheet_Minotaur_181
       rect:
         serializedVersion: 2
-        x: 467
-        y: 828
-        width: 9
-        height: 11
+        x: 922
+        y: 424
+        width: 53
+        height: 50
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -4914,10 +4890,10 @@ TextureImporter:
       name: Spritesheet_Minotaur_182
       rect:
         serializedVersion: 2
-        x: 564
-        y: 769
-        width: 53
-        height: 72
+        x: 1043
+        y: 424
+        width: 60
+        height: 50
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -4936,10 +4912,10 @@ TextureImporter:
       name: Spritesheet_Minotaur_183
       rect:
         serializedVersion: 2
-        x: 45
-        y: 768
-        width: 60
-        height: 55
+        x: 1175
+        y: 424
+        width: 56
+        height: 50
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -4958,10 +4934,10 @@ TextureImporter:
       name: Spritesheet_Minotaur_184
       rect:
         serializedVersion: 2
-        x: 177
-        y: 768
-        width: 56
-        height: 58
+        x: 1299
+        y: 424
+        width: 60
+        height: 55
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -4980,9 +4956,9 @@ TextureImporter:
       name: Spritesheet_Minotaur_185
       rect:
         serializedVersion: 2
-        x: 692
-        y: 768
-        width: 53
+        x: 1431
+        y: 424
+        width: 56
         height: 55
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -5002,9 +4978,9 @@ TextureImporter:
       name: Spritesheet_Minotaur_186
       rect:
         serializedVersion: 2
-        x: 820
-        y: 768
-        width: 53
+        x: 1555
+        y: 424
+        width: 60
         height: 50
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -5024,9 +5000,9 @@ TextureImporter:
       name: Spritesheet_Minotaur_187
       rect:
         serializedVersion: 2
-        x: 948
-        y: 768
-        width: 53
+        x: 1636
+        y: 424
+        width: 56
         height: 50
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -5046,8 +5022,8 @@ TextureImporter:
       name: Spritesheet_Minotaur_188
       rect:
         serializedVersion: 2
-        x: 1069
-        y: 768
+        x: 1718
+        y: 424
         width: 60
         height: 50
       alignment: 0
@@ -5068,8 +5044,8 @@ TextureImporter:
       name: Spritesheet_Minotaur_189
       rect:
         serializedVersion: 2
-        x: 1201
-        y: 768
+        x: 1809
+        y: 424
         width: 56
         height: 50
       alignment: 0
@@ -5090,8 +5066,8 @@ TextureImporter:
       name: Spritesheet_Minotaur_190
       rect:
         serializedVersion: 2
-        x: 1325
-        y: 768
+        x: 1892
+        y: 424
         width: 60
         height: 55
       alignment: 0
@@ -5112,9 +5088,9 @@ TextureImporter:
       name: Spritesheet_Minotaur_191
       rect:
         serializedVersion: 2
-        x: 1457
-        y: 768
-        width: 56
+        x: 0
+        y: 358
+        width: 64
         height: 55
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -5134,10 +5110,10 @@ TextureImporter:
       name: Spritesheet_Minotaur_192
       rect:
         serializedVersion: 2
-        x: 1581
-        y: 768
-        width: 60
-        height: 50
+        x: 131
+        y: 358
+        width: 65
+        height: 55
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -5156,10 +5132,10 @@ TextureImporter:
       name: Spritesheet_Minotaur_193
       rect:
         serializedVersion: 2
-        x: 1713
-        y: 768
-        width: 56
-        height: 50
+        x: 259
+        y: 358
+        width: 65
+        height: 55
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -5178,10 +5154,10 @@ TextureImporter:
       name: Spritesheet_Minotaur_194
       rect:
         serializedVersion: 2
-        x: 1837
-        y: 768
-        width: 60
-        height: 50
+        x: 383
+        y: 358
+        width: 65
+        height: 55
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -5200,10 +5176,10 @@ TextureImporter:
       name: Spritesheet_Minotaur_195
       rect:
         serializedVersion: 2
-        x: 1969
-        y: 768
-        width: 56
-        height: 50
+        x: 12
+        y: 292
+        width: 65
+        height: 55
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -5222,9 +5198,9 @@ TextureImporter:
       name: Spritesheet_Minotaur_196
       rect:
         serializedVersion: 2
-        x: 2093
-        y: 768
-        width: 60
+        x: 136
+        y: 292
+        width: 65
         height: 55
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -5244,9 +5220,9 @@ TextureImporter:
       name: Spritesheet_Minotaur_197
       rect:
         serializedVersion: 2
-        x: 2225
-        y: 768
-        width: 56
+        x: 264
+        y: 292
+        width: 65
         height: 55
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -5266,9 +5242,9 @@ TextureImporter:
       name: Spritesheet_Minotaur_198
       rect:
         serializedVersion: 2
-        x: 2349
-        y: 768
-        width: 60
+        x: 396
+        y: 292
+        width: 65
         height: 55
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -5288,9 +5264,9 @@ TextureImporter:
       name: Spritesheet_Minotaur_199
       rect:
         serializedVersion: 2
-        x: 25
-        y: 640
-        width: 65
+        x: 19
+        y: 222
+        width: 60
         height: 55
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -5310,10 +5286,10 @@ TextureImporter:
       name: Spritesheet_Minotaur_200
       rect:
         serializedVersion: 2
-        x: 157
-        y: 640
-        width: 65
-        height: 55
+        x: 145
+        y: 223
+        width: 59
+        height: 54
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -5332,10 +5308,10 @@ TextureImporter:
       name: Spritesheet_Minotaur_201
       rect:
         serializedVersion: 2
-        x: 285
-        y: 640
-        width: 65
-        height: 55
+        x: 273
+        y: 223
+        width: 59
+        height: 54
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -5354,9 +5330,9 @@ TextureImporter:
       name: Spritesheet_Minotaur_202
       rect:
         serializedVersion: 2
-        x: 409
-        y: 640
-        width: 65
+        x: 403
+        y: 222
+        width: 60
         height: 55
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -5376,9 +5352,9 @@ TextureImporter:
       name: Spritesheet_Minotaur_203
       rect:
         serializedVersion: 2
-        x: 38
-        y: 512
-        width: 65
+        x: 0
+        y: 154
+        width: 64
         height: 55
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -5398,10 +5374,10 @@ TextureImporter:
       name: Spritesheet_Minotaur_204
       rect:
         serializedVersion: 2
-        x: 162
-        y: 512
+        x: 127
+        y: 154
         width: 65
-        height: 55
+        height: 54
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -5420,10 +5396,10 @@ TextureImporter:
       name: Spritesheet_Minotaur_205
       rect:
         serializedVersion: 2
-        x: 290
-        y: 512
+        x: 255
+        y: 155
         width: 65
-        height: 55
+        height: 49
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -5442,10 +5418,10 @@ TextureImporter:
       name: Spritesheet_Minotaur_206
       rect:
         serializedVersion: 2
-        x: 422
-        y: 512
+        x: 383
+        y: 155
         width: 65
-        height: 55
+        height: 49
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -5464,10 +5440,10 @@ TextureImporter:
       name: Spritesheet_Minotaur_207
       rect:
         serializedVersion: 2
-        x: 45
-        y: 384
-        width: 60
-        height: 55
+        x: 511
+        y: 155
+        width: 65
+        height: 49
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -5486,10 +5462,10 @@ TextureImporter:
       name: Spritesheet_Minotaur_208
       rect:
         serializedVersion: 2
-        x: 171
-        y: 385
-        width: 59
-        height: 54
+        x: 639
+        y: 155
+        width: 65
+        height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -5508,10 +5484,10 @@ TextureImporter:
       name: Spritesheet_Minotaur_209
       rect:
         serializedVersion: 2
-        x: 299
-        y: 385
-        width: 59
-        height: 54
+        x: 767
+        y: 155
+        width: 65
+        height: 47
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -5530,10 +5506,10 @@ TextureImporter:
       name: Spritesheet_Minotaur_210
       rect:
         serializedVersion: 2
-        x: 429
-        y: 384
-        width: 60
-        height: 55
+        x: 895
+        y: 155
+        width: 65
+        height: 47
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -5552,10 +5528,10 @@ TextureImporter:
       name: Spritesheet_Minotaur_211
       rect:
         serializedVersion: 2
-        x: 25
-        y: 256
+        x: 1023
+        y: 155
         width: 65
-        height: 55
+        height: 45
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -5574,10 +5550,10 @@ TextureImporter:
       name: Spritesheet_Minotaur_212
       rect:
         serializedVersion: 2
-        x: 153
-        y: 256
+        x: 1151
+        y: 155
         width: 65
-        height: 54
+        height: 44
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -5596,8 +5572,8 @@ TextureImporter:
       name: Spritesheet_Minotaur_213
       rect:
         serializedVersion: 2
-        x: 281
-        y: 257
+        x: 1279
+        y: 154
         width: 65
         height: 49
       alignment: 0
@@ -5618,8 +5594,8 @@ TextureImporter:
       name: Spritesheet_Minotaur_214
       rect:
         serializedVersion: 2
-        x: 409
-        y: 257
+        x: 1407
+        y: 154
         width: 65
         height: 49
       alignment: 0
@@ -5640,10 +5616,10 @@ TextureImporter:
       name: Spritesheet_Minotaur_215
       rect:
         serializedVersion: 2
-        x: 537
-        y: 257
+        x: 1535
+        y: 154
         width: 65
-        height: 49
+        height: 54
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -5662,10 +5638,10 @@ TextureImporter:
       name: Spritesheet_Minotaur_216
       rect:
         serializedVersion: 2
-        x: 665
-        y: 257
+        x: 1612
+        y: 107
         width: 65
-        height: 48
+        height: 104
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -5684,10 +5660,10 @@ TextureImporter:
       name: Spritesheet_Minotaur_217
       rect:
         serializedVersion: 2
-        x: 793
-        y: 257
+        x: 1698
+        y: 154
         width: 65
-        height: 47
+        height: 62
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -5706,10 +5682,10 @@ TextureImporter:
       name: Spritesheet_Minotaur_218
       rect:
         serializedVersion: 2
-        x: 921
-        y: 257
+        x: 1785
+        y: 153
         width: 65
-        height: 47
+        height: 55
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -5728,10 +5704,10 @@ TextureImporter:
       name: Spritesheet_Minotaur_219
       rect:
         serializedVersion: 2
-        x: 1049
-        y: 257
+        x: 1872
+        y: 153
         width: 65
-        height: 45
+        height: 56
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -5750,10 +5726,10 @@ TextureImporter:
       name: Spritesheet_Minotaur_220
       rect:
         serializedVersion: 2
-        x: 1177
-        y: 257
+        x: 1962
+        y: 153
         width: 65
-        height: 44
+        height: 33
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -5772,10 +5748,10 @@ TextureImporter:
       name: Spritesheet_Minotaur_221
       rect:
         serializedVersion: 2
-        x: 1305
-        y: 256
+        x: 2047
+        y: 153
         width: 65
-        height: 49
+        height: 33
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -5794,10 +5770,10 @@ TextureImporter:
       name: Spritesheet_Minotaur_222
       rect:
         serializedVersion: 2
-        x: 1433
-        y: 256
+        x: 2134
+        y: 154
         width: 65
-        height: 49
+        height: 31
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -5816,10 +5792,10 @@ TextureImporter:
       name: Spritesheet_Minotaur_223
       rect:
         serializedVersion: 2
-        x: 1561
-        y: 256
+        x: 12
+        y: 74
         width: 65
-        height: 54
+        height: 55
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -5838,10 +5814,10 @@ TextureImporter:
       name: Spritesheet_Minotaur_224
       rect:
         serializedVersion: 2
-        x: 1689
-        y: 256
+        x: 140
+        y: 74
         width: 65
-        height: 57
+        height: 54
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -5860,10 +5836,10 @@ TextureImporter:
       name: Spritesheet_Minotaur_225
       rect:
         serializedVersion: 2
-        x: 1817
-        y: 256
+        x: 268
+        y: 73
         width: 65
-        height: 62
+        height: 51
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -5882,10 +5858,10 @@ TextureImporter:
       name: Spritesheet_Minotaur_226
       rect:
         serializedVersion: 2
-        x: 1945
-        y: 255
+        x: 396
+        y: 73
         width: 65
-        height: 55
+        height: 51
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -5904,10 +5880,10 @@ TextureImporter:
       name: Spritesheet_Minotaur_227
       rect:
         serializedVersion: 2
-        x: 2073
-        y: 255
+        x: 524
+        y: 73
         width: 65
-        height: 56
+        height: 51
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -5926,10 +5902,10 @@ TextureImporter:
       name: Spritesheet_Minotaur_228
       rect:
         serializedVersion: 2
-        x: 2201
-        y: 255
+        x: 652
+        y: 73
         width: 65
-        height: 33
+        height: 50
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -5948,10 +5924,10 @@ TextureImporter:
       name: Spritesheet_Minotaur_229
       rect:
         serializedVersion: 2
-        x: 2329
-        y: 255
+        x: 780
+        y: 73
         width: 65
-        height: 33
+        height: 49
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -5970,10 +5946,10 @@ TextureImporter:
       name: Spritesheet_Minotaur_230
       rect:
         serializedVersion: 2
-        x: 2457
-        y: 255
+        x: 908
+        y: 73
         width: 65
-        height: 31
+        height: 49
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -5992,10 +5968,10 @@ TextureImporter:
       name: Spritesheet_Minotaur_231
       rect:
         serializedVersion: 2
-        x: 38
-        y: 128
+        x: 1036
+        y: 73
         width: 65
-        height: 55
+        height: 46
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -6014,10 +5990,10 @@ TextureImporter:
       name: Spritesheet_Minotaur_232
       rect:
         serializedVersion: 2
-        x: 166
-        y: 128
+        x: 1164
+        y: 73
         width: 65
-        height: 54
+        height: 45
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -6036,10 +6012,10 @@ TextureImporter:
       name: Spritesheet_Minotaur_233
       rect:
         serializedVersion: 2
-        x: 294
-        y: 127
+        x: 1292
+        y: 73
         width: 65
-        height: 51
+        height: 50
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -6058,10 +6034,10 @@ TextureImporter:
       name: Spritesheet_Minotaur_234
       rect:
         serializedVersion: 2
-        x: 422
-        y: 127
+        x: 1420
+        y: 73
         width: 65
-        height: 51
+        height: 50
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -6080,10 +6056,10 @@ TextureImporter:
       name: Spritesheet_Minotaur_235
       rect:
         serializedVersion: 2
-        x: 550
-        y: 127
+        x: 1548
+        y: 73
         width: 65
-        height: 51
+        height: 58
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -6102,10 +6078,10 @@ TextureImporter:
       name: Spritesheet_Minotaur_236
       rect:
         serializedVersion: 2
-        x: 678
-        y: 127
+        x: 1625
+        y: 30
         width: 65
-        height: 50
+        height: 78
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -6124,10 +6100,10 @@ TextureImporter:
       name: Spritesheet_Minotaur_237
       rect:
         serializedVersion: 2
-        x: 806
-        y: 127
+        x: 1711
+        y: 33
         width: 65
-        height: 49
+        height: 95
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -6146,10 +6122,10 @@ TextureImporter:
       name: Spritesheet_Minotaur_238
       rect:
         serializedVersion: 2
-        x: 934
-        y: 127
+        x: 1798
+        y: 30
         width: 65
-        height: 49
+        height: 99
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -6168,10 +6144,10 @@ TextureImporter:
       name: Spritesheet_Minotaur_239
       rect:
         serializedVersion: 2
-        x: 1062
-        y: 127
+        x: 1885
+        y: 36
         width: 65
-        height: 46
+        height: 71
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -6190,10 +6166,10 @@ TextureImporter:
       name: Spritesheet_Minotaur_240
       rect:
         serializedVersion: 2
-        x: 1190
-        y: 127
+        x: 1975
+        y: 75
         width: 65
-        height: 45
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -6212,10 +6188,10 @@ TextureImporter:
       name: Spritesheet_Minotaur_241
       rect:
         serializedVersion: 2
-        x: 1318
-        y: 127
+        x: 2060
+        y: 75
         width: 65
-        height: 50
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -6234,10 +6210,10 @@ TextureImporter:
       name: Spritesheet_Minotaur_242
       rect:
         serializedVersion: 2
-        x: 1446
-        y: 127
-        width: 65
-        height: 50
+        x: 19
+        y: 0
+        width: 60
+        height: 55
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -6256,10 +6232,10 @@ TextureImporter:
       name: Spritesheet_Minotaur_243
       rect:
         serializedVersion: 2
-        x: 1574
-        y: 127
-        width: 65
-        height: 58
+        x: 147
+        y: 0
+        width: 60
+        height: 54
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -6278,10 +6254,10 @@ TextureImporter:
       name: Spritesheet_Minotaur_244
       rect:
         serializedVersion: 2
-        x: 1702
-        y: 127
-        width: 65
-        height: 63
+        x: 275
+        y: 0
+        width: 60
+        height: 49
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -6300,10 +6276,10 @@ TextureImporter:
       name: Spritesheet_Minotaur_245
       rect:
         serializedVersion: 2
-        x: 1830
-        y: 127
-        width: 65
-        height: 55
+        x: 403
+        y: 0
+        width: 60
+        height: 49
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -6322,10 +6298,10 @@ TextureImporter:
       name: Spritesheet_Minotaur_246
       rect:
         serializedVersion: 2
-        x: 1958
-        y: 127
-        width: 65
-        height: 56
+        x: 531
+        y: 0
+        width: 60
+        height: 49
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -6344,10 +6320,10 @@ TextureImporter:
       name: Spritesheet_Minotaur_247
       rect:
         serializedVersion: 2
-        x: 2086
-        y: 129
-        width: 65
-        height: 32
+        x: 659
+        y: 0
+        width: 60
+        height: 47
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -6366,10 +6342,10 @@ TextureImporter:
       name: Spritesheet_Minotaur_248
       rect:
         serializedVersion: 2
-        x: 2214
-        y: 129
-        width: 65
-        height: 32
+        x: 787
+        y: 0
+        width: 60
+        height: 47
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -6388,10 +6364,10 @@ TextureImporter:
       name: Spritesheet_Minotaur_249
       rect:
         serializedVersion: 2
-        x: 2342
-        y: 129
-        width: 65
-        height: 32
+        x: 915
+        y: 0
+        width: 60
+        height: 47
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -6410,10 +6386,10 @@ TextureImporter:
       name: Spritesheet_Minotaur_250
       rect:
         serializedVersion: 2
-        x: 45
+        x: 1043
         y: 0
         width: 60
-        height: 55
+        height: 44
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -6432,10 +6408,10 @@ TextureImporter:
       name: Spritesheet_Minotaur_251
       rect:
         serializedVersion: 2
-        x: 173
+        x: 1171
         y: 0
         width: 60
-        height: 54
+        height: 43
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -6454,10 +6430,10 @@ TextureImporter:
       name: Spritesheet_Minotaur_252
       rect:
         serializedVersion: 2
-        x: 301
+        x: 1299
         y: 0
         width: 60
-        height: 49
+        height: 47
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -6476,10 +6452,10 @@ TextureImporter:
       name: Spritesheet_Minotaur_253
       rect:
         serializedVersion: 2
-        x: 429
+        x: 1427
         y: 0
         width: 60
-        height: 49
+        height: 47
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -6498,10 +6474,10 @@ TextureImporter:
       name: Spritesheet_Minotaur_254
       rect:
         serializedVersion: 2
-        x: 557
+        x: 1555
         y: 0
         width: 60
-        height: 49
+        height: 54
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -6520,10 +6496,10 @@ TextureImporter:
       name: Spritesheet_Minotaur_255
       rect:
         serializedVersion: 2
-        x: 685
+        x: 1632
         y: 0
         width: 60
-        height: 47
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -6542,10 +6518,10 @@ TextureImporter:
       name: Spritesheet_Minotaur_256
       rect:
         serializedVersion: 2
-        x: 813
+        x: 1718
         y: 0
         width: 60
-        height: 47
+        height: 34
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -6564,10 +6540,10 @@ TextureImporter:
       name: Spritesheet_Minotaur_257
       rect:
         serializedVersion: 2
-        x: 941
+        x: 1805
         y: 0
         width: 60
-        height: 47
+        height: 31
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -6586,10 +6562,10 @@ TextureImporter:
       name: Spritesheet_Minotaur_258
       rect:
         serializedVersion: 2
-        x: 1069
+        x: 1892
         y: 0
         width: 60
-        height: 44
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -6608,10 +6584,10 @@ TextureImporter:
       name: Spritesheet_Minotaur_259
       rect:
         serializedVersion: 2
-        x: 1197
+        x: 1982
         y: 0
         width: 60
-        height: 43
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -6630,10 +6606,10 @@ TextureImporter:
       name: Spritesheet_Minotaur_260
       rect:
         serializedVersion: 2
-        x: 1325
-        y: 0
+        x: 2067
+        y: 1
         width: 60
-        height: 47
+        height: 31
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -6652,10 +6628,10 @@ TextureImporter:
       name: Spritesheet_Minotaur_261
       rect:
         serializedVersion: 2
-        x: 1453
-        y: 0
-        width: 60
-        height: 47
+        x: 2161
+        y: 1
+        width: 52
+        height: 31
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -6666,182 +6642,6 @@ TextureImporter:
       bones: []
       spriteID: 6037ae4ee1c90f960800000000000000
       internalID: 7633773024896512774
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Spritesheet_Minotaur_262
-      rect:
-        serializedVersion: 2
-        x: 1581
-        y: 0
-        width: 60
-        height: 54
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: d9a04722951878ea0800000000000000
-      internalID: -5870581369424049507
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Spritesheet_Minotaur_263
-      rect:
-        serializedVersion: 2
-        x: 1709
-        y: 0
-        width: 60
-        height: 57
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 035bf2f6ec3d4a0c0800000000000000
-      internalID: -4565291238664719056
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Spritesheet_Minotaur_264
-      rect:
-        serializedVersion: 2
-        x: 1837
-        y: 0
-        width: 60
-        height: 62
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 6fb01e4f0bd179510800000000000000
-      internalID: 1555744842139634678
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Spritesheet_Minotaur_265
-      rect:
-        serializedVersion: 2
-        x: 1965
-        y: 0
-        width: 60
-        height: 54
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: f7fe4ac143f250f10800000000000000
-      internalID: 2235244690924695423
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Spritesheet_Minotaur_266
-      rect:
-        serializedVersion: 2
-        x: 2091
-        y: 0
-        width: 62
-        height: 55
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: f94e045d3a4b7f7e0800000000000000
-      internalID: -1731716915950197601
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Spritesheet_Minotaur_267
-      rect:
-        serializedVersion: 2
-        x: 2221
-        y: 0
-        width: 60
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: cce1c72e9bd9343e0800000000000000
-      internalID: -2070637981966000436
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Spritesheet_Minotaur_268
-      rect:
-        serializedVersion: 2
-        x: 2349
-        y: 0
-        width: 60
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: b9e5061faa6865bf0800000000000000
-      internalID: -335933053440336229
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Spritesheet_Minotaur_269
-      rect:
-        serializedVersion: 2
-        x: 2484
-        y: 0
-        width: 53
-        height: 31
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 9e616dbb68004afd0800000000000000
-      internalID: -2331738128394086679
       vertices: []
       indices: 
       edges: []
@@ -7042,14 +6842,6 @@ TextureImporter:
       Spritesheet_Minotaur_26: 2934050700897426587
       Spritesheet_Minotaur_260: -7194716751071797868
       Spritesheet_Minotaur_261: 7633773024896512774
-      Spritesheet_Minotaur_262: -5870581369424049507
-      Spritesheet_Minotaur_263: -4565291238664719056
-      Spritesheet_Minotaur_264: 1555744842139634678
-      Spritesheet_Minotaur_265: 2235244690924695423
-      Spritesheet_Minotaur_266: -1731716915950197601
-      Spritesheet_Minotaur_267: -2070637981966000436
-      Spritesheet_Minotaur_268: -335933053440336229
-      Spritesheet_Minotaur_269: -2331738128394086679
       Spritesheet_Minotaur_27: 4129606723044970447
       Spritesheet_Minotaur_28: -3911449256148058082
       Spritesheet_Minotaur_29: -8949387049639895620

@@ -115,6 +115,12 @@ public class UpgradeRoomController : MonoBehaviour
         PlayerStats stats = playerCollider.GetComponent<PlayerStats>();
         if (stats == null) return;
 
+        if (!stats.SpendCoins(5))
+        {
+            Debug.Log("[UpgradeRoomController] Player cannot afford the anvil buff. Player coins: " + stats.coins);
+            return;
+        }
+
         // Randomly pick flat or percent buff
         bool useFlatBuff = Random.value < 0.5f;
 

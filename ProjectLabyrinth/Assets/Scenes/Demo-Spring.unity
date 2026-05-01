@@ -697,9 +697,9 @@ MonoBehaviour:
   minEnemiesPerRoom: 2
   maxEnemiesPerRoom: 5
   treasureItemPrefab: {fileID: 6388569676009367634, guid: 1ca23eaee3a97ca40b2032c0156992ad, type: 3}
-  upgradeRoomControllerPrefab: {fileID: 0}
+  upgradeRoomControllerPrefab: {fileID: 1863957675162674562, guid: a5f62240764cf724780b783d2504f997, type: 3}
   seed: 0
-  targetRooms: 15
+  targetRooms: 7
   minBossDistance: 5
   roomSpacing: {x: 12, y: 8}
   autoDetectSpacing: 1

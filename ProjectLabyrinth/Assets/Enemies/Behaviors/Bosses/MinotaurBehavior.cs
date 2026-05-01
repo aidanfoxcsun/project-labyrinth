@@ -53,12 +53,14 @@ public class MinotaurBehavior : EnemyBehavior, IEntityBehavior
                 break;
             case MinotaurState.Telegraphing:
                 // Waiting for Coroutine to finish
+                UpdateAnimator(Vector2.zero, false);
                 break;
             case MinotaurState.Charging:
                 // Handled by Coroutine
                 break;
             case MinotaurState.Cooldown:
                 UpdateCooldown();
+                UpdateAnimator(Vector2.zero, false);
                 break;
         }
     }
@@ -73,6 +75,8 @@ public class MinotaurBehavior : EnemyBehavior, IEntityBehavior
             SetNewPatrolPoint();
         }
         controller.agent.SetDestination(patrolTarget);
+        Vector2 moveDir = (patrolTarget - transform.position).normalized;
+        UpdateAnimator(moveDir, true);
     }
 
     private void SetNewPatrolPoint()
@@ -159,6 +163,13 @@ public class MinotaurBehavior : EnemyBehavior, IEntityBehavior
         {
             return new Vector3(0, Mathf.Sign(dir.y), 0);
         }
+    }
+
+    private void UpdateAnimator(Vector2 dir, bool walking)
+    {
+        controller.animator.SetFloat("DirX", dir.x);
+        controller.animator.SetFloat("DirY", dir.y);
+        controller.animator.SetBool("IsWalking", walking);
     }
 
     public void OnDeath()

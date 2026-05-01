@@ -79,6 +79,7 @@ public class PlayerStats : MonoBehaviour
     {
         if (_coins < amount) return false;
         coins -= amount;
+        hud.SetCoins(coins);
         return true;
     }
 
@@ -104,6 +105,7 @@ public class PlayerStats : MonoBehaviour
     {
         if (_bombs <= 0) return false;
         bombs -= 1;
+        hud.SetBombs(bombs);
         return true;
     }
 

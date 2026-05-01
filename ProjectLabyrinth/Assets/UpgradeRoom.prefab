@@ -44,10 +44,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bed8b0631d7d6584fabd167435c45cf9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::UpgradeRoomController
-  shopItemPrefab: {fileID: 0}
+  shopItemPrefab: {fileID: 4582825864548029440, guid: 425ff0ec430ba524aaa07e35179aa3e4, type: 3}
   itemCost: 10
   itemSpacing: 2
-  anvilPrefab: {fileID: 0}
+  anvilPrefab: {fileID: 6857256566692566390, guid: d1b691e1fe9b24346b889a16b7b29a59, type: 3}
   anvilOffsetY: 2
   anvilFlatDamage: 1
   anvilDamageScaling: 0.1
