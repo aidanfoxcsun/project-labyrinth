@@ -26,7 +26,7 @@ MonoBehaviour:
       data:
         hp: 0
         flatDamage: 2
-        damageScaling: 0.1
+        damageScaling: 0.2
         speed: 1
         range: 0
         fireRate: 0

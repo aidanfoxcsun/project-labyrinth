@@ -18,7 +18,6 @@ MonoBehaviour:
   weight: 5
   effects:
   - rid: 8685533113252315564
-  - rid: 8685533113252315565
   references:
     version: 2
     RefIds:
@@ -28,12 +27,6 @@ MonoBehaviour:
         hp: -1
         flatDamage: 2
         damageScaling: -0.2
-        speed: 0
+        speed: 3
         range: 0
         fireRate: 0
-    - rid: 8685533113252315565
-      type: {class: OnHitEffect, ns: , asm: Assembly-CSharp}
-      data:
-        poisonChance: 0.5
-        burnChance: 0
-        freezeChance: 0

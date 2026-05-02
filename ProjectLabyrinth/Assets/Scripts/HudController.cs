@@ -44,6 +44,17 @@ public class HUDController : MonoBehaviour
     public Transform itemIconContainer;
     public GameObject itemIconPrefab;
 
+    [Header("Stat Rows")]
+    public StatRow damageRow;
+    public StatRow fireRateRow;
+    public StatRow rangeRow;
+    public StatRow speedRow;
+
+    private float _lastDamage;
+    private float _lastFireRate;
+    private float _lastRange;
+    private float _lastSpeed;
+
     [Tooltip("Pop animation duration")]
     public float itemPopDuration = 0.18f;
 
@@ -51,6 +62,8 @@ public class HUDController : MonoBehaviour
     public float itemPopOvershoot = 1.2f;
 
     private Dictionary<string, ItemSlotUI> itemSlots = new Dictionary<string, ItemSlotUI>();
+
+    private PlayerStats playerStats;
 
     private class ItemSlotUI
     {
@@ -82,6 +95,9 @@ public class HUDController : MonoBehaviour
     // =========================================================
     void Awake()
     {
+        // ADD: grab PlayerStats reference
+        playerStats = FindFirstObjectByType<PlayerStats>();
+
         // Hearts
         if (currentHearts <= 0f) currentHearts = maxHearts;
         currentHearts = ClampToHalfStep(currentHearts, 0f, maxHearts);
@@ -113,6 +129,48 @@ public class HUDController : MonoBehaviour
         }
 
         UpdateTimerUI();
+    }
+
+    // ADD: the main public refresh method — call this whenever stats change
+    public void Refresh(PlayerStats stats)
+    {
+        Debug.Log($"[HUD] Rows — dmg:{damageRow != null} fire:{fireRateRow != null} range:{rangeRow != null} spd:{speedRow != null}");
+        Debug.Log($"[HUD] Refresh called — dmg:{stats.getDamage()} spd:{stats.speed}");
+        Debug.Log($"[HUD] Last values — dmg:{_lastDamage:F2} fire:{_lastFireRate:F2} range:{_lastRange:F2} spd:{_lastSpeed:F2}");
+        SetHearts(stats.currentHP);
+        SetCoins(stats.coins);
+        SetBombs(stats.bombs);
+        RefreshStats(stats);
+    }
+
+    void RefreshStats(PlayerStats stats)
+    {
+        float dmg = stats.getDamage();
+
+        damageRow?.Show(dmg, dmg - _lastDamage);
+        fireRateRow?.Show(stats.fireRate, stats.fireRate - _lastFireRate);
+        rangeRow?.Show(stats.range, stats.range - _lastRange);
+        speedRow?.Show(stats.speed, stats.speed - _lastSpeed);
+
+        _lastDamage = dmg;
+        _lastFireRate = stats.fireRate;
+        _lastRange = stats.range;
+        _lastSpeed = stats.speed;
+    }
+
+    // Call in SyncAll() to seed without triggering delta animations on start
+    void SeedStats(PlayerStats stats)
+    {
+        float dmg = stats.getDamage();
+        _lastDamage = dmg;
+        _lastFireRate = stats.fireRate;
+        _lastRange = stats.range;
+        _lastSpeed = stats.speed;
+
+        damageRow?.Show(dmg, 0f);
+        fireRateRow?.Show(stats.fireRate, 0f);
+        rangeRow?.Show(stats.range, 0f);
+        speedRow?.Show(stats.speed, 0f);
     }
 
     // =========================================================
@@ -226,6 +284,7 @@ public class HUDController : MonoBehaviour
             RectTransform rt = go.GetComponent<RectTransform>();
 
             Image img = go.GetComponentInChildren<Image>();
+            img.color = new Color(1f, 1f, 1f, 0.5f); // Slightly transparent for visual appeal
             TMP_Text countTmp = go.GetComponentInChildren<TMP_Text>();
 
             if (img != null) img.sprite = iconSprite;

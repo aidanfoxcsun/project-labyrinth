@@ -53,14 +53,14 @@ public class UpgradeRoomController : MonoBehaviour
             return;
         }
 
-        if (ItemPoolManager.Instance == null || ItemPoolManager.Instance.standardPool.Count == 0)
+        if (ItemPoolManager.Instance == null || ItemPoolManager.Instance.ingamePool.Count == 0)
         {
             Debug.LogWarning("[UpgradeRoomController] ItemPoolManager has no items in the pool.");
             return;
         }
 
         // Pick 3 items, avoiding duplicates where possible
-        var pool = ItemPoolManager.Instance.standardPool;
+        var pool = ItemPoolManager.Instance.ingamePool;
         var chosen = new System.Collections.Generic.List<ItemData>();
 
         int attempts = 0;
@@ -134,6 +134,8 @@ public class UpgradeRoomController : MonoBehaviour
             stats.damageScaling += anvilDamageScaling;
             Debug.Log("[UpgradeRoomController] Anvil applied damage scaling +" + (anvilDamageScaling * 100f) + "%");
         }
+
+        stats.UpdateStats();
 
         anvilUsed = true;
 

@@ -358,7 +358,10 @@ bool IsAdjacent(Vector2Int a, Vector2Int b)
             }
         }
 
-        room.GetComponentInChildren<NodeGraphGenerator>().GenerateGraph();
+        NodeGraphGenerator ngGenerator = room.GetComponentInChildren<NodeGraphGenerator>();
+        ngGenerator.nodeRadius = 0.2f;
+        ngGenerator.spacing = 0.3f;
+        ngGenerator.GenerateGraph();
 
         //Used to spawn Enemies properly in their respected rooms
         if (type != RoomType.Treasure && type != RoomType.Boss && type != RoomType.Upgrade)

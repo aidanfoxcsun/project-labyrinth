@@ -8,15 +8,13 @@ public class PlayerStats : MonoBehaviour
     // =========================================================
     private HUDController hud;
 
-    void Awake()
-    {
-        hud = FindFirstObjectByType<HUDController>();
-    }
+    private List<ItemData> collectedItems = new List<ItemData>();
 
     void Start()
     {
-        // Push all initial values to HUD on spawn
-        SyncAll();
+        hud = FindFirstObjectByType<HUDController>();
+        Debug.Log($"[PlayerStats] Found HUD: {hud != null}");
+        if (hud != null) hud.Refresh(this);
     }
 
     // =========================================================
@@ -28,7 +26,26 @@ public class PlayerStats : MonoBehaviour
     public float maxHP
     {
         get => _maxHP;
-        set { _maxHP = Mathf.Max(1f, value); SyncHearts(); }
+        set
+        {
+            float oldMax = _maxHP;
+            _maxHP = Mathf.Max(1f, value);
+
+            float added = _maxHP - oldMax;
+
+            // If max increased, heal by the same amount (like Isaac's heart containers)
+            if (added > 0f)
+                _currentHP = Mathf.Clamp(_currentHP + added, 0f, _maxHP);
+            else
+                _currentHP = Mathf.Clamp(_currentHP, 0f, _maxHP);
+
+            hud?.Refresh(this);
+        }
+    }
+
+    public void UpdateStats()
+    {
+        hud?.Refresh(this);
     }
 
     public float currentHP
@@ -37,7 +54,7 @@ public class PlayerStats : MonoBehaviour
         set
         {
             _currentHP = Mathf.Clamp(value, 0f, _maxHP);
-            hud?.SetHearts(_currentHP);
+            hud?.Refresh(this);
             if (_currentHP <= 0f) OnDeath();
         }
     }
@@ -124,9 +141,11 @@ public class PlayerStats : MonoBehaviour
     // =========================================================
     // Item Collection
     // =========================================================
-    public void CollectItem(string key, Sprite icon, int amount = 1)
+    public void CollectItem(ItemData item)
     {
-        hud?.AddCollectedItem(key, icon, amount);
+        collectedItems.Add(item);
+        hud?.AddCollectedItem(item.itemName, item.icon, 1);
+        hud?.Refresh(this);
     }
 
     // =========================================================
@@ -137,14 +156,6 @@ public class PlayerStats : MonoBehaviour
         // Clamp currentHP if maxHP shrunk (e.g. Dead Cat)
         _currentHP = Mathf.Clamp(_currentHP, 0f, _maxHP);
         hud?.SetHearts(_currentHP);
-    }
-
-    private void SyncAll()
-    {
-        if (hud == null) return;
-        hud.SetHearts(_currentHP);
-        hud.SetCoins(_coins);
-        hud.SetBombs(_bombs);
     }
 
     private void OnDeath()

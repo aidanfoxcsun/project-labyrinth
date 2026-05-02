@@ -2,79 +2,81 @@ using System.Collections;
 using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody2D))]
-[RequireComponent (typeof(PlayerStats))]
-[RequireComponent (typeof(Health))]
+[RequireComponent(typeof(PlayerStats))]
+[RequireComponent(typeof(Health))]
 public class PlayerMovement : MonoBehaviour
 {
-    [Min(0f)] public float moveSpeed = 5f;
-    public Rigidbody2D rb;             // auto-filled if left empty
-    public Animator animator;          // optional
+    [Header("References")]
+    public Rigidbody2D rb;
+    public Animator animator;
     public GameObject projectilePrefab;
     public Transform firePoint;
-    public float projectileSpeed = 10f;
-
-    
-    [SerializeField] private Health health;
-    
     public GameObject aimDirection;
-
     public CameraFollow cam;
 
-    // Loading Stats
-    public PlayerStats playerStats;
+    [Header("Stats (read from PlayerStats — do not set manually)")]
+    [SerializeField] private float projectileSpeed = 10f;
 
-    Vector2 movement;
-    Vector2 lastAim = Vector2.up;
+    private PlayerStats playerStats;
+    private Health health;
 
+    private Vector2 movement;
+    private Vector2 lastAim = Vector2.up;
 
+    // Fire rate cooldown
+    private float fireCooldown = 0f;
 
     void Awake()
     {
+        playerStats = GetComponent<PlayerStats>();
+        health = GetComponent<Health>();
+
         if (!rb) rb = GetComponent<Rigidbody2D>();
-        if (playerStats == null) playerStats = GetComponent<PlayerStats>();
+
         rb.gravityScale = 0f;
         rb.freezeRotation = true;
         rb.collisionDetectionMode = CollisionDetectionMode2D.Continuous;
         rb.interpolation = RigidbodyInterpolation2D.Interpolate;
 
-        UpdateStats();
+        ApplyStats();
     }
 
-    private void OnEnable()
-    {
-        health.OnHit += Health_OnHit;
-    }
+    private void OnEnable() { health.OnHit += Health_OnHit; }
+    private void OnDisable() { health.OnHit -= Health_OnHit; }
 
     private void Health_OnHit()
     {
-        if(animator)
-            animator?.SetTrigger("Hit");
-    }
-
-    private void OnDisable()
-    {
-        health.OnHit -= Health_OnHit;
+        animator?.SetTrigger("Hit");
     }
 
     void Update()
     {
-        // Updated Shooting Logic
-        // Use Arrow keys, twin stick shooter style.
-        // WASD for movement
-        // Arrow Keys for Shooting
+        HandleMovementInput();
+        HandleAimInput();
+        HandleFireInput();
+        UpdateAnimator();
+    }
 
-        //movement.x = Input.GetAxisRaw("Horizontal");
-        //movement.y = Input.GetAxisRaw("Vertical");
+    void FixedUpdate()
+    {
+        rb.MovePosition(rb.position + movement * playerStats.speed * Time.fixedDeltaTime);
+    }
 
+    // =========================================================
+    // Input
+    // =========================================================
+    private void HandleMovementInput()
+    {
         movement = Vector2.zero;
         if (Input.GetKey(KeyCode.W)) movement.y += 1;
         if (Input.GetKey(KeyCode.S)) movement.y -= 1;
         if (Input.GetKey(KeyCode.A)) movement.x -= 1;
         if (Input.GetKey(KeyCode.D)) movement.x += 1;
-
         movement = movement.normalized;
+    }
 
-        // Arrow key aiming only
+    private void HandleAimInput()
+    {
         Vector2 aim = Vector2.zero;
         if (Input.GetKey(KeyCode.UpArrow)) aim.y += 1;
         if (Input.GetKey(KeyCode.DownArrow)) aim.y -= 1;
@@ -84,36 +86,38 @@ public class PlayerMovement : MonoBehaviour
         if (aim.sqrMagnitude > 0.01f)
             lastAim = aim.normalized;
 
-        Vector2 pos = transform.position;
+        aimDirection.transform.position = Vector2.Lerp(
+            aimDirection.transform.position,
+            lastAim + (Vector2)transform.position,
+            Time.deltaTime * 50f);
+    }
 
-        aimDirection.transform.position = Vector2.Lerp(aimDirection.transform.position, 
-            lastAim + pos, 
-            Time.deltaTime * 50.0f);
+    private void HandleFireInput()
+    {
+        fireCooldown -= Time.deltaTime;
 
-        if (Input.GetKeyDown(KeyCode.Space)) Shoot();
+        // fireRate = shots per second, so cooldown = 1 / fireRate
+        float cooldownTime = playerStats.fireRate > 0f ? 1f / playerStats.fireRate : 1f;
 
-        if (animator)
+        if (Input.GetKey(KeyCode.Space) && fireCooldown <= 0f)
         {
-            animator.SetFloat("Horizontal", movement.x);
-            animator.SetFloat("Vertical", movement.y);
-            animator.SetFloat("Speed", movement.sqrMagnitude);
+            Shoot();
+            fireCooldown = cooldownTime;
         }
     }
 
-    void FixedUpdate()
+    private void UpdateAnimator()
     {
-        // <-- This actually moves the player
-        rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime);
+        if (!animator) return;
+        animator.SetFloat("Horizontal", movement.x);
+        animator.SetFloat("Vertical", movement.y);
+        animator.SetFloat("Speed", movement.sqrMagnitude);
     }
 
-    public void UpdateStats()
-    {
-        // Apply stats
-        moveSpeed = playerStats.speed;
-        GetComponent<Health>().maxHP = playerStats.maxHP;
-    }
-
-    void Shoot()
+    // =========================================================
+    // Shooting
+    // =========================================================
+    private void Shoot()
     {
         if (!projectilePrefab || !firePoint) return;
 
@@ -122,27 +126,43 @@ public class PlayerMovement : MonoBehaviour
             animator.SetFloat("FaceX", lastAim.x);
             animator.SetFloat("FaceY", lastAim.y);
             animator.SetTrigger("Attack");
-            //Debug.Log("Shoot animation triggered");
         }
 
-        var proj = Instantiate(projectilePrefab, firePoint.position, Quaternion.identity);
+        GameObject proj = Instantiate(projectilePrefab, firePoint.position, Quaternion.identity);
+
+        // Apply stats to projectile
         proj.GetComponent<Projectile>().lifetime = playerStats.range;
         proj.GetComponent<Hazard>().setDamage(playerStats.getDamage());
-
-        var projCol = proj.GetComponent<Collider2D>();
-        var playerCol = GetComponent<Collider2D>();
-        if (projCol && playerCol) Physics2D.IgnoreCollision(projCol, playerCol);
-
         proj.GetComponent<Projectile>()?.SetDirection(lastAim);
+
+        // Ignore collision between projectile and player
+        Collider2D projCol = proj.GetComponent<Collider2D>();
+        Collider2D playerCol = GetComponent<Collider2D>();
+        if (projCol && playerCol)
+            Physics2D.IgnoreCollision(projCol, playerCol);
     }
 
+    // =========================================================
+    // Stat Sync
+    // =========================================================
+
+    // Call this after any stat change to re-sync everything
+    public void ApplyStats()
+    {
+        // Speed is read directly in FixedUpdate from playerStats.speed
+        // so nothing to cache there — always live
+
+        // Sync Health component with PlayerStats
+        health.maxHP = playerStats.maxHP;
+        health.hitPoints = Mathf.Min(health.hitPoints, health.maxHP);
+
+        // Reset fire cooldown in case fireRate changed significantly
+        fireCooldown = 0f;
+    }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Room"))
-        {
-            GameObject room = collision.gameObject;
-            cam.SetTargetDestination(new Vector2(room.transform.position.x, room.transform.position.y));
-        }
+            cam.SetTargetDestination(collision.transform.position);
     }
 }
