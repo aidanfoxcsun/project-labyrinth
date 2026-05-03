@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: MagicMushroom
   m_EditorClassIdentifier: Assembly-CSharp::ItemData
   itemName: Magic Mushroom
-  description: All Stats Up!
+  description: Feels familiar...
   icon: {fileID: -2510476293373519475, guid: 62d3977c50eb9cd4b9fa0748d02c2452, type: 3}
-  weight: 1
+  weight: 0.2
   effects:
   - rid: 8685533113252315343
   references:

@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 475370614341215509}
   - component: {fileID: 8352406833096231199}
   - component: {fileID: 4773783710111742114}
+  - component: {fileID: 4463471167447705205}
   m_Layer: 0
   m_Name: Portal
   m_TagString: Untagged
@@ -126,8 +127,8 @@ CircleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
-  m_Radius: 0.5
+  m_Offset: {x: 0, y: -0.116954595}
+  m_Radius: 0.3830454
 --- !u!114 &4773783710111742114
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -141,3 +142,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PortalToNextFloor
   playerTag: Player
+--- !u!95 &4463471167447705205
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4081196267222041555}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 863817a2e5aeba645a7a3dc23f5d057b, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0

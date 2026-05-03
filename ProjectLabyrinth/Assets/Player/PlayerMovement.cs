@@ -97,7 +97,7 @@ public class PlayerMovement : MonoBehaviour
         fireCooldown -= Time.deltaTime;
 
         // fireRate = shots per second, so cooldown = 1 / fireRate
-        float cooldownTime = playerStats.fireRate > 0f ? 1f / playerStats.fireRate : 1f;
+        float cooldownTime = playerStats.fireRate > 0f ? 1f / playerStats.fireRate : 1.5f;
 
         if (Input.GetKey(KeyCode.Space) && fireCooldown <= 0f)
         {
@@ -129,6 +129,7 @@ public class PlayerMovement : MonoBehaviour
         }
 
         GameObject proj = Instantiate(projectilePrefab, firePoint.position, Quaternion.identity);
+        proj.transform.localScale *= Mathf.Sqrt(playerStats.getDamage());
 
         // Apply stats to projectile
         proj.GetComponent<Projectile>().lifetime = playerStats.range;

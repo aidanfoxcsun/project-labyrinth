@@ -36,20 +36,22 @@ public class ShopItem : MonoBehaviour
         if (purchased) return;
         if (!other.CompareTag("Player")) return;
 
-        HUDController hud = FindObjectOfType<HUDController>();
-        if (hud == null) return;
+        PlayerStats stats = other.GetComponent<PlayerStats>();
+        PlayerMovement movement = other.GetComponent<PlayerMovement>();
 
         // Check if the player can afford it
-        if (!hud.SpendCoins(cost))
+        if (!stats.SpendCoins(cost))
         {
             Debug.Log("[ShopItem] Not enough coins to purchase " + data.itemName);
             return;
         }
 
-        // Apply the item effect to the player
-        PlayerStats stats = other.GetComponent<PlayerStats>();
         if (stats != null)
+        {
             data.Apply(stats);
+            movement?.ApplyStats();
+            stats.CollectItem(data);
+        }
 
         purchased = true;
 

@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ItemData
   itemName: Power Potion
   description: You feel strong!
-  icon: {fileID: 21300000, guid: 54ba6b5dce6ee034f9da367d4af3b5ea, type: 3}
+  icon: {fileID: -3143817774551375588, guid: d1ee053dd616e0b4c84439c6256baae8, type: 3}
   weight: 5
   effects:
   - rid: 4525888053118238939

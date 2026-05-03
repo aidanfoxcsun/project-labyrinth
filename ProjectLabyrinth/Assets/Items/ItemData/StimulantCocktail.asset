@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d408cbb5d410f444bacf2905f4e5efa6, type: 3}
+  m_Name: StimulantCocktail
+  m_EditorClassIdentifier: Assembly-CSharp::ItemData
+  itemName: Stimulant Cocktail
+  description: A concotion of various stimulants...
+  icon: {fileID: -4728554739982445105, guid: d1ee053dd616e0b4c84439c6256baae8, type: 3}
+  weight: 2
+  effects:
+  - rid: 7097487281174610023
+  references:
+    version: 2
+    RefIds:
+    - rid: 7097487281174610023
+      type: {class: StatUpEffect, ns: , asm: Assembly-CSharp}
+      data:
+        hp: 0
+        flatDamage: 0
+        damageScaling: 0
+        speed: 1
+        range: -1
+        fireRate: 1

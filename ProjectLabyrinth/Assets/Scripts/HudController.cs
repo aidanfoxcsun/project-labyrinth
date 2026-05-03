@@ -75,6 +75,27 @@ public class HUDController : MonoBehaviour
     }
 
     // =========================================================
+    // Item Popup
+    // =========================================================
+    [Header("Item Pickup Popup")]
+    [Tooltip("Root GameObject containing the popup — will be shown/hidden")]
+    public GameObject itemPopupRoot;
+
+    [Tooltip("Displays the item name")]
+    public TMP_Text itemPopupName;
+
+    [Tooltip("Displays the item description")]
+    public TMP_Text itemPopupDescription;
+
+    [Tooltip("How long the popup stays fully visible")]
+    public float popupHoldDuration = 2.5f;
+
+    [Tooltip("How long the fade in/out takes")]
+    public float popupFadeDuration = 0.4f;
+
+    private Coroutine popupCoroutine;
+
+    // =========================================================
     // Bomb Counter
     // =========================================================
     [Header("Bomb Counter")]
@@ -171,6 +192,65 @@ public class HUDController : MonoBehaviour
         fireRateRow?.Show(stats.fireRate, 0f);
         rangeRow?.Show(stats.range, 0f);
         speedRow?.Show(stats.speed, 0f);
+    }
+
+    // =========================================================
+    // Item Popup API
+    // =========================================================
+
+    // Call this from Item.cs after applying the item
+    public void ShowItemPopup(ItemData data)
+    {
+        if (itemPopupRoot == null) return;
+
+        if (itemPopupName != null) itemPopupName.text = data.itemName;
+        if (itemPopupDescription != null) itemPopupDescription.text = data.description;
+
+        if (popupCoroutine != null) StopCoroutine(popupCoroutine);
+        popupCoroutine = StartCoroutine(PopupSequence());
+    }
+
+    private IEnumerator PopupSequence()
+    {
+        itemPopupRoot.SetActive(true);
+
+        // Collect all CanvasGroup or drive alpha via Image/TMP color
+        // Using a CanvasGroup on itemPopupRoot is the cleanest approach
+        CanvasGroup cg = itemPopupRoot.GetComponent<CanvasGroup>();
+
+        if (cg == null)
+        {
+            // No CanvasGroup — just show and hide with no fade
+            yield return new WaitForSecondsRealtime(popupHoldDuration);
+            itemPopupRoot.SetActive(false);
+            yield break;
+        }
+
+        // Fade in
+        float t = 0f;
+        while (t < popupFadeDuration)
+        {
+            t += Time.unscaledDeltaTime;
+            cg.alpha = Mathf.Clamp01(t / popupFadeDuration);
+            yield return null;
+        }
+        cg.alpha = 1f;
+
+        // Hold
+        yield return new WaitForSecondsRealtime(popupHoldDuration);
+
+        // Fade out
+        t = 0f;
+        while (t < popupFadeDuration)
+        {
+            t += Time.unscaledDeltaTime;
+            cg.alpha = Mathf.Clamp01(1f - (t / popupFadeDuration));
+            yield return null;
+        }
+
+        cg.alpha = 0f;
+        itemPopupRoot.SetActive(false);
+        popupCoroutine = null;
     }
 
     // =========================================================

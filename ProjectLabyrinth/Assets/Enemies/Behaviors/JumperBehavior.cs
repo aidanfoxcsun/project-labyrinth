@@ -106,6 +106,8 @@ public class JumperBehavior : EnemyBehavior, IEntityBehavior
 
         controller.agent.SetDestination(jumpTarget);
 
+        controller.animator.SetTrigger("Jump");
+
         isJumping = true; // start the jump
     }
 

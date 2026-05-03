@@ -145,6 +145,7 @@ public class PlayerStats : MonoBehaviour
     {
         collectedItems.Add(item);
         hud?.AddCollectedItem(item.itemName, item.icon, 1);
+        hud?.ShowItemPopup(item);
         hud?.Refresh(this);
     }
 
