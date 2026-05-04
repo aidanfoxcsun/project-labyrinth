@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 6541515243163235385}
   - component: {fileID: 952518583488110357}
   - component: {fileID: 4455087995396686361}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Jumper
   m_TagString: Untagged
   m_Icon: {fileID: 0}
