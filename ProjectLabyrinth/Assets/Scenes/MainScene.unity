@@ -131,7 +131,6 @@ GameObject:
   - component: {fileID: 1402492389}
   - component: {fileID: 1402492388}
   - component: {fileID: 1402492387}
-  - component: {fileID: 1402492391}
   m_Layer: 0
   m_Name: PlayerTEST
   m_TagString: Player
@@ -248,7 +247,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 0
   m_Sprite: {fileID: -2413806693520163455, guid: 34e1e2729cb282043a279cbf77c9f936, type: 3}
   m_Color: {r: 0.36957386, g: 0.7169812, b: 0.1251335, a: 1}
   m_FlipX: 0
@@ -275,19 +274,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1402492391
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1402492385}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 43377150c081ffa4ab709a5b69671b96, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PlayerMovement_test
-  moveSpeed: 5
 --- !u!1 &1491054221
 GameObject:
   m_ObjectHideFlags: 0
@@ -456,7 +442,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DungeonGenerator
   roomPrefab: {fileID: 3738668724862959439, guid: 03781b73cc420d74eac9b0e109cd457d, type: 3}
   largeRoomPrefab: {fileID: 0}
-  bossPrefab: {fileID: 3599107784049094890, guid: 5536f4aa30944974dbc9d6c2fafec23c, type: 3}
+  bossPrefab: {fileID: 0}
   rockPrefabs:
   - {fileID: 1390904374234985786, guid: 047dea15ebd48ed4e89c054d27ce4032, type: 3}
   - {fileID: 1390904374234985787, guid: b8e591527a74ec54d99f0f297221a1bd, type: 3}
@@ -472,7 +458,7 @@ MonoBehaviour:
   treasureItemPrefab: {fileID: 0}
   upgradeRoomControllerPrefab: {fileID: 0}
   seed: 0
-  targetRooms: 20
+  targetRooms: 100
   minBossDistance: 5
   roomSpacing: {x: 12, y: 8}
   autoDetectSpacing: 1
