@@ -1,8 +1,15 @@
 using UnityEngine;
+using System.Collections;
 
 public class BombCollectible : MonoBehaviour
 {
     public int bombValue = 1; // default bomb
+    public AudioSource pickupSound;
+
+    private void Start()
+    {
+        pickupSound.volume = AudioController.Instance.sfxVolume;    
+    }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -13,9 +20,19 @@ public class BombCollectible : MonoBehaviour
             {
                 playerStats.bombs += bombValue;
                 // Optionally, play a sound effect or animation here
-                Destroy(gameObject); // Remove the coin from the scene
+
+                GetComponent<SpriteRenderer>().enabled = false; // Hide the coin sprite immediately
+                GetComponent<Collider2D>().enabled = false; // Disable the collider to prevent further triggers
+                pickupSound?.Play(); // Play pickup sound if assigned
+                StartCoroutine(waitToDestroy());
                 Debug.Log("Collected a bomb! Total bombs: " + playerStats.bombs);
             }
         }
+    }
+
+    private IEnumerator waitToDestroy()
+    {
+        yield return new WaitForSeconds(1f);
+        Destroy(gameObject);
     }
 }

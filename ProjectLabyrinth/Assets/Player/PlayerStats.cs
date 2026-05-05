@@ -7,12 +7,16 @@ public class PlayerStats : MonoBehaviour
     // HUD Reference
     // =========================================================
     private HUDController hud;
+    [SerializeField] private AudioSource paySound;
+    [SerializeField] private AudioSource itemAudio;
 
     private List<ItemData> collectedItems = new List<ItemData>();
 
     void Start()
     {
         hud = FindFirstObjectByType<HUDController>();
+        paySound.volume = AudioController.Instance.sfxVolume;
+        itemAudio.volume = AudioController.Instance.sfxVolume;
         Debug.Log($"[PlayerStats] Found HUD: {hud != null}");
         if (hud != null) hud.Refresh(this);
     }
@@ -95,6 +99,7 @@ public class PlayerStats : MonoBehaviour
     public bool SpendCoins(int amount)
     {
         if (_coins < amount) return false;
+        paySound?.Play();
         coins -= amount;
         hud.SetCoins(coins);
         return true;
@@ -144,6 +149,7 @@ public class PlayerStats : MonoBehaviour
     public void CollectItem(ItemData item)
     {
         collectedItems.Add(item);
+        itemAudio?.Play();
         hud?.AddCollectedItem(item.itemName, item.icon, 1);
         hud?.ShowItemPopup(item);
         hud?.Refresh(this);

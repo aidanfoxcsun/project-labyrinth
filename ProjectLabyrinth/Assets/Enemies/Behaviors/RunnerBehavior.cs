@@ -42,6 +42,7 @@ public class RunnerBehavior : EnemyBehavior, IEntityBehavior
 
     public void OnHit()
     {
+        controller.voice.Play();
         StartCoroutine(HitFlash());
     }
 

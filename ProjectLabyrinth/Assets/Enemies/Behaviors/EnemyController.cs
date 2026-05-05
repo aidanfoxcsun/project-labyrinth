@@ -6,6 +6,7 @@ public class EnemyController : MonoBehaviour
 {
     public EnemyBehavior behavior;
     public Animator animator;
+    public AudioSource voice;
 
     [HideInInspector] public Health health;
     [HideInInspector] public NavigationAgent agent;
@@ -33,6 +34,9 @@ public class EnemyController : MonoBehaviour
         {
             behavior.Initialize(this);
         }
+
+        voice.volume = AudioController.Instance.sfxVolume;
+
     }
     private void Awake()
     {
@@ -47,12 +51,16 @@ public class EnemyController : MonoBehaviour
         {
             behavior.Initialize(this);
         }
+        if (voice != null)
+            voice.volume = AudioController.Instance.sfxVolume;
     }
 
     private void Update()
     {
         if (alive)
+        {
             behavior?.OnUpdate();
+        }
     }
 
     public void StopUpdate()

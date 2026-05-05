@@ -90,6 +90,8 @@ public class UpgradeRoomController : MonoBehaviour
         }
     }
 
+    private Animator anvilAnimator;
+
     // Places the anvil above the center item
     void SpawnAnvil()
     {
@@ -104,6 +106,7 @@ public class UpgradeRoomController : MonoBehaviour
 
         // Add the trigger component at runtime so the prefab stays simple
         AnvilInteractable interactable = anvilInstance.AddComponent<AnvilInteractable>();
+        anvilAnimator = interactable.gameObject.GetComponent<Animator>();
         interactable.controller = this;
     }
 
@@ -112,7 +115,9 @@ public class UpgradeRoomController : MonoBehaviour
     {
         if (anvilUsed) return;
 
+
         PlayerStats stats = playerCollider.GetComponent<PlayerStats>();
+        playerCollider.GetComponent<PlayerMovement>().Flash(Color.yellow); // Freeze player during upgrade animation
         if (stats == null) return;
 
         if (!stats.SpendCoins(5))
@@ -120,6 +125,9 @@ public class UpgradeRoomController : MonoBehaviour
             Debug.Log("[UpgradeRoomController] Player cannot afford the anvil buff. Player coins: " + stats.coins);
             return;
         }
+        anvilAnimator.SetTrigger("Upgrade");
+        anvilAnimator.transform.GetComponentInChildren<AudioSource>().volume = AudioController.Instance.sfxVolume; // Play the upgrade particle effect
+        anvilAnimator.transform.GetComponentInChildren<AudioSource>().Play(); // Play the anvil sound effect
 
         // Randomly pick flat or percent buff
         bool useFlatBuff = Random.value < 0.5f;

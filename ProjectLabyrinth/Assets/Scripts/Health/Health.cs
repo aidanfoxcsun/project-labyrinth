@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Collections.Generic;
 
 [RequireComponent(typeof(Collider2D))]
 public class Health : MonoBehaviour
@@ -11,9 +12,10 @@ public class Health : MonoBehaviour
 
     public bool isPlayer = false;
 
-    [Header("Coin Drop (enemies only)")]
-    public GameObject coinPrefab;
-    public int coinDropAmount = 1;
+    [Header("Collectable Drops (enemies only)")]
+    public float dropChance = 0.75f; // Chance to drop collectables on death
+    public List<GameObject> droppables;
+    public int dropAmount = 1;
 
     
     private PlayerStats playerStats;
@@ -77,12 +79,12 @@ public class Health : MonoBehaviour
     {
         OnDeath?.Invoke();
 
-        if (!isPlayer && coinPrefab != null)
+        if (!isPlayer && droppables.Count > 0)
         {
-            GameObject coin = Instantiate(coinPrefab, transform.position, Quaternion.identity);
-            CoinPickup pickup = coin.GetComponent<CoinPickup>();
-            if (pickup != null)
-                pickup.value = coinDropAmount;
+            if(UnityEngine.Random.value <= dropChance)
+            {
+                Instantiate(droppables[Random.Range(0, droppables.Count)], transform.position, Quaternion.identity);    
+            }
         }
     }
 

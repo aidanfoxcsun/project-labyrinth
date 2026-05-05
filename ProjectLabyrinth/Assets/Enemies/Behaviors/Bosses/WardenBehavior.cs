@@ -23,6 +23,8 @@ public class WardenBehavior : EnemyBehavior, IEntityBehavior
     private BossProjectile projectile;
     private GameObject player;
 
+    public AudioSource summonSound;
+
     public override void Initialize(EnemyController controller)
     {
         base.Initialize(controller);
@@ -32,6 +34,11 @@ public class WardenBehavior : EnemyBehavior, IEntityBehavior
             controller.health.OnHit += OnHit;
         }
         player = GameObject.FindGameObjectWithTag("Player");
+
+        if (AudioController.Instance != null)
+            summonSound.volume = AudioController.Instance.sfxVolume;
+
+        Debug.Log($"{GetType().Name} initialized. Player found: {player != null}, Health: {controller.health != null}");
     }
 
     public override void OnUpdate()
@@ -44,7 +51,10 @@ public class WardenBehavior : EnemyBehavior, IEntityBehavior
 
         // Telegraph firing animation
         if (fireTimer >= fireInterval - 0.4f)
+        {
+            summonSound?.Play(); // Play summon sound as a telegraph for firing
             PlayFiringAnimation();
+        }
 
         if (fireTimer >= fireInterval)
         {
@@ -57,6 +67,7 @@ public class WardenBehavior : EnemyBehavior, IEntityBehavior
         {
             summonTimer = 0f;
             fireTimer = 0f; // Reset fire timer so we don't immediately fire after summoning
+            summonSound?.Play();
             StartCoroutine(SummonMinions());
         }
     }

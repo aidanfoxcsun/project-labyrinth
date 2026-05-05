@@ -64,6 +64,7 @@ public class ShooterBehavior : EnemyBehavior, IEntityBehavior
 
     public void OnHit()
     {
+        controller.voice.Play();
         StartCoroutine(HitFlash());
     }
 

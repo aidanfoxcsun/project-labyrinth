@@ -1,4 +1,5 @@
 using System.Collections;
+using Unity.VisualScripting.Antlr3.Runtime.Misc;
 using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody2D))]
@@ -13,9 +14,14 @@ public class PlayerMovement : MonoBehaviour
     public Transform firePoint;
     public GameObject aimDirection;
     public CameraFollow cam;
+    public AudioSource hitSound;
+    public AudioSource shootSound;
 
     [Header("Stats (read from PlayerStats — do not set manually)")]
     [SerializeField] private float projectileSpeed = 10f;
+
+    [Header("Bomb Prefab")]
+    [SerializeField] private GameObject bombPrefab;
 
     private PlayerStats playerStats;
     private Health health;
@@ -41,6 +47,12 @@ public class PlayerMovement : MonoBehaviour
         ApplyStats();
     }
 
+    private void Start()
+    {
+        hitSound.volume = AudioController.Instance.sfxVolume;
+        shootSound.volume = AudioController.Instance.sfxVolume * 0.5f;
+    }
+
     private void OnEnable() { health.OnHit += Health_OnHit; health.OnDeath += Health_OnDeath; }
 
     private void OnDisable() { health.OnHit -= Health_OnHit; health.OnDeath -= Health_OnDeath; }
@@ -48,6 +60,8 @@ public class PlayerMovement : MonoBehaviour
     private void Health_OnHit()
     {
         animator?.SetTrigger("Hit");
+        hitSound?.Play();
+        Flash(Color.lightPink);
     }
 
     private void Health_OnDeath()
@@ -62,6 +76,7 @@ public class PlayerMovement : MonoBehaviour
         HandleMovementInput();
         HandleAimInput();
         HandleFireInput();
+        HandleBombInput();
         UpdateAnimator();
     }
 
@@ -123,6 +138,22 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
+    private void HandleBombInput()
+    {
+        if (isDead) return;
+        
+        if (Input.GetKeyDown(KeyCode.E) && playerStats.bombs > 0)
+        {
+            Debug.Log("Placing bomb at " + transform.position);
+            Instantiate(bombPrefab, transform.position, Quaternion.identity);
+            playerStats.bombs -= 1;
+        }
+        else if(Input.GetKeyDown(KeyCode.E) && playerStats.bombs <= 0)
+        {
+            Debug.Log("No bombs left!");
+        }
+    }
+
     private void UpdateAnimator()
     {
         if (!animator) return;
@@ -140,6 +171,8 @@ public class PlayerMovement : MonoBehaviour
 
         if (!projectilePrefab || !firePoint) return;
 
+        shootSound?.Play();
+
         if (animator)
         {
             animator.SetFloat("FaceX", lastAim.x);
@@ -149,6 +182,7 @@ public class PlayerMovement : MonoBehaviour
 
         GameObject proj = Instantiate(projectilePrefab, firePoint.position, Quaternion.LookRotation(Vector3.forward, lastAim));
         proj.transform.localScale *= Mathf.Sqrt(playerStats.getDamage());
+        proj.GetComponent<CircleCollider2D>().radius = Mathf.Clamp(proj.GetComponent<CircleCollider2D>().radius * Mathf.Sqrt(playerStats.getDamage()), 0.1f, 1.0f);
 
         // Apply stats to projectile
         proj.GetComponent<Projectile>().lifetime = playerStats.range;
@@ -178,6 +212,21 @@ public class PlayerMovement : MonoBehaviour
 
         // Reset fire cooldown in case fireRate changed significantly
         fireCooldown = 0f;
+    }
+
+    public void Flash(Color color)
+    {
+        StartCoroutine(FlashCoroutine(color));
+    }
+
+    private IEnumerator FlashCoroutine(Color color)
+    {
+        SpriteRenderer sr = GetComponent<SpriteRenderer>();
+        if (sr == null) yield break;
+        Color originalColor = sr.color;
+        sr.color = color;
+        yield return new WaitForSeconds(0.1f);
+        sr.color = originalColor;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

@@ -1,12 +1,14 @@
 using System.Collections;
 using Unity.VisualScripting;
-using UnityEditor.SceneManagement;
+using UnityEngine.SceneManagement;
 using UnityEngine;
 
 public class MinotaurBehavior : EnemyBehavior, IEntityBehavior
 {
     public enum MinotaurState { Patrolling, Telegraphing, Charging, Cooldown }
     public MinotaurState currentState = MinotaurState.Patrolling;
+
+    public AudioSource roarSound;
 
     public LayerMask obstacleMask; // For line of sight checks during charge detection
 
@@ -32,6 +34,11 @@ public class MinotaurBehavior : EnemyBehavior, IEntityBehavior
         }
 
         player = GameObject.FindGameObjectWithTag("Player");
+
+        if(AudioController.Instance != null)
+            roarSound.volume = AudioController.Instance.sfxVolume;
+
+        Debug.Log($"{GetType().Name} initialized. Player found: {player != null}, Health: {controller.health != null}, Roar Sound: {roarSound != null}, AudioController: {AudioController.Instance}");
     }
 
     private void Start()
@@ -56,6 +63,7 @@ public class MinotaurBehavior : EnemyBehavior, IEntityBehavior
                 // Waiting for Coroutine to finish
                 UpdateAnimator(player.transform.position - transform.position, false);
                 controller.animator.SetTrigger("Telegraph");
+                roarSound?.Play();
                 break;
             case MinotaurState.Charging:
                 // Handled by Coroutine
