@@ -28,6 +28,7 @@ public class DoorAnimator : MonoBehaviour
     // Called by Door.cs when the locked state changes
     public void PlayOpen()
     {
+        if (!gameObject.activeInHierarchy) return;
         if (openFrames == null || openFrames.Length == 0) return;
         if (current != null) StopCoroutine(current);
         current = StartCoroutine(PlayFrames(openFrames));
@@ -35,6 +36,7 @@ public class DoorAnimator : MonoBehaviour
 
     public void PlayClose()
     {
+        if (!gameObject.activeInHierarchy) return;
         if (closeFrames == null || closeFrames.Length == 0) return;
         if (current != null) StopCoroutine(current);
         current = StartCoroutine(PlayFrames(closeFrames));
