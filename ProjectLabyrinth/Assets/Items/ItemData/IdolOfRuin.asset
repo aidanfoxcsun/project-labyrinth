@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ItemData
   itemName: Idol Of Ruin
   description: Power can corrupt...
-  icon: {fileID: -8857194953980467720, guid: d049db39f515264478f0a95e744b8671, type: 3}
-  weight: 1
+  icon: {fileID: -8095514423771670948, guid: d049db39f515264478f0a95e744b8671, type: 3}
+  weight: 4
   effects:
   - rid: 7097487281174610021
   references:

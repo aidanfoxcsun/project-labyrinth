@@ -149,18 +149,9 @@ public class PlayerStats : MonoBehaviour
         hud?.Refresh(this);
     }
 
-    // =========================================================
-    // Sync Helpers
-    // =========================================================
-    private void SyncHearts()
-    {
-        // Clamp currentHP if maxHP shrunk (e.g. Dead Cat)
-        _currentHP = Mathf.Clamp(_currentHP, 0f, _maxHP);
-        hud?.SetHearts(_currentHP);
-    }
-
     private void OnDeath()
     {
+        hud?.RestartPrompt();
         Debug.Log("[PlayerStats] Player died.");
         // Hook into your game manager / respawn system here
     }

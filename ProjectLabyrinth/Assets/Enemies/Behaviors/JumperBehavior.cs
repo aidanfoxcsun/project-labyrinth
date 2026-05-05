@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
+using System.Collections;
 
 public class JumperBehavior : EnemyBehavior, IEntityBehavior
 {
@@ -37,12 +38,35 @@ public class JumperBehavior : EnemyBehavior, IEntityBehavior
 
     public void OnDeath()
     {
-        Destroy(controller.gameObject);
+        Debug.Log(this.name + " died");
+        controller.animator.SetTrigger("Die");
+        StopAllCoroutines();
+        SpriteRenderer sr = GetComponent<SpriteRenderer>();
+        sr.color = Color.white;
+        GetComponent<Collider2D>().enabled = false;
+        controller.StopUpdate();
+        StartCoroutine(DelayedDeath());
+    }
+
+    private IEnumerator DelayedDeath()
+    {
+        // Wait for the death animation to finish (adjust time as needed)
+        yield return new WaitForSeconds(1.5f);
+        Destroy(gameObject);
     }
 
     public void OnHit()
     {
-        // Optional reaction to being hit
+        StartCoroutine(HitFlash());
+    }
+
+    private IEnumerator HitFlash()
+    {
+        SpriteRenderer sr = GetComponent<SpriteRenderer>();
+        Color originalColor = sr.color;
+        sr.color = Color.lightPink; // Flash red on hit
+        yield return new WaitForSeconds(0.1f); // Duration of the flash
+        sr.color = originalColor; // Revert to original color
     }
 
     public override void OnUpdate()

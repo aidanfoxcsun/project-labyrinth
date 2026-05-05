@@ -7,7 +7,17 @@ public class BossPortalOnDeath : MonoBehaviour
 
     private bool spawned;
 
-    private void OnDestroy()
+    private void OnEnable()
+    {
+        GetComponent<Health>().OnDeath += OnDeath;
+    }
+
+    private void OnDisable()
+    {
+        GetComponent<Health>().OnDeath -= OnDeath;
+    }
+
+    private void OnDeath()
     {
         // Prevent spawning during editor stop / domain reload
         if (!Application.isPlaying) return;

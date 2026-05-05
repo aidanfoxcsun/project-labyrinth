@@ -61,6 +61,13 @@ public class HUDController : MonoBehaviour
     [Tooltip("Pop overshoot scale (1.2 = 20% larger)")]
     public float itemPopOvershoot = 1.2f;
 
+
+    // Fade in effect on scene start
+    [Header("Fade Effect")]
+    public Image fadeInImage;
+    public float fadeInDuration = 1f;
+    public TMP_Text restartPrompt;
+
     private Dictionary<string, ItemSlotUI> itemSlots = new Dictionary<string, ItemSlotUI>();
 
     private PlayerStats playerStats;
@@ -137,6 +144,30 @@ public class HUDController : MonoBehaviour
         UpdateCoinUI();
     }
 
+    private void Start()
+    {
+        fadeInImage.enabled = true;
+        restartPrompt.color = new Color(restartPrompt.color.r, restartPrompt.color.g, restartPrompt.color.b, 0f);
+        StartCoroutine(fadeIn());
+    }
+
+    private IEnumerator fadeIn()
+    {
+        if (fadeInImage == null) yield break;
+        Color c = fadeInImage.color;
+        c.a = 1f;
+        fadeInImage.color = c;
+        float t = 0f;
+        while (t < fadeInDuration)
+        {
+            t += Time.deltaTime;
+            c.a = Mathf.Clamp01(1f - (t / fadeInDuration));
+            fadeInImage.color = c;
+            yield return null;
+        }
+        c.a = 0f;
+    }
+
     void Update()
     {
         if (!timerRunning) return;
@@ -150,6 +181,28 @@ public class HUDController : MonoBehaviour
         }
 
         UpdateTimerUI();
+    }
+
+    public void RestartPrompt()
+    {
+        StartCoroutine(RestartPromptFadeIn());
+    }
+
+    private IEnumerator RestartPromptFadeIn()
+    {
+        if (restartPrompt == null) yield break;
+        Color c = restartPrompt.color;
+        c.a = 0f;
+        restartPrompt.color = c;
+        float t = 0f;
+        while (t < fadeInDuration)
+        {
+            t += Time.deltaTime;
+            c.a = Mathf.Clamp01(t / fadeInDuration);
+            restartPrompt.color = c;
+            yield return null;
+        }
+        c.a = 1f;
     }
 
     // ADD: the main public refresh method — call this whenever stats change

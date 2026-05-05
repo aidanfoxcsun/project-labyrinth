@@ -15,7 +15,7 @@ MonoBehaviour:
   itemName: Savory Pie
   description: A savory meat, carrot, and cabbage pie that restores health.
   icon: {fileID: 3986983024073355817, guid: d1ee053dd616e0b4c84439c6256baae8, type: 3}
-  weight: 7
+  weight: 12
   effects:
   - rid: 5411405956543414337
   references:
@@ -27,6 +27,6 @@ MonoBehaviour:
         hp: 1
         flatDamage: 0
         damageScaling: 0
-        speed: 0
+        speed: -1
         range: 0
         fireRate: 0

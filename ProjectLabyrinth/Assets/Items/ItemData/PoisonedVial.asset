@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d408cbb5d410f444bacf2905f4e5efa6, type: 3}
-  m_Name: PoisonedMushroom
+  m_Name: PoisonedVial
   m_EditorClassIdentifier: Assembly-CSharp::ItemData
   itemName: Poisoned Vial
   description: You've been poisoned!
   icon: {fileID: 2288196008720251971, guid: d1ee053dd616e0b4c84439c6256baae8, type: 3}
-  weight: 5
+  weight: 10
   effects:
   - rid: 8685533113252315564
   references:

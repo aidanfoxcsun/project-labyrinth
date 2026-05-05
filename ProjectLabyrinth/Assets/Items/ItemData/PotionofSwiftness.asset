@@ -15,7 +15,7 @@ MonoBehaviour:
   itemName: Potion of Swiftness
   description: You feel energized...
   icon: {fileID: -2389019624635814985, guid: d1ee053dd616e0b4c84439c6256baae8, type: 3}
-  weight: 4
+  weight: 7
   effects:
   - rid: 7097487281174610022
   references:

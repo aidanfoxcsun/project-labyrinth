@@ -1,6 +1,4 @@
-using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class DungeonGenerator : MonoBehaviour
@@ -11,7 +9,7 @@ public class DungeonGenerator : MonoBehaviour
     public GameObject roomPrefab;
     public GameObject largeRoomPrefab;
 
-    public GameObject bossPrefab;
+    public List<GameObject> bossPrefabs;
 
     [Header("Rock Settings")]
     public GameObject[] rockPrefabs;
@@ -309,6 +307,21 @@ bool IsAdjacent(Vector2Int a, Vector2Int b)
 
         GameObject room = Instantiate(prefab, worldPos, Quaternion.identity, transform);
 
+        switch (type)
+        {
+            case RoomType.Start:
+                room.GetComponent<RoomController>().SetRoomType(RoomType.Start); break;
+            case RoomType.Boss:
+                room.GetComponent<RoomController>().SetRoomType(RoomType.Boss); break;
+            case RoomType.Treasure:
+                room.GetComponent<RoomController>().SetRoomType(RoomType.Treasure); break;
+            case RoomType.Upgrade:
+                room.GetComponent<RoomController>().SetRoomType(RoomType.Upgrade); break;
+            case RoomType.Normal:
+            default:
+                room.GetComponent<RoomController>().SetRoomType(RoomType.Normal); break;
+        }
+
         var sr = room.GetComponentInChildren<SpriteRenderer>();
         if (sr != null)
         {
@@ -384,7 +397,7 @@ bool IsAdjacent(Vector2Int a, Vector2Int b)
             if (spawner == null)
                 spawner = room.AddComponent<BossSpawner>();
 
-            spawner.bossPrefab = bossPrefab;
+            spawner.bossPrefab = bossPrefabs[UnityEngine.Random.Range(0, bossPrefabs.Count)];
 
             spawner.SpawnBoss(room.transform);
         }

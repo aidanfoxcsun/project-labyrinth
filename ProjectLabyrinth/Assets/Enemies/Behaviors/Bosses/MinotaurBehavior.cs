@@ -1,5 +1,6 @@
 using System.Collections;
 using Unity.VisualScripting;
+using UnityEditor.SceneManagement;
 using UnityEngine;
 
 public class MinotaurBehavior : EnemyBehavior, IEntityBehavior
@@ -53,7 +54,8 @@ public class MinotaurBehavior : EnemyBehavior, IEntityBehavior
                 break;
             case MinotaurState.Telegraphing:
                 // Waiting for Coroutine to finish
-                UpdateAnimator(Vector2.zero, false);
+                UpdateAnimator(player.transform.position - transform.position, false);
+                controller.animator.SetTrigger("Telegraph");
                 break;
             case MinotaurState.Charging:
                 // Handled by Coroutine
@@ -131,6 +133,7 @@ public class MinotaurBehavior : EnemyBehavior, IEntityBehavior
         // 2. Charge
         currentState = MinotaurState.Charging;
         Vector3 chargeDir = GetCardinalDirection(player.transform.position);
+        UpdateAnimator(chargeDir, true);
 
         float chargeTime = 1.5f;
         while (chargeTime > 0)
@@ -167,6 +170,15 @@ public class MinotaurBehavior : EnemyBehavior, IEntityBehavior
 
     private void UpdateAnimator(Vector2 dir, bool walking)
     {
+        if(dir.x < 0)
+        {
+            GetComponent<SpriteRenderer>().flipX = true;
+        }
+        else if (dir.x > 0)
+        {
+            GetComponent<SpriteRenderer>().flipX = false;
+        }
+
         controller.animator.SetFloat("DirX", dir.x);
         controller.animator.SetFloat("DirY", dir.y);
         controller.animator.SetBool("IsWalking", walking);
@@ -174,11 +186,31 @@ public class MinotaurBehavior : EnemyBehavior, IEntityBehavior
 
     public void OnDeath()
     {
+        controller.animator.SetTrigger("Die");
+        StopAllCoroutines(); // Stop any ongoing behavior
+        SpriteRenderer sr = GetComponent<SpriteRenderer>();
+        sr.color = Color.white;
+        StartCoroutine(DeathAnimation());
+    }
+
+    private IEnumerator DeathAnimation()
+    {
+        GetComponent<Collider2D>().enabled = false; // Disable hitbox
+        yield return new WaitForSeconds(2f); // Wait for animation to finish
         Destroy(controller.gameObject);
     }
 
     public void OnHit()
     {
-        // Optional reaction to being hit. Play hit animation or enter second phase at some point.
+        StartCoroutine(HitFlash());
+    }
+
+    private IEnumerator HitFlash()
+    {
+        SpriteRenderer sr = GetComponent<SpriteRenderer>();
+        Color originalColor = sr.color;
+        sr.color = Color.lightPink; // Flash red on hit
+        yield return new WaitForSeconds(0.1f); // Duration of the flash
+        sr.color = originalColor; // Revert to original color
     }
 }

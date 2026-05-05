@@ -41,12 +41,20 @@ public class PlayerMovement : MonoBehaviour
         ApplyStats();
     }
 
-    private void OnEnable() { health.OnHit += Health_OnHit; }
-    private void OnDisable() { health.OnHit -= Health_OnHit; }
+    private void OnEnable() { health.OnHit += Health_OnHit; health.OnDeath += Health_OnDeath; }
+
+    private void OnDisable() { health.OnHit -= Health_OnHit; health.OnDeath -= Health_OnDeath; }
 
     private void Health_OnHit()
     {
         animator?.SetTrigger("Hit");
+    }
+
+    private void Health_OnDeath()
+    {
+        isDead = true;
+        animator?.SetTrigger("Die");
+        GetComponent<Collider2D>().enabled = false;
     }
 
     void Update()
@@ -57,8 +65,11 @@ public class PlayerMovement : MonoBehaviour
         UpdateAnimator();
     }
 
+    private bool isDead = false;
+
     void FixedUpdate()
     {
+        if (isDead) return;
         rb.MovePosition(rb.position + movement * playerStats.speed * Time.fixedDeltaTime);
     }
 
@@ -67,6 +78,8 @@ public class PlayerMovement : MonoBehaviour
     // =========================================================
     private void HandleMovementInput()
     {
+        if (isDead) return;
+
         movement = Vector2.zero;
         if (Input.GetKey(KeyCode.W)) movement.y += 1;
         if (Input.GetKey(KeyCode.S)) movement.y -= 1;
@@ -77,6 +90,8 @@ public class PlayerMovement : MonoBehaviour
 
     private void HandleAimInput()
     {
+        if (isDead) return;
+
         Vector2 aim = Vector2.zero;
         if (Input.GetKey(KeyCode.UpArrow)) aim.y += 1;
         if (Input.GetKey(KeyCode.DownArrow)) aim.y -= 1;
@@ -94,6 +109,8 @@ public class PlayerMovement : MonoBehaviour
 
     private void HandleFireInput()
     {
+        if (isDead) return;
+
         fireCooldown -= Time.deltaTime;
 
         // fireRate = shots per second, so cooldown = 1 / fireRate
@@ -119,6 +136,8 @@ public class PlayerMovement : MonoBehaviour
     // =========================================================
     private void Shoot()
     {
+        if (isDead) return;
+
         if (!projectilePrefab || !firePoint) return;
 
         if (animator)
@@ -128,13 +147,13 @@ public class PlayerMovement : MonoBehaviour
             animator.SetTrigger("Attack");
         }
 
-        GameObject proj = Instantiate(projectilePrefab, firePoint.position, Quaternion.identity);
+        GameObject proj = Instantiate(projectilePrefab, firePoint.position, Quaternion.LookRotation(Vector3.forward, lastAim));
         proj.transform.localScale *= Mathf.Sqrt(playerStats.getDamage());
 
         // Apply stats to projectile
         proj.GetComponent<Projectile>().lifetime = playerStats.range;
         proj.GetComponent<Hazard>().setDamage(playerStats.getDamage());
-        proj.GetComponent<Projectile>()?.SetDirection(lastAim);
+        proj.GetComponent<Projectile>()?.SetDirection(Vector2.up);
 
         // Ignore collision between projectile and player
         Collider2D projCol = proj.GetComponent<Collider2D>();

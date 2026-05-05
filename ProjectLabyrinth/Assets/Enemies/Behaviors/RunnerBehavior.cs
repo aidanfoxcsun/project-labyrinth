@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Collections;
 
 public class RunnerBehavior : EnemyBehavior, IEntityBehavior
 {
@@ -23,14 +24,34 @@ public class RunnerBehavior : EnemyBehavior, IEntityBehavior
         // This is where any special behaviors need to go.
         // Loot drops, animations, second phases, etc.
         Debug.Log(this.name + " died");
-        Destroy(this.gameObject);
+        controller.animator.SetTrigger("Die");
+        StopAllCoroutines();
+        SpriteRenderer sr = GetComponent<SpriteRenderer>();
+        sr.color = Color.white;
+        GetComponent<Collider2D>().enabled = false;
+        controller.StopUpdate();
+        StartCoroutine(DelayedDeath());
+    }
+
+    private IEnumerator DelayedDeath()
+    {
+        // Wait for the death animation to finish (adjust time as needed)
+        yield return new WaitForSeconds(1.5f);
+        Destroy(gameObject);
     }
 
     public void OnHit()
     {
-        // This is where any special behaviors need to go.
-        // Change in behavior, animations, etc.
-        Debug.Log(this.name + " has been hit");
+        StartCoroutine(HitFlash());
+    }
+
+    private IEnumerator HitFlash()
+    {
+        SpriteRenderer sr = GetComponent<SpriteRenderer>();
+        Color originalColor = sr.color;
+        sr.color = Color.lightPink; // Flash red on hit
+        yield return new WaitForSeconds(0.1f); // Duration of the flash
+        sr.color = originalColor; // Revert to original color
     }
 
     private float frameCounter = 0f;

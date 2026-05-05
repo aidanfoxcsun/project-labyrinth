@@ -11,10 +11,17 @@ public class RoomController : MonoBehaviour
     private bool activated = false;
     private bool locked = false;
 
+    public DungeonGenerator.RoomType roomType;
+
     void Start()
     {
         // collect doors
         doors.AddRange(GetComponentsInChildren<Door>(true));
+    }
+
+    public void SetRoomType(DungeonGenerator.RoomType type)
+    {
+        roomType = type;
     }
 
     public void RegisterEnemy(GameObject enemy)
@@ -30,6 +37,29 @@ public class RoomController : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
+        if (other.CompareTag("Player"))
+        {
+            switch (roomType)
+            {
+                case DungeonGenerator.RoomType.Normal:
+                case DungeonGenerator.RoomType.Start:
+                    AudioController.Instance.EnterNormalArea();
+                    break;
+                case DungeonGenerator.RoomType.Upgrade:
+                    AudioController.Instance.EnterShop();
+                    break;
+                case DungeonGenerator.RoomType.Treasure:
+                    AudioController.Instance.EnterItemRoom();
+                    break;
+                case DungeonGenerator.RoomType.Boss:
+                    AudioController.Instance.EnterBossRoom();
+                    break;
+                default:
+                    AudioController.Instance.EnterNormalArea();
+                    break;
+            }
+        }
+
         if (!activated && other.CompareTag("Player"))
         {
             activated = true;

@@ -18,6 +18,7 @@ GameObject:
   - component: {fileID: -6755711140151044636}
   - component: {fileID: -8953828011250620126}
   - component: {fileID: -4601847794863077499}
+  - component: {fileID: -5162847923577290381}
   m_Layer: 10
   m_Name: Minotaur
   m_TagString: Untagged
@@ -87,7 +88,7 @@ SpriteRenderer:
   m_SortingLayerID: -1798415723
   m_SortingLayer: 3
   m_SortingOrder: 0
-  m_Sprite: {fileID: -3887742357417350912, guid: 54c0bfd7cdc63aa418455333e360e00c, type: 3}
+  m_Sprite: {fileID: -5276288388775073970, guid: 11b9ab4d5a61d9a44878d51963d9c68b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -268,3 +269,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BossBridge
   bossDisplayName: The Minotaur
+--- !u!114 &-5162847923577290381
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3599107784049094890}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 58bb61503140be64fbe2a9fd78b5a35e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BossPortalOnDeath
+  portalPrefab: {fileID: 4081196267222041555, guid: d9a162ca92605f64485db655b17df6e1, type: 3}
+  spawnOffset: {x: 0, y: 0, z: 0}

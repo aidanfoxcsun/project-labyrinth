@@ -150,7 +150,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DungeonGenerator
   roomPrefab: {fileID: 3738668724862959439, guid: 03781b73cc420d74eac9b0e109cd457d, type: 3}
   largeRoomPrefab: {fileID: 0}
-  bossPrefab: {fileID: 3599107784049094890, guid: 5536f4aa30944974dbc9d6c2fafec23c, type: 3}
+  bossPrefabs:
+  - {fileID: 3599107784049094890, guid: 714052953de3a2d4ea65aada7050b22d, type: 3}
+  - {fileID: 3599107784049094890, guid: 5536f4aa30944974dbc9d6c2fafec23c, type: 3}
   rockPrefabs:
   - {fileID: 1390904374234985786, guid: 047dea15ebd48ed4e89c054d27ce4032, type: 3}
   minRocksPerRoom: 2
@@ -263,6 +265,52 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &905770351
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 905770352}
+  - component: {fileID: 905770353}
+  m_Layer: 0
+  m_Name: InputHandler
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &905770352
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 905770351}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.51451, y: -4.33373, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &905770353
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 905770351}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 79517a5451d030d4e9616a8989f705eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::InputHandler
+  holdReloadTime: 2
+  fadeImage: {fileID: 1552662913}
 --- !u!1 &1253474083
 GameObject:
   m_ObjectHideFlags: 0
@@ -293,7 +341,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FloorManager
   dungeonGenerator: {fileID: 0}
-  startingRooms: 15
+  startingRooms: 7
   roomsPerFloor: 3
 --- !u!4 &1253474085
 Transform:
@@ -310,6 +358,17 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1552662913 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6929325942234160796, guid: f4a89fb83a474c844ac1590f9bca4a2d, type: 3}
+  m_PrefabInstance: {fileID: 2412428781056286963}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
 --- !u!1001 &1621643425
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1122,3 +1181,4 @@ SceneRoots:
   - {fileID: 1253474085}
   - {fileID: 2412428781056286963}
   - {fileID: 805569129}
+  - {fileID: 905770352}

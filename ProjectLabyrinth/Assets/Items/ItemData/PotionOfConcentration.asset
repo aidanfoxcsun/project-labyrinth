@@ -15,7 +15,7 @@ MonoBehaviour:
   itemName: Potion of Concentration
   description: You feel focused...
   icon: {fileID: 3615456233794990054, guid: d1ee053dd616e0b4c84439c6256baae8, type: 3}
-  weight: 3
+  weight: 7
   effects:
   - rid: 7097487281174610024
   references:
