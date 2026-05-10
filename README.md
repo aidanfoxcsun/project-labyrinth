@@ -141,6 +141,6 @@ This project is developed for academic purposes under the COMP 490/491 Senior Pr
 ## 🔗 Repository
 
 The full project source code, build instructions, and deployment artifacts are available at:  
-**https://github.com/aidanfoxcsun/ProjectLabyrinth**
+**https://github.com/aidanfoxcsun/project-labyrinth**
 
-Release builds (Windows standalone `.exe`) are available under [GitHub Releases](https://github.com/aidanfoxcsun/ProjectLabyrinth/releases).
+Release builds (Windows standalone `.exe`) are available under [GitHub Releases](https://github.com/aidanfoxcsun/project-labyrinth/releases).
